@@ -1,7 +1,12 @@
-# 开发学习笔记
+# 学习笔记
 
-## [MySQL](mysql.md)
+[MySQL](mysql.md)
 
-## [Flutter](flutter.md)
+[Flutter](flutter.md)
 
-## [Vue](vue.md)
+[Vue](vue.md)
+
+[Mac](mac.md)
+
+[Vim](vim.md)
+
