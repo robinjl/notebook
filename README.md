@@ -11,3 +11,7 @@
 [Mac](mac.md)
 
 [Vim](vim.md)
+
+[WebStorm](webstorm.md)
+
+[iTerm2](iTerm2.md)
