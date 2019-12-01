@@ -1,6 +1,6 @@
 # React Native
 
-[命令行启动 Android 模拟器](https://developer.android.com/studio/run/emulator-commandlin) 
+[命令行启动 Android 模拟器](https://developer.android.com/studio/run/emulator-commandline) 
 ```
 emulator -list-avds // Nexus_5X_API_28
 emulator -avd Nexus_5X_API_28
