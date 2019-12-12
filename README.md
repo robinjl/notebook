@@ -1,5 +1,10 @@
 # 学习笔记
 
+## 前端学习资料
+
+[资源](tutorial.md)
+[React 简易教程](react-simple-tutorial/README.md)
+
 ## 前端框架
 
 1. [React Native](react_native.md)

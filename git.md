@@ -174,6 +174,6 @@ Change your remote's URL from SSH to HTTPS with the git remote set-url command.
 $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 ```
 
-2. 项目迁移
-   从 GitHub 迁移至 GitLab
-   new project -> import project -> select GitHub -> select repository
+2. 项目迁移  
+从 GitHub 迁移至 GitLab  
+new project -> import project -> select GitHub -> select repository
