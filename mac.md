@@ -1,17 +1,17 @@
-# MacBook / iPhone 
+# MacBook / iPhone
 
 ## MacBook 常用软件
 
-| 软件         | 功能         |
-| ------------ | ------------ |
-| MagicanRest  | 休息提醒     |
-| VirtualBox   | 免费的虚拟机 |
-| Folx         | 下载工具     |
-| Charles      | 抓包工具     |
-| Dr.Cleaner   | 系统清理工具 |
-| SmartSVN     | 管理工具     |
-| Alfred       | 快速搜索工具 |
-| ForkLift     | FTP        |
+| 软件        | 功能         |
+| ----------- | ------------ |
+| MagicanRest | 休息提醒     |
+| VirtualBox  | 免费的虚拟机 |
+| Folx        | 下载工具     |
+| Charles     | 抓包工具     |
+| Dr.Cleaner  | 系统清理工具 |
+| SmartSVN    | 管理工具     |
+| Alfred      | 快速搜索工具 |
+| ForkLift    | FTP          |
 
 ## macOS 查看本地 IP
 
@@ -63,3 +63,12 @@ $ xcrun simctl erase all
 1. iPhone 数据线连接 MacBook
 2. MacBook 开启 QuickTime player, 目录 -> 文件 -> 新建影片录制
 3. 按录制旁边的选项，选择连接的 iPhone
+
+## Mac 创建 txt file
+
+Spotlight -> TextEdit.app -> Menu -> 文本编辑 -> 偏好设置 -> 新建文稿 -> 纯文本
+
+## 其他
+
+1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
+2. SmartSVN 修改 repository 地址：Menu -> Modify -> Relocate

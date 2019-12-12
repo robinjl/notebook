@@ -122,7 +122,7 @@ ADD COLUMN avatar VARCHAR(255);
 
 ## Workbench
 
-Navicat 是付费的v
+Navicat 是付费的 v
 
 ER(entity-relationship)  
 EER(enhanced entity-relationship)
@@ -131,7 +131,7 @@ EER(enhanced entity-relationship)
 将 EER 导出 SQL script, File -> Export -> Forward Enginner SQL CREATE Script  
 通过 script 生成 database
 
-将已有 database 生成为 EER  v
+将已有 database 生成为 EER v
 Database -> Reverse Engineer
 
 EER 导出为其他格式文件 File - Export -> Export as PNG / SVG / PDF
@@ -140,6 +140,9 @@ EER 导出为其他格式文件 File - Export -> Export as PNG / SVG / PDF
 
 export / import .sql 文件 导出/引入数据库文件
 
+1. 连接本地数据库，一种方式是 `standard 127.0.0.1`，一种方式是 `socket 192.168.1.177`
+2. 导入数据有中文时报错，调整字符集，Preference -> General -> utf-8
+
 ## 字段类型
 
 字符串 varchar char  
@@ -147,7 +150,7 @@ export / import .sql 文件 导出/引入数据库文件
 布尔 bit (1/0)  
 日期 date time datetime timestamp(值为空，则保存系统当前时间)  
 大数据 blob (mp4, mkv)  
-文本 text 
+文本 text
 
 ## 单表约束
 
