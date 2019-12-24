@@ -5,6 +5,20 @@
 1. [2019 权威「HTML+CSS」零基础入门精英课【渡一教育】](https://ke.qq.com/course/231570?taid=2955805083273362)
 2. [Web 前端开发之 JavaScript(Js)精英课堂【渡一教育】](https://ke.qq.com/course/231577?taid=2841395744442521)
 
+## 书籍
+
+1. JavaScript 高级程序设计（第 3 版)
+2. JavaScript DOM 编程艺术（第 2 版）
+3. JavaScript 语言精粹
+4. 深入浅出 Node.js
+5. JavaScript 框架设计（第 2 版)
+6. JavaScript 权威指南（第 6 版）
+7. JavaScript 忍者秘籍 第 2 版
+8. ES6 标准入门（第 3 版）
+9. CSS 世界
+10. 精通 CSS 高级 Web 标准解决方案 第 3 版
+11. jQuery 基础教程（第 4 版）
+
 ## JavaScript
 
 1. [ECMAScript 6 入门 - 阮一峰 著](http://es6.ruanyifeng.com/)
@@ -19,11 +33,7 @@
 5. [Front End Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)
 6. [A set of best practices for JavaScript projects](https://github.com/elsewhencode/project-guidelines)
 7. [Roadmap on becoming a UI/UX designer in 2017](https://github.com/togiberlin/ui-ux-designer-roadmap)
-
-## React
-
-- [React Lifecycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-- [React 技术栈系列教程 - 阮一峰 著](http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html)
+8. [State of JavaScript](https://2019.stateofjs.com/)
 
 ## 风格指南
 
@@ -141,3 +151,4 @@
 2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
 3. [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
 4. [科学上网的终极姿势：在 Vultr VPS 上搭建 Shadowsocks](https://zoomyale.com/2016/vultr_and_ss)
+5. [MikuTools](https://tools.miku.ac/)
