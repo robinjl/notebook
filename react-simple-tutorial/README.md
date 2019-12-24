@@ -14,25 +14,25 @@
 ## 目标 _Goal_
 
 - 了解 React 的基本概念和相关工具，比如 Babel、 Webpack、 JSX、 components, props, state 和 lifecycle
--  创建一个简单的 React app, 讲解概念
+- 创建一个简单的 React app, 讲解概念
 
 ## 什么是 React _What is React?_
 
-- React 是一个 JavaScript 库（library),GitHub 最受欢迎项目之一
+- React 是一个 JavaScript 库（library)，GitHub 最受欢迎项目之一
 - React 不是一个框架 (framework)
 - Fackbook 开源项目
 - React 用于创建前端 UI 层
 - React 用于实现 MVC 架构的 View 层
 
-React 一个主要特点是可以创建自定义的、可重用的组件,  快速搭建 UI 层； 同时使用 state 和 props 储存或处理数据
+React 一个主要特点是可以创建自定义的、可重用的组件, 快速搭建 UI 层； 同时使用 state 和 props 储存或处理数据
 
-## 安装和部署 _Setup and Installation_
+## 安装和部署 _Setup and Installation_
 
 有两种方式
 
-### 静态 HTML *Static HTML File*
+### 静态 HTML _Static HTML File_
 
-这种方式并不推荐，类似于 jQuery 使用的思维方式，它不需要了解 Webpack、Babel 和 Node.js
+这种方式并不推荐，类似于 jQuery 使用的思维方式，它不需要了解 Webpack、Babel 和 Node.js
 
 示例 index.html
 HTML 引入三个基本脚本库
@@ -41,7 +41,7 @@ HTML 引入三个基本脚本库
 - React DOM: React DOM API
 - Babel: 将 ES6+ 转译成兼容浏览器的 JavaScript
 
-### 官方脚手架工具 create-react-app
+### 官方脚手架工具 create-react-app
 
 - 安装 Node (NPM)
 - 安装 create-react-app
@@ -64,7 +64,7 @@ $ npm start
 ```
 
 示例：  
-删除 /src 自动生成的一些文件，只保留 index.js, index.css
+删除 /src 自动生成的一些文件，只保留 index.js, index.css
 index.css 替换样式  
 [Primitive CSS](https://taniarascia.github.io/primitive/css/main.css)
 
