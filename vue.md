@@ -44,7 +44,8 @@ VS Code: Vetur
 @vue/cli  
 @vue/cli-service-global 可以单独编译一个 Vue 文件
 
-## 其他
+## Vue 技术栈
 
-CSS BEM 编码风格  
-CSS calc()
+1. Element
+2. avue
+

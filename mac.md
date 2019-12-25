@@ -12,6 +12,7 @@
 | SmartSVN    | 管理工具     |
 | Alfred      | 快速搜索工具 |
 | ForkLift    | FTP          |
+| Fliqlo      | 经典时钟屏保  |
 
 ## macOS 查看本地 IP
 

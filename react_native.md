@@ -6,6 +6,11 @@
 2. [慕课网 - 新版 React Native 从入门到实战打造高质量上线 App（再升级）](https://coding.imooc.com/learn/list/304.html)
 3. [React Native 学习资源精选仓库](https://github.com/crazycodeboy/react-native-awesome)
 
+## 开源项目
+
+1. [Facebook F8 app of 2017](https://github.com/fbsamples/f8app)
+2. [akveo/kittenTricks](https://github.com/akveo/kittenTricks)
+
 ## iOS linking libraries (连接原生库)
 
 _RN < 60_  
@@ -14,9 +19,16 @@ _RN < 60_
 _RN > 60_  
 通过 Cocoapods 安装
 
-## Android Mulit-deployment
+## Android Mulit-deployment（多版本部署）
 
-## iOS Scheme
+[参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-android.md)  
+APP 启动图标自动生成器: 1. [图标工厂](https://icon.wuruihong.com/) 2. [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
+
+## iOS Multi-Scheme（多版本部署）
+
+[参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-ios.md)  
+APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)
+创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / display name 和自定义属性。
 
 ## CodePush (热更新)
 
@@ -89,14 +101,37 @@ label 参数命令行会报错，若忽略，默认是更新最后一个版本
 
 ## 第三方组件
 
-[React Native Example](https://reactnativeexample.com/)
+RN 插件库： [React Native Example](https://reactnativeexample.com/)
+
+## 打包
+
+#### Android
+
+方式一：`cd android && ./gradlew assembleRelease`  
+方式二：连接真机, `react-native run-android --variant=release`
+
+#### iOS
+
+1. 启动 XCode
+2. 选择 Release Scheme
+3. 选择 General iOS Device
+4. Menu -> Product -> Archive
+5. 选择 App Store 或者 Ad Hoc
 
 ## 内部分发测试
 
 1. 蒲公英
+   iOS 设备需要通过蒲公英提供的二维码，扫码后获取 UDID，然后在 App Developer 中注册该设备，然后更新应用的 Provisioning Profile 中设备列表  
+   iOS 测试设备上限 100 台，每年苹果允许重置一次
+   每个版本单日下载量上限 100 次
+
 2. TestFlight
+   _尚未实践_
 
 ## App Store
+
+证书类型： 个人 / 公司 年费 $99 / 企业 年费 $299
+审核日期目前为 1 ～ 2 个工作日
 
 ## Android 应用市场
 
@@ -108,11 +143,6 @@ label 参数命令行会报错，若忽略，默认是更新最后一个版本
 ## React Naitve 版本升级
 
 _尚未实践_ [文档](http://facebook.github.io/react-native/docs/upgrading)
-
-## 开源项目
-
-1. [Facebook F8 app of 2017](https://github.com/fbsamples/f8app)
-2. [akveo/kittenTricks](https://github.com/akveo/kittenTricks)
 
 ## 启动模拟器
 
