@@ -27,7 +27,7 @@ APP 启动图标自动生成器: 1. [图标工厂](https://icon.wuruihong.com/) 
 ## iOS Multi-Scheme（多版本部署）
 
 [参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-ios.md)  
-APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)
+APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)  
 创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / display name 和自定义属性。
 
 ## CodePush (热更新)

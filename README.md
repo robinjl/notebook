@@ -6,16 +6,16 @@
 
 ## 前端框架
 
-1. [React](react.md)
-2. [Vue](vue.md)
+1. [React](frontend/react.md)
+2. [Vue](frontend/vue.md)
 3. Angular
 
 ## 移动端框架
 
 #### 原生 App
 
-1. Android (Java / Kotlin)
-2. iOS (Objective-C / Swift)
+1. Android(Java / Kotlin)
+2. iOS(Objective-C / Swift)
 
 #### 混合 App
 
@@ -26,10 +26,10 @@
 
 #### 跨平台 App
 
-1. [React Native](react_native.md)(React)  Expo
-2. [Flutter](flutter.md)(Dart)
-3. Xamarin（C#）
-4. NativeScript（Angular）
+1. [React Native](frontend/react_native.md)(React) Expo
+2. [Flutter](frontend/flutter.md)(Dart)
+3. Xamarin(C#)
+4. NativeScript(Angular)
 
 ## 桌面框架
 
@@ -46,21 +46,21 @@ Electron
 
 ## 后端框架
 
-[Django](django.md)
+[Django](backend/django.md)
 
 ## 数据库
 
-[MySQL](mysql.md)
+[MySQL](backend/mysql.md)
 
 ## 工具
 
-1. [Git](git.md)
-2. [Mac](mac.md)
-3. [Vim](vim.md)
-4. [iTerm2](iTerm2.md)
-5. [WebStorm](webstorm.md)
+1. [Git](tools/git.md)
+2. [Mac](tools/mac.md)
+3. [Vim](tools/vim.md)
+4. [iTerm2](tools/iTerm2.md)
+5. [WebStorm](tools/webstorm.md)
 6. Postman
 
 ## 职场/创业
 
-[博文](working.md)
+[博文](career.md)
