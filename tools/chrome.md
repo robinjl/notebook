@@ -7,3 +7,12 @@
 | 首页                   | Control + Cmd + H |
 | 聚焦地址搜索框         | Cmd + L           |
 | 撤销上一次关闭的标签页 | Shift + Cmd + T   |
+
+
+2. 插件
+
+| 名称                    | 功能            |
+| ---------------------- | ----------------- |
+| Adblock Plus           | 网页广告屏蔽       |
+| Momentum               | 新标签页背景图     |
+| Octotree               | GitHub 菜单树    |v
