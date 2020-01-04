@@ -1,6 +1,8 @@
 # WebStorm
 
-1. 插件 - Prettier
+## 插件
+
+#### Prettier
 
 安装插件，[WebStorm 启用 Prettier](https://prettier.io/docs/en/webstorm.html)  
 shortcut: `Alt-Shift-Cmd-P`  
@@ -9,9 +11,9 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 - JSX 自闭合标签前留出一个空格 Preferences -> Code Style -> HTML -> Other -> In empty tag 勾选
 - ES6 import/export braces 留出空格 Preferences -> Code Style -> JavaScript -> Spaces -> ES6 import/export braces 勾选
 
-2. 关于激活
+## 关于激活
 
-2020.1.4 更新
+#### 2020.1.4 更新
 
 [永久激活](https://www.52pojie.cn/thread-1067129-1-1.html)  
 [IntelliJ IDEA 2019.3利用补丁永久破解激活教程](https://www.jiweichengzhu.com/article/2940ed65c94f4671ae3f3aa72e168673)
@@ -24,7 +26,7 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 或者手动输入 `http://jetbrains-license-server`
 5. Activation code 输入 ACTIVATION_CODE.txt 内的注册码
 
-2019.12.11 更新
+#### 2019.12.11 更新
 
 1. _已失效_ [THIS LICENSE 56ZS5PQ1RF HAS BEEN CANCELLED](https://www.cnblogs.com/ISJI/p/11670764.html)  
 必须刷新DNS；Mac 刷新DNS缓存 `sudo killall -HUP mDNSResponder`
