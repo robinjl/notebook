@@ -179,3 +179,6 @@ sudo gem install cocoapods -v [version] 安装指定版本
 ```
 
 ## 开发问题
+
+1. ERROR: [Builds in Xcode but not using command line](https://github.com/facebook/react-native/issues/18793)  
+解决方法：删除 ios/build 文件夹，重新运行
