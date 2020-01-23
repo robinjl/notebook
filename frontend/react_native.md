@@ -122,7 +122,7 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
 1. 蒲公英
    iOS 设备需要通过蒲公英提供的二维码，扫码后获取 UDID，然后在 App Developer 中注册该设备，然后更新应用的 Provisioning Profile 中设备列表  
-   iOS 测试设备上限 100 台，每年苹果允许重置一次
+   iOS 测试设备上限 100 台，设备即便禁用后，也计入其中。每一次年费续费，苹果允许重置一次；如果需要立即重置，也可以直接[发送邮件申请](https://developer.apple.com/contact/submit/)  
    每个版本单日下载量上限 100 次
 
 2. TestFlight
@@ -179,3 +179,6 @@ sudo gem install cocoapods -v [version] 安装指定版本
 ```
 
 ## 开发问题
+
+1. ERROR: [Builds in Xcode but not using command line](https://github.com/facebook/react-native/issues/18793)  
+解决方法：删除 ios/build 文件夹，重新运行
