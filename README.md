@@ -23,6 +23,7 @@
 2. PhoneGap
 3. Cordova
 4. uni-app(Vue)
+5. Taro(React)
 
 #### 跨平台 App
 
@@ -48,6 +49,10 @@ Electron
 
 [Django](backend/django.md)
 
+## 后端预研
+
+[Java](backend/java.md)
+
 ## 数据库
 
 [MySQL](backend/mysql.md)
@@ -60,7 +65,7 @@ Electron
 4. [iTerm2](tools/iTerm2.md)
 5. [WebStorm](tools/webstorm.md)
 6. Postman
-7. [VirtualBox](tools/virtualbox.md) 
+7. [VirtualBox](tools/virtualbox.md)
 
 ## 职场/创业
 

@@ -12,7 +12,10 @@
 | SmartSVN    | 管理工具     |
 | Alfred      | 快速搜索工具 |
 | ForkLift    | FTP          |
-| Fliqlo      | 经典时钟屏保  |
+| Fliqlo      | 经典时钟屏保 |
+| iTerm       | 终端         |
+| Oh My Zsh   | 终端         |
+| Homebrew    | 包安装工具   |
 
 ## macOS 查看本地 IP
 
@@ -29,10 +32,11 @@ $ ifconfig | grep inet
 
 ## Mac 快捷键
 
-| 操作               | 快捷键              |
-| ------------------ | ------------------- |
-| 聚焦搜索 Spotlight | Command + Space     |
-| 显示/隐藏 文件     | Command + Shift + . |
+| 操作               | 快捷键                 |
+| ------------------ | ---------------------- |
+| 聚焦搜索 Spotlight | Command + Space        |
+| 显示/隐藏 文件     | Command + Shift + .    |
+| 强制推出任务       | Option + Command + Esc |
 
 ## Mac 看根目录文件大小分布
 

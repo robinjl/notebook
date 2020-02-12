@@ -56,13 +56,15 @@
 
 - 综合
 
-  - MacBook (macOS)
+  - 科学上网
+  - MacBook (Air/Pro) / iMac
   - Google
   - English
 
 - 通用工具
 
-  - macOS / Linux Command Line (命令行工具)
+  - Linux 
+  - Shell
   - Git / GitHub / GitLab
   - Postman
 

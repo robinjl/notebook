@@ -2,11 +2,11 @@
 
 ## 快捷键
 
-| 功能               | 快捷方式     |
-| ------------------ | ---------------------------- |
-| 打开最近的文件     | Command + E  |
-| 全局搜索文件、代码 | double Shift |
-| 搜索文件结构  | Command + F12 -> Command + 0（自定义）|
+| 功能               | 快捷方式                               |
+| ------------------ | -------------------------------------- |
+| 打开最近的文件     | Command + E                            |
+| 全局搜索文件、代码 | double Shift                           |
+| 搜索文件结构       | Command + F12 -> Command + 0（自定义） |
 
 ## 插件
 
@@ -22,7 +22,11 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 
 ## 关于激活
 
-#### 2020.1.4 更新
+支持正版，待能力提高一定程度，一定购买正版。
+
+#### 2020.2.12 更新
+
+_下载 2019.3.2 或以前的版本，并且不能升级_
 
 [永久激活](https://www.52pojie.cn/thread-1067129-1-1.html)  
 [IntelliJ IDEA 2019.3 利用补丁永久破解激活教程](https://www.jiweichengzhu.com/article/2940ed65c94f4671ae3f3aa72e168673)
@@ -31,7 +35,8 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 
 1. 将破解补丁 jetbrains-agent.jar 放在电脑某文件下
 2. 进入 WebStorm, 如果无法进入，选择试用进入
-3. Menu -> Help -> Edit Custom VM Options..., 配置补丁文件绝对路径（以 Mac 为例） `-javaagent:/Users/username/jetbrains-agent.jar`
+3. Menu -> Help -> Edit Custom VM Options..., 配置补丁文件绝对路径（以 Mac 为例） `-javaagent:/Users/robin/Documents/JetBrains/jetbrains-agent.jar`  
+   如果填写错误， 重新修改文件 `/Users/[username]/Library/Preferences/IntelliJIdea/idea.vmoptions`
 4. 重新启动， Menu -> Help -> Register 选择 license server -> 点击 Discover Server
    或者手动输入 `http://jetbrains-license-server`
 5. Activation code 输入 ACTIVATION_CODE.txt 内的注册码
