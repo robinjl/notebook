@@ -32,6 +32,11 @@
 3. Xamarin(C#)
 4. NativeScript(Angular)
 
+#### 小程序
+
+1. 微信小程序
+2. 支付宝小程序
+
 ## 桌面框架
 
 Electron
@@ -45,13 +50,17 @@ Electron
 5. EasyUI
 6. RxJS
 
+## 后端语言
+
+1. [Java](backend/java.md)
+2. Python
+3. NodeJS
+
 ## 后端框架
 
-[Django](backend/django.md)
-
-## 后端预研
-
-[Java](backend/java.md)
+1. SSH, SSM
+2. [Django](backend/django.md)
+3. Express, Koa
 
 ## 数据库
 
@@ -70,3 +79,5 @@ Electron
 ## 职场/创业
 
 [博文](career.md)
+
+

@@ -26,11 +26,21 @@ Java 预研特性
 5. 多线程
 6. 大数据开发
 
+JVM Java Virtual Machine Java 虚拟机
+JRE Java Runtime Environment Java 运行环境
+JDK Java Development Kit Java 开发工具包
+
+JDK 包含 JRE，JRE 包含 JVM
+
+bin 目录包含工具集，其中 javac.exe 是编辑工具，java.exe 是执行工具
+
 ## 配置开发环境
 
-1. 安装 Java  
-   使用过 React Native，已经安装过 Java， [文档](http://facebook.github.io/react-native/docs/getting-started)  
-   查看 Java 版本 `java -version`
+1. 安装 Java
+
+(1) 通过 Oracle Java 官网下载安装  
+(2) 使用过 React Native，已经安装过 Java， [文档](http://facebook.github.io/react-native/docs/getting-started)  
+ 查看 Java 版本 `java -version`
 
 通过 homebrew 安装 JDK
 
@@ -38,8 +48,6 @@ Java 预研特性
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk8
 ```
-
-或者直接通过 Oracle Java 官网下载安装
 
 2. 设置 JAVA_HOME
    获取 JAVA_HOME 环境变量：

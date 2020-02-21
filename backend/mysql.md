@@ -6,6 +6,35 @@
 - [MySQL Tutorial](http://www.mysqltutorial.org/)
 - [腾讯课堂](https://ke.qq.com/course/431451?term_id=100515157&taid=3746143490446683)
 
+## 客户端
+
+#### Workbench
+
+ER(entity-relationship)  
+EER(enhanced entity-relationship)
+
+设计 EER Diagram, File -> New Model/Open Model  
+将 EER 导出 SQL script, File -> Export -> Forward Enginner SQL CREATE Script  
+通过 script 生成 database
+
+将已有 database 生成为 EER v
+Database -> Reverse Engineer
+
+EER 导出为其他格式文件 File - Export -> Export as PNG / SVG / PDF
+
+#### Sequel Pro
+
+export / import .sql 文件 导出/引入数据库文件
+
+1. 连接本地数据库，一种方式是 `standard 127.0.0.1`，一种方式是 `socket 192.168.1.177`
+2. 导入数据有中文时报错，调整字符集，Preference -> General -> utf-8
+
+bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪退
+
+#### DataGrip
+
+#### Navicat
+
 ## 命令
 
 连接服务
@@ -49,7 +78,11 @@ select database();    // 查看当前使用
 
 ```
 create database [database_name];
-create database [database_name] character utf8;  // 指定字符集
+create database [database_name] character utf8;  // 指定字符集 无效
+
+CREATE DATABASE mydb
+  CHARACTER SET utf8
+  COLLATE utf8_general_ci;
 ```
 
 查看数据库定义信息
@@ -119,29 +152,6 @@ CREATE TABLE animals (
 ALTER TABLE pet
 ADD COLUMN avatar VARCHAR(255);
 ```
-
-## Workbench
-
-Navicat 是付费的 v
-
-ER(entity-relationship)  
-EER(enhanced entity-relationship)
-
-设计 EER Diagram, File -> New Model/Open Model  
-将 EER 导出 SQL script, File -> Export -> Forward Enginner SQL CREATE Script  
-通过 script 生成 database
-
-将已有 database 生成为 EER v
-Database -> Reverse Engineer
-
-EER 导出为其他格式文件 File - Export -> Export as PNG / SVG / PDF
-
-## Sequel Pro
-
-export / import .sql 文件 导出/引入数据库文件
-
-1. 连接本地数据库，一种方式是 `standard 127.0.0.1`，一种方式是 `socket 192.168.1.177`
-2. 导入数据有中文时报错，调整字符集，Preference -> General -> utf-8
 
 ## 字段类型
 
