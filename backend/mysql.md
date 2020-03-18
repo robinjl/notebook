@@ -33,6 +33,9 @@ bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪�
 
 #### DataGrip
 
+1. 导出数据库： 选择数据库 -> 右键 -> Dump with 'mysqldump'
+2. 导入数据库： schemes 下创建数据库 -> 右键 -> Restore with 'mysql' 或者 打开.sql文件运行->tab 右键-> run -> 选择数据库
+
 #### Navicat
 
 ## 命令

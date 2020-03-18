@@ -44,3 +44,8 @@ n 切换下一个匹配 N 反向查找
 :s/before/after 替换当前行第一个匹配  
 :n,$s/before/after 从第n行起到最后一行第一个匹配  
 :%s/before/after/g 全文替换
+
+## 操作
+
+编辑状态 dd 快速删除一行
+:noh 取消高亮
