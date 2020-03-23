@@ -23,7 +23,6 @@
 2. PhoneGap
 3. Cordova
 4. uni-app(Vue)
-5. Taro(React)
 
 #### 跨平台 App
 
@@ -36,6 +35,7 @@
 
 1. 微信小程序
 2. 支付宝小程序
+3. [Taro(React)](frontend/taro.md)
 
 ## 桌面框架
 

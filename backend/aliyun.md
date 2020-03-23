@@ -78,6 +78,8 @@ $ ps -ef | grep nginx
 $ kill -9 [pid]
 ```
 
+## CentOS 防火墙
+
 开启端口
 
 ```
@@ -94,7 +96,37 @@ sudo firewall-cmd --reload
 systemctl start firewalld
 ```
 
-Nginx 已启动，但是欢迎页（外网 IP）无法访问，这是因为 Nginx 配置文件默认监听 80 端口，但是阿里云实例中并没有开通，操作步骤：实例 -> 管理 -> 安全组 -> 配置规则 -> 添加安全组规则 端口范围 80/80 授权对象 0.0.0.0/0 参考：[解决阿里云服务器安装 nginx 不能访问的问题](https://www.jianshu.com/p/0328acae26b0)
+查看防火墙状态
+
+```
+firewall-cmd --state
+```
+
+关闭防火墙
+
+```
+systemctl stop firewalld
+```
+
+查看当前防火墙开放的端口
+
+```
+firewall-cmd --list-ports
+```
+
+添加端口(比如 80)
+
+```
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+```
+
+重新启动防火墙
+
+```
+firewall-cmd --reload
+```
+
+**注意：** Nginx 已启动，但是欢迎页（外网 IP）无法访问，这是因为 Nginx 配置文件默认监听 80 端口，但是阿里云实例中并没有开通，操作步骤：实例 -> 管理 -> 安全组 -> 配置规则 -> 添加安全组规则 端口范围 80/80 授权对象 0.0.0.0/0 参考：[解决阿里云服务器安装 nginx 不能访问的问题](https://www.jianshu.com/p/0328acae26b0)
 
 ## CentOS 安装 Python
 
@@ -107,15 +139,14 @@ $ sudo yum install python36
 $ python3 -V
 ```
 
-安装虚拟环境
+#### 安装虚拟环境
 
 ```
 $ pip3 install virtualenv
 $ pip3 install virtualenvwrapper
 ```
 
-设置全局变量  
-vim ~/.bashrc
+设置全局变量 `vim ~/.bashrc`
 
 ```
 export WORKON_HOME=$HOME/.virtualenvs
@@ -123,7 +154,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-source ~/.bashrc
+`source ~/.bashrc`
 
 创建虚拟环境
 
@@ -162,38 +193,24 @@ $ nginx -t -c /etc/nginx/nginx.conf
 
 ```
 $ netstat -ltnep
-
 $ netstat -lnp|grep [port]
 ```
 
-防火墙命令
+配置前端环境（以 ant design pro 为例）
+
+在 `/etc/nginx/conf.d` 文件夹下创建`nginx.conf`文件
+
+#### uWSGI
+
+参考资料：[uWSGI 教程](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
+
+uwsgi 启动：先进入虚拟环境，然后进入项目目录，执行
 
 ```
-查看防火墙状态
-firewall-cmd --state
-
-打开防火墙
-systemctl start firewalld
-
-关闭防火墙
-systemctl stop firewalld
-
-查看当前防火墙开放的端口
-firewall-cmd --list-ports
-
-添加80端口
-firewall-cmd --zone=public --add-port=80/tcp --permanent
-
-重新启动防火墙
-firewall-cmd --reload
-
+uwsgi --ini uwsgi.ini
 ```
 
-uWSGI
-
-uwsgi 启动：如果有虚拟环境先进入虚拟环境，然后进入项目目录，然后执行 uwsgi --ini uwsgi.ini
-
-重启
+重启（更改项目文件后，需要重启）
 
 ```
 uwsgi --reload uwsgi.pid
@@ -207,4 +224,55 @@ uwsgi --stop uwsgi.pid
 
 uwsgi.ini module 指向 django 项目 settings 对应的名称
 
-[uWSGI 教程](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
+直接在 /etc/nginx/nginx.conf 配置 server
+
+```
+server {
+    listen [port];
+    server_name 127.0.0.1;
+
+    location / {
+        include /etc/nginx/uwsgi_params;
+        uwsgi_pass 127.0.0.1:[uwsgi_port];
+    }
+
+    location /static {
+        alias /path/to/mysite/static;
+    }
+}
+```
+
+**注意** 无法访问/root/下部署的程序，需要开放阿里云根目录访问权限
+
+```
+$ chmod -R 777 /root
+```
+
+什么是软链接？
+
+#### 配置静态文件
+
+项目目录 /mysite/settings.py 添加
+
+```
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+```
+
+运行
+
+```
+python manage.py collectstatic
+```
+
+## https ssl
+
+云盾证书服务(包年) -> 免费版（个人）DV -> Symantec  
+个人型 SSL 证书，保护一个域名。浏览器上有 https 提示并有绿锁标记。快速签发，适合个人和小微企业，支持个人/企业申请。一个阿里云帐户最多签发 20 张。
+
+[在 Nginx/Tengine 服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.0.0.3b6156a7dlzBU8)
+
+Nginx 配置路径：/etc/nginx/ 下建 cert 文件夹 放入证书文件 domain_name.key, domain_name.pem
+
+http 自动跳转 https 配置
+
+前端程序 nginx.conf 也要配置 ssl

@@ -2,20 +2,21 @@
 
 ## MacBook 常用软件
 
-| 软件        | 功能         |
-| ----------- | ------------ |
-| MagicanRest | 休息提醒     |
-| VirtualBox  | 免费的虚拟机 |
-| Folx        | 下载工具     |
-| Charles     | 抓包工具     |
-| Dr.Cleaner  | 系统清理工具 |
-| SmartSVN    | 管理工具     |
-| Alfred      | 快速搜索工具 |
-| ForkLift    | FTP          |
-| Fliqlo      | 经典时钟屏保 |
-| iTerm       | 终端         |
-| Oh My Zsh   | 终端         |
-| Homebrew    | 包安装工具   |
+| 软件            | 功能            |
+| --------------- | --------------- |
+| MagicanRest     | 休息提醒        |
+| VirtualBox      | 免费的虚拟机    |
+| Folx            | 下载工具        |
+| Charles         | 抓包工具        |
+| Dr.Cleaner      | 系统清理工具    |
+| SmartSVN        | 管理工具        |
+| Alfred          | 快速搜索工具    |
+| ForkLift        | FTP             |
+| Fliqlo          | 经典时钟屏保    |
+| iTerm           | 终端            |
+| Oh My Zsh       | 终端            |
+| Homebrew        | 包安装工具      |
+| OminDiskSweeper | 文件分布查看 ｜ |
 
 ## macOS 查看本地 IP
 
@@ -51,6 +52,11 @@ $ cd Library
 $ du -d 1 -h
 ```
 
+升级系统/XCode 会占用大量内存，储存空间中“其他”占用很大空间
+![](../images/macOS_room_problem.png)  
+使用 **[OmniDiskSweeper](https://www.omnigroup.com/more/)**，文件从大到小显示
+![](../images/OminDiskSweeper.png)
+
 ## 查看 iOS simulator 列表
 
 ```
@@ -73,7 +79,10 @@ $ xcrun simctl erase all
 
 Spotlight -> TextEdit.app -> Menu -> 文本编辑 -> 偏好设置 -> 新建文稿 -> 纯文本
 
+## SmartSVN
+
+SmartSVN 修改 repository 地址：Menu -> Modify -> Relocate
+
 ## 其他
 
 1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
-2. SmartSVN 修改 repository 地址：Menu -> Modify -> Relocate
