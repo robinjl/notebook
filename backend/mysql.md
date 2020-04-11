@@ -34,7 +34,8 @@ bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪�
 #### DataGrip
 
 1. 导出数据库： 选择数据库 -> 右键 -> Dump with 'mysqldump'
-2. 导入数据库： schemes 下创建数据库 -> 右键 -> Restore with 'mysql' 或者 打开.sql文件运行->tab 右键-> run -> 选择数据库
+2. 导入数据库： schemes 下创建数据库 -> 右键 -> Restore with 'mysql' 或者 打开.sql 文件运行->tab 右键-> run -> 选择数据库
+3. 在自动生成的命令上加上-d参数, 就可以仅仅导出表结构而不包含数据
 
 #### Navicat
 
@@ -83,9 +84,29 @@ select database();    // 查看当前使用
 create database [database_name];
 create database [database_name] character utf8;  // 指定字符集 无效
 
-CREATE DATABASE mydb
+CREATE DATABASE [database_name]
   CHARACTER SET utf8
   COLLATE utf8_general_ci;
+```
+
+修改数据库字符集
+
+```
+ALTER DATABASE [database_name] DEFAULT CHARACTER SET character_name [COLLATE ...];
+```
+
+把表默认的字符集和所有字符列（CHAR,VARCHAR,TEXT）改为新的字符集：
+
+```
+ALTER TABLE [table_name] CONVERT TO CHARACTER SET character_name [COLLATE ...]
+如：ALTER TABLE [table_name] CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
+
+只是修改表的默认字符集：
+
+```
+ALTER TABLE [table_name] DEFAULT CHARACTER SET character_name [COLLATE...];
+如：ALTER TABLE [table_name] DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 查看数据库定义信息
@@ -173,4 +194,10 @@ create table [database_name] (
      phone char(11) unique,
      birthday date not null
 )
+```
+
+## 删除 Column
+
+```
+ALTER TABLE [table_name] DROP COLUMN [column_name];
 ```

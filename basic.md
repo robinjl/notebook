@@ -134,3 +134,4 @@
 2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
 3. [科学上网的终极姿势：在 Vultr VPS 上搭建 Shadowsocks](https://zoomyale.com/2016/vultr_and_ss)
 4. [MikuTools](https://tools.miku.ac/)
+5. [图片压缩 Tinypng](https://tinypng.com/)

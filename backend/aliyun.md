@@ -200,6 +200,11 @@ $ netstat -lnp|grep [port]
 
 在 `/etc/nginx/conf.d` 文件夹下创建`nginx.conf`文件
 
+重启 nginx
+```
+$ systemctl restart nginx
+```
+
 #### uWSGI
 
 参考资料：[uWSGI 教程](https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html)
@@ -207,7 +212,7 @@ $ netstat -lnp|grep [port]
 uwsgi 启动：先进入虚拟环境，然后进入项目目录，执行
 
 ```
-uwsgi --ini uwsgi.ini
+uwsgi --ini uwsgi.ini  // 可以打印调试信息
 ```
 
 重启（更改项目文件后，需要重启）

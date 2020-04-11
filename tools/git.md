@@ -72,7 +72,7 @@ $ git log -p        含有内容差异
 $ git log -2        最近数条
 $ git log --stat    列出总结性选项
 $ git log --pretty=oneline || short || full || fuller 格式化查看内容
-$ git log --pragh   展现分支线
+$ git log --pragh   展现分支线  
 
 $ git log filename  查看单文件提交历史
 $ git log -p filename 查看单文件提交历史和差异详细信息

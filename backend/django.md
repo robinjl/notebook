@@ -65,6 +65,12 @@ pip 安装指定版本
 $ pip install [package_anme]==[version_name]
 ```
 
+创建应用
+
+```
+$ python manage.py startapp [app_name]
+```
+
 本地项目迁移
 
 ```
@@ -165,3 +171,18 @@ fc-list | grep chinese //查看安装的新字体
 ```
 open /Applications/Python\ 3.7/Install\ Certificates.command
 ```
+
+
+#### 映射数据库出现的问题
+
+重复列名 `Duplicate column name [column_name]`
+
+删除 Column
+
+```
+ALTER TABLE [table_name] DROP COLUMN [column_name];
+```
+
+已存在表 Table already exits
+
+删除 migrations对应py文件相应的表模块

@@ -147,7 +147,7 @@ _尚未实践_ [文档](http://facebook.github.io/react-native/docs/upgrading)
 ## 启动模拟器
 
 1. Android Studio -> Run / iOS Xcode -> Run
-2. iOS 指定模拟器
+2. iOS 指定模拟器, [React Native Change Default iOS Simulator Device](https://stackoverflow.com/questions/37328942/react-native-change-default-ios-simulator-device)  
    `react-native run-ios --simulator="iPhone X"`  
    查看 Xcode 可用模拟器 `xcrun simctl list devices`  
    直接开启 `open -a simuloar`
@@ -181,4 +181,9 @@ sudo gem install cocoapods -v [version] 安装指定版本
 ## 开发问题
 
 1. ERROR: [Builds in Xcode but not using command line](https://github.com/facebook/react-native/issues/18793)  
-解决方法：删除 ios/build 文件夹，重新运行
+   解决方法：删除 ios/build 文件夹，重新运行
+
+## 投影
+
+- Total Control（Android on Windows）
+- 隔空投放

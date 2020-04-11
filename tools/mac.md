@@ -2,21 +2,21 @@
 
 ## MacBook 常用软件
 
-| 软件            | 功能            |
-| --------------- | --------------- |
-| MagicanRest     | 休息提醒        |
-| VirtualBox      | 免费的虚拟机    |
-| Folx            | 下载工具        |
-| Charles         | 抓包工具        |
-| Dr.Cleaner      | 系统清理工具    |
-| SmartSVN        | 管理工具        |
-| Alfred          | 快速搜索工具    |
-| ForkLift        | FTP             |
-| Fliqlo          | 经典时钟屏保    |
-| iTerm           | 终端            |
-| Oh My Zsh       | 终端            |
-| Homebrew        | 包安装工具      |
-| OminDiskSweeper | 文件分布查看 ｜ |
+| 软件            | 功能         |
+| --------------- | ------------ |
+| MagicanRest     | 休息提醒     |
+| VirtualBox      | 免费的虚拟机 |
+| Folx            | 下载工具     |
+| Charles         | 抓包工具     |
+| Dr.Cleaner      | 系统清理工具 |
+| SmartSVN        | 管理工具     |
+| Alfred          | 快速搜索工具 |
+| ForkLift        | FTP          |
+| Fliqlo          | 经典时钟屏保 |
+| iTerm           | 终端         |
+| Oh My Zsh       | 终端         |
+| Homebrew        | 包安装工具   |
+| OminDiskSweeper | 文件分布查看 |
 
 ## macOS 查看本地 IP
 
@@ -82,6 +82,13 @@ Spotlight -> TextEdit.app -> Menu -> 文本编辑 -> 偏好设置 -> 新建文�
 ## SmartSVN
 
 SmartSVN 修改 repository 地址：Menu -> Modify -> Relocate
+
+## Axure RP
+
+macOS 升级 10.15，Axure RP 8 打不开，需要下载 8.1.0.3388 或 9， 下载地址：[Axure RP 8 Mac](https://www.axure.com/release-history/rp8)  
+注册码：  
+Licensee：zdfans.com  
+Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli  
 
 ## 其他
 
