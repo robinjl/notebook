@@ -133,6 +133,25 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 证书类型： 个人 / 公司 年费 $99 / 企业 年费 $299
 审核日期目前为 1 ～ 2 个工作日
 
+2020 年续费流程发生了改变，需要先在 iPhone 下载 Apple Developer App, 完成身份验证，然后才能续费
+
+#### 企业开发者资质证书 certificate 更新
+
+1. Mac 钥匙串访问 -> 证书助理 -> 从证书颁发机构请求证书 -> 创建 CSR
+2. Apple Developer -> Certificate -> 创建 -> iOS Distribution (App Store and Ad Hoc) -> 选择 CSR -> 生成证书
+
+#### 极光推送证书更新
+
+1. Identifiers -> Push Noficications -> Edit -> Production SSL Certificate -> 选择 mac CSR
+2. Certificates -> 创建 -> Apple Push Notification service SSL (Sandbox & Production) -> App ID -> 生成 Cer 文件
+3. 双击 Cer 文件 -> 右键导出 p12 文件 -> 设置密码 -> mac 登录密码
+4. 极光后台 -> app -> iOS -> 证书配置 -> 编辑 -> 选择上传 p12 文件，输入证书密码
+5. （将要）过期的 Certificate 可以删除
+
+#### 蒲公英内测版这书更新
+
+1. Profiles -> Edit -> 选择新的企业证书 -> 保存导出 provision 文件 -> Xcode Organizer -> 打包更新
+
 ## Android 应用市场
 
 1. 腾讯开放平台（应用宝）
