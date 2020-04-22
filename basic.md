@@ -63,7 +63,7 @@
 
 - 通用工具
 
-  - Linux 
+  - Linux
   - Shell
   - Git / GitHub / GitLab
   - Postman
@@ -132,6 +132,5 @@
 
 1. [Bing 每日一图 API](http://guolin.tech/api/bing_pic)
 2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
-3. [科学上网的终极姿势：在 Vultr VPS 上搭建 Shadowsocks](https://zoomyale.com/2016/vultr_and_ss)
-4. [MikuTools](https://tools.miku.ac/)
-5. [图片压缩 Tinypng](https://tinypng.com/)
+3. [MikuTools](https://tools.miku.ac/)
+4. [图片压缩 Tinypng](https://tinypng.com/)
