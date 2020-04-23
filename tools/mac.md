@@ -51,6 +51,11 @@ $ du -sh *
 $ cd Library
 $ du -d 1 -h
 ```
+查看硬盘空间
+
+```
+$ df -h
+```
 
 升级系统/XCode 会占用大量内存，储存空间中“其他”占用很大空间
 ![](../images/macOS_room_problem.png)  

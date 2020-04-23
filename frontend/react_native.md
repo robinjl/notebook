@@ -122,8 +122,11 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
 1. 蒲公英
    iOS 设备需要通过蒲公英提供的二维码，扫码后获取 UDID，然后在 App Developer 中注册该设备，然后更新应用的 Provisioning Profile 中设备列表  
-   iOS 测试设备上限 100 台，设备即便禁用后，也计入其中。每一次年费续费，苹果允许重置一次；如果需要立即重置，也可以直接[发送邮件申请](https://developer.apple.com/contact/submit/)  
    每个版本单日下载量上限 100 次
+   iOS 测试设备上限 100 台，设备即便禁用后，也计入其中。每一次年费到期续费，苹果允许重置一次；如果需要立即重置，也可以直接[发送邮件申请](https://developer.apple.com/contact/submit/)    
+   Devices 会显示 Warning 信息 _Reset your device list before adding any new devices._
+   ![](../images/select_devices_to_carry_on.png)
+   选中在下一年要保留的设备  
 
 2. TestFlight
    _尚未实践_
@@ -131,7 +134,8 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 ## App Store
 
 证书类型： 个人 / 公司 年费 $99 / 企业 年费 $299
-审核日期目前为 1 ～ 2 个工作日
+审核日期目前为 1 ～ 2 个工作日  
+[查看订单](https://secure1.www.apple.com.cn/shop/order/list)
 
 2020 年续费流程发生了改变，需要先在 iPhone 下载 Apple Developer App, 完成身份验证，然后才能续费
 
@@ -148,7 +152,7 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 4. 极光后台 -> app -> iOS -> 证书配置 -> 编辑 -> 选择上传 p12 文件，输入证书密码
 5. （将要）过期的 Certificate 可以删除
 
-#### 蒲公英内测版这书更新
+#### 蒲公英内测版证书更新
 
 1. Profiles -> Edit -> 选择新的企业证书 -> 保存导出 provision 文件 -> Xcode Organizer -> 打包更新
 

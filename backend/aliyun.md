@@ -227,6 +227,8 @@ uwsgi --reload uwsgi.pid
 uwsgi --stop uwsgi.pid
 ```
 
+如果无法停止，查看对应的端口进程情况 `netstat -lnp|grep [port]` 然后编辑 uwsgi.pid，重新停止
+
 uwsgi.ini module 指向 django 项目 settings 对应的名称
 
 直接在 /etc/nginx/nginx.conf 配置 server
@@ -254,6 +256,8 @@ $ chmod -R 777 /root
 ```
 
 什么是软链接？
+
+uwsgi 报错 `no python application found`, 检查是否是虚拟环境错误
 
 #### 配置静态文件
 
