@@ -123,10 +123,12 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 1. 蒲公英
    iOS 设备需要通过蒲公英提供的二维码，扫码后获取 UDID，然后在 App Developer 中注册该设备，然后更新应用的 Provisioning Profile 中设备列表  
    每个版本单日下载量上限 100 次
-   iOS 测试设备上限 100 台，设备即便禁用后，也计入其中。每一次年费到期续费，苹果允许重置一次；如果需要立即重置，也可以直接[发送邮件申请](https://developer.apple.com/contact/submit/)    
+   iOS 测试设备上限 100 台，设备即便禁用后，也计入其中。每一次年费到期续费，苹果允许重置一次；如果需要立即重置，也可以直接[发送邮件申请](https://developer.apple.com/contact/submit/)  
    Devices 会显示 Warning 信息 _Reset your device list before adding any new devices._
+
    ![](../images/select_devices_to_carry_on.png)
-   选中在下一年要保留的设备  
+
+   选中在下一年要保留的设备
 
 2. TestFlight
    _尚未实践_
@@ -205,6 +207,55 @@ sudo gem install cocoapods -v [version] 安装指定版本
 
 1. ERROR: [Builds in Xcode but not using command line](https://github.com/facebook/react-native/issues/18793)  
    解决方法：删除 ios/build 文件夹，重新运行
+
+2. iphone 真机无法开启 debug 模式
+
+解决方法：
+
+- 将 http://localhost:8081/debugger-ui/ 改为 http://192.168.xxx.xxx:8081/debugger-ui/
+- [Cannot debug JS remotely on iOS device](https://github.com/facebook/react-native/issues/14288)
+
+3. react-native-photo-view 编译错误
+
+解决方法：
+
+- [Manifest merger failed](https://github.com/alwx/react-native-photo-view/issues/75)
+- [ERROR: Attribute application@allowBackup value=(false)](https://stackoverflow.com/questions/46934387/attribute-applicationallowbackup-value-false-from-androidmanifest-xml-is-also)
+
+4. JPush-react-native iOS staging / release 编译报错
+   `"_OBJC_CLASS_$_JPUSHService", referenced from: Objc-class-ref in AppDelegate.o Symbol(s) not found for architecture x86_64`
+   jpush-react-native jcore-react-native 没有配置完全
+   `-[JPUSHSRVResolver processRecord:length:] in libRCTJCoreModule.a(JPUSHSRVResolver.o)`
+   缺少 libresolv.tbd
+   解决方法：TARGETS -> Build Settings -> Build Active Architecture Only -> release 设为 Yes [release 模式编译失败](https://github.com/jpush/jpush-react-native/issues/104)
+
+5. Android 9 闪退原因之一
+
+要求使用 HTTPS， 解决方法 在 `AndroidManifest.xml` 中 添加代码 `android:usesCleartextTraffic="true"`
+
+6. Release 无法编译
+
+[Undefined symbols for architecture arm64 - JSClassCreate](https://stackoverflow.com/questions/54515175/undefined-symbols-for-architecture-arm64-jsclasscreate)
+
+Scheme -> Build -> 去掉 XXXTests 勾选
+
+7. Staging Archive 报错
+
+`Library not found for -lPods-RiskControlApp`
+
+配置 Pods
+Pods -> PROJECT -> Build Locations -> Pre-configuration Build Products Path -> Staging -> $(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
+
+8. Android 真机调试状态 redux-persist: rehydrate for "root" called after timeout
+
+解决方法： persistConfig 配置 timeout: 0
+
+9. Android "import android.support.v4.util.Pools" problem
+    `npm install --save-dev jetifier`
+
+Manifest merger failed : Attribute application@appComponentFactory
+gradle.properties file 增加
+`android.enableJetifier=true android.useAndroidX=true`
 
 ## 投影
 

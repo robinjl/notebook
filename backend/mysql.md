@@ -5,6 +5,7 @@
 - [MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/)
 - [MySQL Tutorial](http://www.mysqltutorial.org/)
 - [腾讯课堂](https://ke.qq.com/course/431451?term_id=100515157&taid=3746143490446683)
+- [SQL 教程-廖雪峰](https://www.liaoxuefeng.com/wiki/1177760294764384)
 
 ## 客户端
 
@@ -35,7 +36,7 @@ bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪�
 
 1. 导出数据库： 选择数据库 -> 右键 -> Dump with 'mysqldump'
 2. 导入数据库： schemes 下创建数据库 -> 右键 -> Restore with 'mysql' 或者 打开.sql 文件运行->tab 右键-> run -> 选择数据库
-3. 在自动生成的命令上加上-d参数, 就可以仅仅导出表结构而不包含数据
+3. 在自动生成的命令上加上-d 参数, 就可以仅仅导出表结构而不包含数据
 
 #### Navicat
 
@@ -137,7 +138,7 @@ show tables;
 
 ```
 CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
-       species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+       species VARCHAR(20), sex CHAR(1), birth DATE, death DATE) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
 查看表
@@ -200,4 +201,12 @@ create table [database_name] (
 
 ```
 ALTER TABLE [table_name] DROP COLUMN [column_name];
+```
+
+## 删除带有外键约束的记录
+
+```
+set foreign_key_checks = 0; // 关闭外键检查
+delete from [table_name] where ...;
+set foreign_key_checks = 1; // 重新开启外键检查
 ```
