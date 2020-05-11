@@ -98,3 +98,4 @@ Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli
 ## 其他
 
 1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
+2. [MacWk](https://macwk.com/) Mac 软件下载

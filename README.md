@@ -75,6 +75,9 @@ Electron
 5. [WebStorm](tools/webstorm.md)
 6. Postman
 7. [VirtualBox](tools/virtualbox.md)
+8. 思维导图 XMind 在线工具：[ProcessOn](https://processon.com/)
+9. Axure RP
+10. [蓝湖](https://lanhuapp.com/)
 
 ## 职场/创业
 
