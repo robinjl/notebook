@@ -201,6 +201,7 @@ $ netstat -lnp|grep [port]
 在 `/etc/nginx/conf.d` 文件夹下创建`nginx.conf`文件
 
 重启 nginx
+
 ```
 $ systemctl restart nginx
 ```
@@ -275,7 +276,7 @@ python manage.py collectstatic
 
 ## https ssl
 
-云盾证书服务(包年) -> 免费版（个人）DV -> Symantec  
+云盾证书服务(包年) 单域名-> 免费版（个人）DV -> Symantec (已更名) 
 个人型 SSL 证书，保护一个域名。浏览器上有 https 提示并有绿锁标记。快速签发，适合个人和小微企业，支持个人/企业申请。一个阿里云帐户最多签发 20 张。
 
 [在 Nginx/Tengine 服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.0.0.3b6156a7dlzBU8)
@@ -285,3 +286,11 @@ Nginx 配置路径：/etc/nginx/ 下建 cert 文件夹 放入证书文件 domain
 http 自动跳转 https 配置
 
 前端程序 nginx.conf 也要配置 ssl
+
+## 域名备案
+
+域名实名认证后，要至少等待 3 天信息同步后才可以进行域名备案；否则，会提示
+
+> 请在域名注册商完成域名实名认证后 2-3 天再提交备案
+
+https://*[domain_name]*:*[port_name]* 无法访问？

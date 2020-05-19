@@ -4,7 +4,9 @@
 
 [Google Python 风格指南](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/)
 
-## Mac 下安装 mysqlclient 报错问题
+## 常见问题
+
+1. Mac 下安装 mysqlclient 报错问题
 
 根据[官网](https://github.com/PyMySQL/mysqlclient-python)安装 python mysql 中间件
 
@@ -41,7 +43,22 @@ PyCharm -> Edit Configuration
 
 ## Django Rest Framework
 
-[Authentication credentials were not provided](https://stackoverflow.com/questions/26906630/django-rest-framework-authentication-credentials-were-not-provided)
+1. [Authentication credentials were not provided](https://stackoverflow.com/questions/26906630/django-rest-framework-authentication-credentials-were-not-provided)
+
+2. DRF 文档返回结果
+
+```
+{
+    "detail": "You do not have permission to perform this action."
+}
+```
+
+这是因为 scheme（接口列表） 是空的，源码判断混淆，[参考](https://github.com/encode/django-rest-framework/issues/6801)
+
+3. django class
+   报错：`has no attribute 'get_extra_actions'`
+
+解决方法：？
 
 ## pip install 安装缓慢
 
@@ -172,7 +189,6 @@ fc-list | grep chinese //查看安装的新字体
 open /Applications/Python\ 3.7/Install\ Certificates.command
 ```
 
-
 #### 映射数据库出现的问题
 
 重复列名 `Duplicate column name [column_name]`
@@ -185,4 +201,4 @@ ALTER TABLE [table_name] DROP COLUMN [column_name];
 
 已存在表 Table already exits
 
-删除 migrations对应py文件相应的表模块
+删除 migrations 对应 py 文件相应的表模块
