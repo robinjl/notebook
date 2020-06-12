@@ -36,7 +36,7 @@ bin 目录包含工具集，其中 javac.exe 是编辑工具，java.exe 是执�
 
 ## 配置开发环境
 
-1. 安装 Java
+1. Mac OS X 安装 Java
 
 (1) 通过 Oracle Java 官网下载安装  
 (2) 使用过 React Native，已经安装过 Java， [文档](http://facebook.github.io/react-native/docs/getting-started)  
@@ -71,6 +71,14 @@ $ source ~/.zshrc
 $ echo $JAVA_HOME
 ```
 
+3. Linux 安装 Java8
+
+```
+yum install java-1.8.0-openjdk
+```
+
+安装在 /usr/lib/jvm
+
 ## J2SE
 
 ## J2EE
@@ -92,3 +100,19 @@ $ echo $JAVA_HOME
 ## Tomcat
 
 ## Maven
+
+## IntelliJ IDEA
+
+1. 配置热更新
+   （1）安装 SpringBoot DevTools
+   （2）IDEA Compiler 勾选 Build project automatically
+   （3）Shift+option+command+/， 点击 Registry, 勾选 compiler.automake.allow.when.app.running
+
+
+## 部署
+
+1. 打包：`mvn clean package`
+2. 命令行：
+`java -jar xxx.jar`  
+或者加上配置变量  
+`java -jar xxx.jar --spring.profiles.active=dev` 

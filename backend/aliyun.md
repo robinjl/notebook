@@ -293,4 +293,12 @@ http 自动跳转 https 配置
 
 > 请在域名注册商完成域名实名认证后 2-3 天再提交备案
 
-https://*[domain_name]*:*[port_name]* 无法访问？
+https://*[domain_name]*:*[port_name]* 无法访问？  
+后来没有调整什么就可以访问了，难道是域名实名认证后需要一段时间后才可以访问？
+
+
+## issues
+
+1. 阿里云部署后出现报错 `[Errno 5] Input/output error` 或者其他报错
+
+解决方法：注释 print 调用支付宝支付接口也出现过问题，都是因为 print 的原因

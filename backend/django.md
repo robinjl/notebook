@@ -191,7 +191,7 @@ open /Applications/Python\ 3.7/Install\ Certificates.command
 
 #### 映射数据库出现的问题
 
-重复列名 `Duplicate column name [column_name]`
+1. 重复列名 `Duplicate column name [column_name]`
 
 删除 Column
 
@@ -199,6 +199,18 @@ open /Applications/Python\ 3.7/Install\ Certificates.command
 ALTER TABLE [table_name] DROP COLUMN [column_name];
 ```
 
-已存在表 Table already exits
+2. 已存在表 Table already exits
 
 删除 migrations 对应 py 文件相应的表模块
+
+3. 已经建立表（existing schema）的情况
+
+```
+python manage.py migrate --fake
+```
+
+[Create initial migrations for existing schema](https://stackoverflow.com/questions/29888046/django-1-8-create-initial-migrations-for-existing-schema)
+
+## 其他
+
+[BasicComparisonFilters](https://code.djangoproject.com/wiki/BasicComparisonFilters)
