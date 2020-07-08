@@ -2,7 +2,8 @@
 
 ## 视频课程
 
-[Java 零基础入门到精通-上](https://ke.qq.com/course/375599?taid=2866267900197679)
+- [Java 零基础入门到精通-上](https://ke.qq.com/course/375599?taid=2866267900197679)
+- [从 Java 后端到 Web 全栈](https://class.imooc.com/sale/javafullstack)
 
 ## IDE
 
@@ -33,6 +34,14 @@ JDK Java Development Kit Java 开发工具包
 JDK 包含 JRE，JRE 包含 JVM
 
 bin 目录包含工具集，其中 javac.exe 是编辑工具，java.exe 是执行工具
+
+DO Data Object 数据对象  
+DAO Data Access Object 数据访问对象  
+DTO Data Transfer Object 数据传输对象  
+BO Business Object 业务对象
+VO View Object 显示层对象
+
+数据持久层 JPA(Java Persistance API) / MyBatis (MyBatis Plus) / iBatis / Hibernate
 
 ## 配置开发环境
 
@@ -83,13 +92,13 @@ yum install java-1.8.0-openjdk
 
 ## J2EE
 
-#### SSH 框架
+### SSH 框架
 
 - Struts
 - Spring
 - Hibernate
 
-#### SSM 框架
+### SSM 框架
 
 - Spring
 - SpringMVC
@@ -108,11 +117,103 @@ yum install java-1.8.0-openjdk
    （2）IDEA Compiler 勾选 Build project automatically
    （3）Shift+option+command+/， 点击 Registry, 勾选 compiler.automake.allow.when.app.running
 
+2. @Getter @Setter 但 IntelliJ 提示找不到 get()、set()方法
+   pom.xml 中引入 lombok 包，IDE 安装 lombok 插件
+
+3. intellij IDEA Properties 中文 unicode 转码问题
+   Preferences -> File Encodings -> 勾选 Transparent native-to-ascii conversion
+
+4. 版本控制不显示颜色问题
+   Preferences -> Version Control -> Add -> Apply
+
+5. console 日志有时不显示颜色问题
+   application.properties 增加配置项 `spring.output.ansi.enabled = ALWAYS`
+
+6. Java 注释格式化
+   Preferences -> Code Style -> Java -> Code Generation(tab) -> Comment Code
+
+7. 快捷键
+
+多行编辑：Shift + Option + click
+
+8. 在 resources/mapper/mapper.xml 文件中书写 sql
+   Option + Enter -> Edit Generic SQL Fragment 或者 Language Injection Setting
+    并且改成 Convert to MySQL 这时语句会高亮和格式化
+   怎样换行缩进？
 
 ## 部署
 
 1. 打包：`mvn clean package`
 2. 命令行：
-`java -jar xxx.jar`  
-或者加上配置变量  
-`java -jar xxx.jar --spring.profiles.active=dev` 
+   `java -jar xxx.jar`  
+   或者加上配置变量  
+   `java -jar xxx.jar --spring.profiles.active=dev`
+
+## 从 Java 后端到 Web 全栈 教程笔记
+
+1. IntelliJ 启动， `Edit Configuration` 选择主入口文件，`use classpath of module` 选择项目名称，
+   而不是 main 或 test
+
+2. 开闭原则 （OCP， open closed principle） 里氏替换原则 迪米特法则
+   IOC Inverse of Control 控制反转  
+   DI Dependency Injection 依赖注入 （1）属性注入 （2）构造注入
+   DIP Dependency Inversion Principle 依赖倒置  
+   Interface -> 设计模式：工厂模式 -> IOC / DI  
+   面向抽象 -> OCP -> 编写可维护的代码  
+   单纯的 interface 可以统一方法的调用，但不能统一对象实例化
+   IOC 实现：容器 加入容器 注入
+
+3. `xxx required a bean of type xxx`
+   可能是 interface 没有找到实现，MyBatis Mapper 映射配置
+
+4. 注解
+5. stereotype annotations 模式注解
+   @Component 基础注解 组件/类/bean 类的实例化 加入容器
+   @Controller @Repository @Service 衍生注解
+   @Configuration
+
+Field 注入 / constructor 注入 / set 注入  
+Spring 官方不推荐 field injection，推荐 constructor-based 注入
+
+5. Entity 与数据库表
+   JPA/Hibernate 实体类生成表  
+   MyBatis 实体类生成表  
+   先创建表，逆向生成实体类
+
+6. JSON 序列化库
+   Jackson / Fastjson
+
+### 阶段二 Java Spring API
+
+1. JPA 逆向生成 Entity, 通过数据表生成 model
+   (1) 引用 spring-boot-starter-data-jpa 依赖
+   (2) IntelliJ 连接 Database
+   (3) File -> Project Structure -> Project Settings -> Modules -> Current Project -> Add -> JPA -> Default JPA Provider -> Hibernate
+   (4) View -> Tool Windows -> Persistance
+   (5) 项目名称 -> 右键 -> Generate Persistance Mapping -> By database schema -> 选择数据源和 package
+
+2. CodeGenerator
+
+0.1.0 报错 应使用最新版本
+
+### 阶段三 Java CMS
+
+1. 下载项目目前最新版本是 [tag 0.2.0](https://github.com/TaleLin/lin-cms-spring-boot/tree/sleeve-0.2.0)
+2. 按照热更新配置，但是并没有起到作用
+   原因：？
+3. FileController.java、FileServiceImpl.java 编译报错
+   原因：？
+4. log.error / info 无法被 IDE 识别
+   原因：？
+5. create 方法执行后，create_time, update_time 没有赋值
+   原因：字段没有设置默认值  
+   解决：设置默认值 比如 CURRENT_TIMESTAMP，以及勾选“根据当前时间戳更新”
+6. 分页处理，起始页从 0 开始 page 类型 Long 报错？Interger
+7. MyBatis SQL 查询后的数据集要要映射到对象模型转化成 Java 对象，
+resultType 属性指向对象模型，而且是完整路径，IDE 右键模型，选择 copy reference 粘贴路径  
+resultMap 属性制定手写的resultMap xml  表字段与对象属性同名，可以不用写result配置项
+二者选其一
+
+8. JPA 与 MyBatis/MyBatis Plus 可以混合使用
+   JPA 导航属性 自动生成 SQL， 但灵活控制查询语句需要较高的学习成本
+   MyBatis 手写 SQL

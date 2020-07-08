@@ -128,6 +128,12 @@ firewall-cmd --reload
 
 **注意：** Nginx 已启动，但是欢迎页（外网 IP）无法访问，这是因为 Nginx 配置文件默认监听 80 端口，但是阿里云实例中并没有开通，操作步骤：实例 -> 管理 -> 安全组 -> 配置规则 -> 添加安全组规则 端口范围 80/80 授权对象 0.0.0.0/0 参考：[解决阿里云服务器安装 nginx 不能访问的问题](https://www.jianshu.com/p/0328acae26b0)
 
+## 磁盘空间
+
+`df -h` 查看磁盘剩余空间
+
+查看文件大小 `du -h [目录名]` 查看指定文件夹下的所有文件大小（包含子文件夹）
+
 ## CentOS 安装 Python
 
 参考：[Python 3 Installation on Centos 7](https://medium.com/@gk.mr/python-3-6-x-installation-centos-7-4-55ada041a03)  
@@ -276,7 +282,7 @@ python manage.py collectstatic
 
 ## https ssl
 
-云盾证书服务(包年) 单域名-> 免费版（个人）DV -> Symantec (已更名) 
+云盾证书服务(包年) 单域名-> 免费版（个人）DV -> Symantec (已更名)
 个人型 SSL 证书，保护一个域名。浏览器上有 https 提示并有绿锁标记。快速签发，适合个人和小微企业，支持个人/企业申请。一个阿里云帐户最多签发 20 张。
 
 [在 Nginx/Tengine 服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.0.0.3b6156a7dlzBU8)
@@ -296,6 +302,66 @@ http 自动跳转 https 配置
 https://*[domain_name]*:*[port_name]* 无法访问？  
 后来没有调整什么就可以访问了，难道是域名实名认证后需要一段时间后才可以访问？
 
+## 安装 Mysql
+
+以 5.7 为例
+
+1. 添加 Mysql5.7 仓库
+
+```
+sudo rpm -ivh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+```
+
+2.开始安装 Mysql5.7
+
+```
+sudo yum -y install mysql-community-server
+```
+
+3. 启动 Mysql
+
+启动
+
+```
+sudo systemctl start mysqld
+```
+
+设置系统启动时自动启动
+
+```
+sudo systemctl enable mysqld
+```
+
+查看启动状态
+
+```
+sudo systemctl status mysqld
+```
+
+修改 root 密码
+
+```
+sudo grep 'temporary password' /var/log/mysqld.log // 获取临时密码
+mysql -uroot -p // 用临时密码登录
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new password' // 设置新密码
+```
+
+## 允许远程连接数据库
+
+进入 MySQL 命令行，允许所有 IP 地址访问数据库
+
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'passowrd' WITH GRANT OPTION;
+
+```
+
+刷新权限
+
+```
+FLUSH PRIVILEGES;
+```
+
+重启数据库
 
 ## issues
 
