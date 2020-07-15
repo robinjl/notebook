@@ -20,6 +20,17 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 - JSX 自闭合标签前留出一个空格 Preferences -> Code Style -> HTML -> Other -> In empty tag 勾选
 - ES6 import/export braces 留出空格 Preferences -> Code Style -> JavaScript -> Spaces -> ES6 import/export braces 勾选
 
+#### ESlint
+
+ESlint 规则无分号，WebStorm 依然高亮显示    
+解决方法：Preferences | Editor | Inspections | JavaScript | Code style issues | Unterminated statement  
+Severity -> No highlighting, only fix
+
+## 设置
+
+1. 版本控制不显示颜色问题
+   Preferences -> Version Control -> Add -> Apply
+
 ## 关于激活
 
 支持正版，待能力提高一定程度，一定购买正版。

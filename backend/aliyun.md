@@ -120,6 +120,12 @@ firewall-cmd --list-ports
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 ```
 
+删除端口(比如 80)
+
+```
+firewall-cmd --zone=public --remove-port=80/tcp --permanent
+```
+
 重新启动防火墙
 
 ```
@@ -363,8 +369,20 @@ FLUSH PRIVILEGES;
 
 重启数据库
 
+## 安装 Vim
+
+```
+yum install vim-X11 vim-common vim-enhanced vim-minimal
+```
+
+[文档](http://apetec.com/linux/installvim.htm)
+
 ## issues
 
 1. 阿里云部署后出现报错 `[Errno 5] Input/output error` 或者其他报错
 
 解决方法：注释 print 调用支付宝支付接口也出现过问题，都是因为 print 的原因
+
+2. Nginx failed (13: Permission denied)
+
+解决方法： /etc/selinux/config 将 SELINUX=enforcing 改为 SELINUX=disabled 重启服务器 reboot

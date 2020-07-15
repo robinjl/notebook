@@ -88,6 +88,12 @@ yum install java-1.8.0-openjdk
 
 安装在 /usr/lib/jvm
 
+4. 查看版本
+
+```
+java -version
+```
+
 ## J2SE
 
 ## J2EE
@@ -123,56 +129,61 @@ yum install java-1.8.0-openjdk
 3. intellij IDEA Properties 中文 unicode 转码问题
    Preferences -> File Encodings -> 勾选 Transparent native-to-ascii conversion
 
-4. 版本控制不显示颜色问题
-   Preferences -> Version Control -> Add -> Apply
-
-5. console 日志有时不显示颜色问题
+4. console 日志有时不显示颜色问题
    application.properties 增加配置项 `spring.output.ansi.enabled = ALWAYS`
 
-6. Java 注释格式化
+5. Java 注释格式化
    Preferences -> Code Style -> Java -> Code Generation(tab) -> Comment Code
 
-7. 快捷键
+6. 快捷键
 
 多行编辑：Shift + Option + click
 
-8. 在 resources/mapper/mapper.xml 文件中书写 sql
+7. 在 resources/mapper/mapper.xml 文件中书写 sql
    Option + Enter -> Edit Generic SQL Fragment 或者 Language Injection Setting
     并且改成 Convert to MySQL 这时语句会高亮和格式化
    怎样换行缩进？
 
 ## 部署
 
-1. 打包：`mvn clean package`
+1. 打包：IntelliJ -> 右侧面板 -> Maven -> m(Excute Maven Goal) -> `mvn clean package`
+   > 编译测试文件报错，忽略测试文件 `mvn clean package -DskipTests`
 2. 命令行：
    `java -jar xxx.jar`  
    或者加上配置变量  
    `java -jar xxx.jar --spring.profiles.active=dev`
+3. CentOS 保持项目运行
+   `nohup java -jar xxx.jar`
 
-## 从 Java 后端到 Web 全栈 教程笔记
+## 从 Java 后端到 Web 全栈教程笔记
 
 1. IntelliJ 启动， `Edit Configuration` 选择主入口文件，`use classpath of module` 选择项目名称，
    而不是 main 或 test
 
 2. 开闭原则 （OCP， open closed principle） 里氏替换原则 迪米特法则
-   IOC Inverse of Control 控制反转  
+   IOC Inverse of Control 控制反转, 论文 [Inversion of Control Containers and the Dependency Injection pattern](https://martinfowler.com/articles/injection.html)
    DI Dependency Injection 依赖注入 （1）属性注入 （2）构造注入
    DIP Dependency Inversion Principle 依赖倒置  
    Interface -> 设计模式：工厂模式 -> IOC / DI  
    面向抽象 -> OCP -> 编写可维护的代码  
    单纯的 interface 可以统一方法的调用，但不能统一对象实例化
-   IOC 实现：容器 加入容器 注入
+   IOC 实现：容器 加入容器 注入  
+   DI 是 IOC 的一种实现/应用
 
 3. `xxx required a bean of type xxx`
    可能是 interface 没有找到实现，MyBatis Mapper 映射配置
 
 4. 注解
-5. stereotype annotations 模式注解
+   stereotype annotations 模式注解
    @Component 基础注解 组件/类/bean 类的实例化 加入容器
    @Controller @Repository @Service 衍生注解
    @Configuration
 
-Field 注入 / constructor 注入 / set 注入  
+   Spring 默认 立即/提前对象实例化，但可以延迟实例化 @Lazy
+
+5. 注入
+
+Field 注入 / constructor 注入 / setter 注入  
 Spring 官方不推荐 field injection，推荐 constructor-based 注入
 
 5. Entity 与数据库表
@@ -210,9 +221,9 @@ Spring 官方不推荐 field injection，推荐 constructor-based 注入
    解决：设置默认值 比如 CURRENT_TIMESTAMP，以及勾选“根据当前时间戳更新”
 6. 分页处理，起始页从 0 开始 page 类型 Long 报错？Interger
 7. MyBatis SQL 查询后的数据集要要映射到对象模型转化成 Java 对象，
-resultType 属性指向对象模型，而且是完整路径，IDE 右键模型，选择 copy reference 粘贴路径  
-resultMap 属性制定手写的resultMap xml  表字段与对象属性同名，可以不用写result配置项
-二者选其一
+   resultType 属性指向对象模型，而且是完整路径，IDE 右键模型，选择 copy reference 粘贴路径  
+   resultMap 属性制定手写的 resultMap xml 表字段与对象属性同名，可以不用写 result 配置项
+   二者选其一
 
 8. JPA 与 MyBatis/MyBatis Plus 可以混合使用
    JPA 导航属性 自动生成 SQL， 但灵活控制查询语句需要较高的学习成本
