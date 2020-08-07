@@ -126,6 +126,12 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ```
 
+也可以添加端口范围(比如 80)
+
+```
+firewall-cmd --zone=public --add-port=7000-9000/tcp --permanent
+```
+
 重新启动防火墙
 
 ```
@@ -386,3 +392,16 @@ yum install vim-X11 vim-common vim-enhanced vim-minimal
 2. Nginx failed (13: Permission denied)
 
 解决方法： /etc/selinux/config 将 SELINUX=enforcing 改为 SELINUX=disabled 重启服务器 reboot
+
+3. Nginx 默认上传数据大小为 1M
+
+可以设置请求和代理参数
+```
+client_max_body_size 100m;
+client_header_timeout 750s;
+client_body_timeout 750s;
+proxy_connect_timeout 600s;
+proxy_read_timeout 750s;
+proxy_send_timeout 750s;
+client_body_buffer_size 102400k;
+```

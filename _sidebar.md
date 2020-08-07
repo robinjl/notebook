@@ -31,7 +31,7 @@
 
 - 小程序
 
-  - 微信小程序
+  - [微信小程序](frontend/wechat.md)
   - 支付宝小程序
   - [Taro(React)](frontend/taro.md)
 
@@ -80,7 +80,9 @@
   - [ProcessOn](https://processon.com/)
   - Axure RP
   - [蓝湖](https://lanhuapp.com/)
+  - [ESLint](tools/eslint.md)
 
 - 职场/创业
 
   - [博文](career.md)
+  - [团队协作](teamwork.md)

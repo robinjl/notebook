@@ -19,16 +19,52 @@ _RN < 60_
 _RN > 60_  
 通过 Cocoapods 安装
 
-## Android Mulit-deployment（多版本部署）
+## Android Multi-deployment（多版本部署）
 
-[参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-android.md)  
-APP 启动图标自动生成器: 1. [图标工厂](https://icon.wuruihong.com/) 2. [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
+- [参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-android.md) , 测试版创建 releaseStaging 文件夹，分别配置 APP 名称和开屏图标
+
+- APP 启动图标自动生成器:
+
+  1.  [图标工厂](https://icon.wuruihong.com/)
+  2.  [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
+
+- 生成 release keystore, [参考 Publishing to Google Play Store](https://reactnative.dev/docs/signed-apk-android)，双字母国家/地区代码是 CN（China）
+
+运行命令
+
+```
+$ npm run android // 开发版本
+$ react-native run-android --variant releaseStaging // 测试版本
+$ react-native run-android --variant release // 正式版本
+```
+
+!> releaseStaging 安装失败，需要增加配置项`matchingFallbacks = ['release']` [issue](https://github.com/microsoft/react-native-code-push/issues/1557#issuecomment-480927795)
 
 ## iOS Multi-Scheme（多版本部署）
 
-[参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-ios.md)  
+[参考 react-native-code-push 配置文档](https://github.com/microsoft/react-native-code-push/blob/master/docs/multi-deployment-testing-ios.md)
+
+!> 步骤 7 XCode11 can not find "Build Location -> Per-configuration Build Products Path -> Staging"
+
+解决方法: Add User-Defined Setting，先赋值  
+Debug + Release: $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)  
+Staging: $(BUILD_DIR)/Release\$(EFFECTIVE_PLATFORM_NAME)
+最后更改键名 CONFIGURATION_BUILD_DIR，若先改键名，XCode 会闪退
+
+!> Pods 也要设置多版本 否则报错 `Library not found for -lPods-xxApp` Pods 配置同上
+
 APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)  
-创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / display name 和自定义属性。
+创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / bunlde display name 和自定义属性。
+
+BUNDLE_DISPALY_NAME VS BUNDLE_NAME iOS 使用前者即可
+
+运行命令
+
+```
+$ npm run ios // 开发版本
+$ react-native run-ios --configuration Staging // 测试版本
+$ react-native run-ios --configuration Release // 正式版本
+```
 
 ## CodePush (热更新)
 
@@ -95,20 +131,22 @@ label 参数命令行会报错，若忽略，默认是更新最后一个版本
    在 App 杀死时，你通过极光推送发的消息，在这 4 种手机上，会自动走系统推送下发消息，需要开通 VIP。
 3. iOS 是系统内（APN）推送，所以应用即使杀掉进程，也可以获取推送通知，并唤起应用
 
-## 离线功能
-
-插件：react-native-offline
-
 ## 第三方组件
 
 RN 插件库： [React Native Example](https://reactnativeexample.com/)
+
+- [react-navigation](https://reactnavigation.org/)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) RN>60.0 [解决 autolink 问题](https://github.com/oblador/react-native-vector-icons/issues/1035#issuecomment-508645612) iOS/Android 都需要手动引入字体库
+- react-native-offline
 
 ## 打包
 
 #### Android
 
-方式一：`cd android && ./gradlew assembleRelease`  
-方式二：连接真机, `react-native run-android --variant=release`
+方式一：`cd android && ./gradlew assembleRelease`  (测试版 assembleReleaseStaging)
+方式二：连接真机, `react-native run-android --variant=release` (测试版 releaseStaging)
+
+> 测试版 releaseStaging
 
 #### iOS
 
@@ -163,7 +201,7 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 1. 腾讯开放平台（应用宝）
 2. 阿里应用分发开放平台（PP 助手 / 豌豆荚 / UC 应用商店）
 
-企业注册需要提交营业执照，应用上架需要提交软件著作权
+!> 企业注册需要提交营业执照，应用上架需要提交软件著作权
 
 ## React Naitve 版本升级
 
@@ -239,19 +277,12 @@ sudo gem install cocoapods -v [version] 安装指定版本
 
 Scheme -> Build -> 去掉 XXXTests 勾选
 
-7. Staging Archive 报错
-
-`Library not found for -lPods-RiskControlApp`
-
-配置 Pods
-Pods -> PROJECT -> Build Locations -> Pre-configuration Build Products Path -> Staging -> $(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)
-
-8. Android 真机调试状态 redux-persist: rehydrate for "root" called after timeout
+7. Android 真机调试状态 redux-persist: rehydrate for "root" called after timeout
 
 解决方法： persistConfig 配置 timeout: 0
 
-9. Android "import android.support.v4.util.Pools" problem
-    `npm install --save-dev jetifier`
+8. Android "import android.support.v4.util.Pools" problem
+   `npm install --save-dev jetifier`
 
 Manifest merger failed : Attribute application@appComponentFactory
 gradle.properties file 增加
@@ -261,3 +292,11 @@ gradle.properties file 增加
 
 - Total Control（Android on Windows）
 - 隔空投放
+
+## 配置
+
+1. 绝对路径
+
+一种简单的方式是在 app 文件夹下创建`package.json`文件，然后编写`{"name":"app"}`就可以通过 app/components、app/assets 方式引用, [参考](https://medium.com/@davidjwoody/how-to-use-absolute-paths-in-react-native-6b06ae3f65d1)
+
+正确的方式是配置 `jsconfig.js`、`webpack.config.js`, 待研究
