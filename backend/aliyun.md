@@ -405,3 +405,12 @@ proxy_read_timeout 750s;
 proxy_send_timeout 750s;
 client_body_buffer_size 102400k;
 ```
+
+4. 报错：`ssh_exchange_identification: read: Connection reset by peer`
+
+原因 IP 阿里云阻截，需要开启白名单
+
+获取公网 IP `curl ifconfig.me`
+
+[解决公司网络无法通过ssh连接阿里云ECS的22端口](https://www.jianshu.com/p/effb2b665c15)
+[简单记录一下阿里云服务器Ssh登录不上的问题](https://hbnnforever.cn/article/sshaliecs.html)

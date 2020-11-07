@@ -40,7 +40,7 @@ bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪�
 
 #### Navicat
 
-1. 数据库较大时，导出SQL文件迁移，会很慢，源数据库使用"新建备份"创建备份，然后在目标数据库中选择"还原备份从"选择备份文件，速度很快
+1. 数据库较大时，导出 SQL 文件迁移，会很慢，源数据库使用"新建备份"创建备份，然后在目标数据库中选择"还原备份从"选择备份文件，速度很快
 
 ## 命令
 
@@ -178,6 +178,24 @@ CREATE TABLE animals (
 ```
 ALTER TABLE pet
 ADD COLUMN avatar VARCHAR(255);
+```
+
+[替换字段值](https://www.sqltutorial.org/sql-string-functions/sql-replace/)
+
+```
+UPDATE employees
+SET
+    email = REPLACE(email,
+        'sqltutorial.org',
+        'acme.com')
+WHERE
+    employee_id = 100;
+```
+
+字段中添加内容
+
+```
+UPDATE book SET image = CONCAT('https://domain.com/assets/', image)
 ```
 
 ## 字段类型

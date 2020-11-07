@@ -134,3 +134,4 @@
 2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
 3. [MikuTools](https://tools.miku.ac/)
 4. [图片压缩 Tinypng](https://tinypng.com/)
+5. [Juxtapose](https://juxtapose.knightlab.com/)  实现两张图片通过中间轴滑动对比

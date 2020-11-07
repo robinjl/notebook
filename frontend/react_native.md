@@ -26,7 +26,7 @@ _RN > 60_
 - APP 启动图标自动生成器:
 
   1.  [图标工厂](https://icon.wuruihong.com/)
-  2.  [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
+  2.  [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) 可以生成圆形图片
 
 - 生成 release keystore, [参考 Publishing to Google Play Store](https://reactnative.dev/docs/signed-apk-android)，双字母国家/地区代码是 CN（China）
 
@@ -53,6 +53,9 @@ Staging: $(BUILD_DIR)/Release\$(EFFECTIVE_PLATFORM_NAME)
 
 !> Pods 也要设置多版本 否则报错 `Library not found for -lPods-xxApp` Pods 配置同上
 
+[XCode11 can not find "Build Location -> Per-configuration Build Products Path -> Staging "](https://github.com/microsoft/react-native-code-push/issues/1782)
+
+
 APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)  
 创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / bunlde display name 和自定义属性。
 
@@ -65,6 +68,17 @@ $ npm run ios // 开发版本
 $ react-native run-ios --configuration Staging // 测试版本
 $ react-native run-ios --configuration Release // 正式版本
 ```
+
+!> 如果出现之前能安装，过段时间安装不了测试/正式版本，仔细查看错误报告。原因可能是 gradle 升级 解决方法：清除 build 缓存、gradle 临时构建文件，或者删除已安装的APP，重新 build
+
+## 开屏页
+
+组件 [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash)
+
+Android 是约定好的文件名称，要按照要求修改  
+iOS 如果使用一张图片作为 LanchScreen.storyboard 加上上下左右 constraint = 0 的 4 个限制
+
+iOS 使用
 
 ## CodePush (热更新)
 
@@ -143,7 +157,7 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
 #### Android
 
-方式一：`cd android && ./gradlew assembleRelease`  (测试版 assembleReleaseStaging)
+方式一：`cd android && ./gradlew assembleRelease` (测试版 assembleReleaseStaging)  
 方式二：连接真机, `react-native run-android --variant=release` (测试版 releaseStaging)
 
 > 测试版 releaseStaging
@@ -287,6 +301,14 @@ Scheme -> Build -> 去掉 XXXTests 勾选
 Manifest merger failed : Attribute application@appComponentFactory
 gradle.properties file 增加
 `android.enableJetifier=true android.useAndroidX=true`
+
+9. Error: Use of undeclared identifier 'CodePush' in AppDelegate.m
+
+#import <CodePush/CodePush.h> 引用依赖需要写在 `#ifdef FB_SONARKIT_ENABLED` 之上
+
+10. git 锁死无法 add 文件，并且无法 reload app
+
+解决方法： `rm -rf .git/index.lock`
 
 ## 投影
 

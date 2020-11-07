@@ -36,8 +36,8 @@ JDK 包含 JRE，JRE 包含 JVM
 bin 目录包含工具集，其中 javac.exe 是编辑工具，java.exe 是执行工具
 
 DO Data Object 数据对象  
-DAO Data Access Object 数据访问对象  数据层->业务层 mybatis中相当于mapper, jpa中相当于model
-DTO Data Transfer Object 数据传输对象  前端请求
+DAO Data Access Object 数据访问对象 数据层->业务层 mybatis 中相当于 mapper, jpa 中相当于 model
+DTO Data Transfer Object 数据传输对象 前端请求
 BO Business Object 业务对象 service->controller
 VO View Object 显示层对象
 
@@ -116,18 +116,23 @@ java -version
 
 ## Maven
 
+1. 从网络中下载不了依赖包
+
+手动下载安装包，IntelliJ -> File -> Project Structure -> Project Settings -> Libraries 找到依赖项，根据路径将下载的安装包放在该路径下  
+虽然版本号会出现问题，但是不影响程序运行
+
 ## IntelliJ IDEA
 
 1. 配置热更新
    （1）安装 SpringBoot DevTools
-   （2）IDEA Compiler 勾选 Build project automatically
+   （2）IDEA Build,Execution,Deployment -> Compiler -> 勾选 Build project automatically
    （3）Shift+option+command+/， 点击 Registry, 勾选 compiler.automake.allow.when.app.running
 
 2. @Getter @Setter 但 IntelliJ 提示找不到 get()、set()方法
    pom.xml 中引入 lombok 包，IDE 安装 lombok 插件
 
 3. intellij IDEA Properties 中文 unicode 转码问题
-   Preferences -> Editor -> File Encodings -> 勾选 Transparent native-to-ascii conversion
+   Preferences -> Editor -> File Encodings -> utf-8 勾选 Transparent native-to-ascii conversion
 
 4. console 日志有时不显示颜色问题
    application.properties 增加配置项 `spring.output.ansi.enabled = ALWAYS`
@@ -172,16 +177,31 @@ java -version
 
 5. 注入
 
-Field 注入 / constructor 注入 / setter 注入  
+Field 字段注入（成员变量注入） / constructor 注入 / setter 注入  
 Spring 官方不推荐 field injection，推荐 constructor-based 注入
 
 @Autowired 被动注入有两种方式： byType byName
- byType
- - 找不到任何一个bean 报错
- - 一个 直接注入
- - 多个 不一定报错 按照字段名称推断选择哪个bean
+byType
 
- 主动注入 使用@Qualifier(value="bean_name")
+- 找不到任何一个 bean 报错
+- 一个 直接注入
+- 多个 不一定报错 按照字段名称推断选择哪个 bean
+
+主动注入 使用@Qualifier(value="bean_name")
+
+使用@Primary 优先注入
+
+6. 注解与配置
+
+@Conditional 注解 自定义条件注解  
+SpringBoot 主要内置条件注解 @ConditionalOnProperty @ConditionalOnBean (当 Bean 存在时，引用注释的 Bean 被注入 IOC 容器)  
+与之相反的是 @ConditionalOnMissingBean
+
+7. 异常
+
+Exception 分为      
+Exception(CheckedException) 编译时异常处理  
+RuntimeException 运行时异常
 
 6. Entity 与数据库表
    JPA/Hibernate 实体类生成表  
@@ -192,6 +212,10 @@ Spring 官方不推荐 field injection，推荐 constructor-based 注入
    Jackson / Fastjson
 
 8. Spring 约定大于配置
+
+9. 面向对象应对变化的方案
+   （1）通过多个类实现同一个 interface
+   （2）通过一个类的不同属性
 
 ### 阶段二 Java Spring API
 
@@ -204,7 +228,7 @@ Spring 官方不推荐 field injection，推荐 constructor-based 注入
 
 2. CodeGenerator
 
-0.1.0 报错 应使用最新版本
+0.1.0 报错 应使用最新版本，待学习
 
 3. 延迟思考
 
@@ -232,8 +256,32 @@ fetch = FetchType.Lazy 懒加载的作用就是不使用的字段,不去关联�
 8. 分类表设计
 
 重要字段 is_root parant_id level  
-路径表示法 记录子节点所有父节点的路径  例如 /node1_id/node2_id/node3_id/  
+路径表示法 记录子节点所有父节点的路径 例如 /node1_id/node2_id/node3_id/  
 两级分类除了 category_id 还可以设置冗余字段 root_category_id 便于查询
+
+9. 定义校验信息
+
+ValidationMessages.properties 固定文件名
+
+10. Json 与 Map/List 的映射实现
+
+AttributeConverter
+
+11. 分页参数
+    PC 端 page, size  
+    APP 端 start, count
+
+12. servlet
+
+servlet 是 java 一种接口标准, 相当于 python 中的 wsgi, uwsgi 是 wsgi 的一种实现  
+tomcat 相当于 servlet 的容器
+
+拦截： filter(servlet) interceptor aop
+
+13. Java8
+
+引入了 Optional 关键字、Stream 方法  
+Optinal 是通过一种简洁的写法标注可能存在 Java 空指针情况
 
 ### 阶段三 Java CMS
 
@@ -255,11 +303,8 @@ fetch = FetchType.Lazy 懒加载的作用就是不使用的字段,不去关联�
 
 8. JPA 与 MyBatis/MyBatis Plus 可以混合使用
    JPA 导航属性 自动生成 SQL， 但灵活控制查询语句需要较高的学习成本
-   MyBatis 手写 SQL
-
-9. 分页参数
-PC 端 page, size  
-APP 端 start, count
+   MyBatis 手写 SQL  
+   JPA 使用单表查询（相对于联表查询）具有优势
 
 ## 部署
 
@@ -287,4 +332,11 @@ APP 端 start, count
 
 ## MySQL
 
-存入数据库的时间差8小时，数据库配置项更新为 `serverTimezone=Asia/Shanghai`
+1. 存入数据库的时间差 8 小时，数据库配置项更新为 `serverTimezone=Asia/Shanghai`
+
+2. 数据库的数据不止是完整的覆盖所有的数据，而且要针对业务（前端）给予良好的查询接口
+
+## Spring Boot
+
+[WebView](https://spring.io/guides/gs/serving-web-content/)
+
