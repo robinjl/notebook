@@ -199,7 +199,7 @@ SpringBoot 主要内置条件注解 @ConditionalOnProperty @ConditionalOnBean (�
 
 7. 异常
 
-Exception 分为      
+Exception 分为  
 Exception(CheckedException) 编译时异常处理  
 RuntimeException 运行时异常
 
@@ -324,6 +324,17 @@ Optinal 是通过一种简洁的写法标注可能存在 Java 空指针情况
    杀掉线程：kill -9 线程 id  
    重启服务
 
+**自动更新**
+按照[官网教程](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-systemd-service)部署 systemd 方式， 在 /etc/systemd/system 下创建.service 文件。但存在一个问题，配置参数（ExecStart）为 jar 绝对路径，新包中如果有更新的版本号，就要再次修改路径，才能使用命令行启动
+
+命令行
+
+```
+systemctl restart union-dev
+```
+
+编辑 .service 修改路径，保存后执行`systemctl daemon-reload`使之生效
+
 ## MyBatis
 
 ## MyBatis Plus
@@ -338,5 +349,38 @@ Optinal 是通过一种简洁的写法标注可能存在 Java 空指针情况
 
 ## Spring Boot
 
-[WebView](https://spring.io/guides/gs/serving-web-content/)
+1. [WebView 教程](https://spring.io/guides/gs/serving-web-content/)
+1. 提交代码，总是先提交一个空类的文件，然后需要再次提交增加的代码？
+2. @Controller 返回动态模版，如何与 @RestController 下的方法写在同一个 controller 文件里
+3. UUID 存储，目前将 uuid 转化成 String，数据库默认排序
+4. dozermapper 的使用, 简化分页单条数据模型
+5. Integer int Long long Boolean boolean 区别
+6. VO BO 区别
+7. Mapper.xml 作用 及 SQL 查询
+8. varchar(1) bit(1) boolean
+9. 简便的方式获取人员姓名等信息
+10. html 转换图片 [参考](https://my.oschina.net/u/4051898/blog/2990638)
+    java - htmltoimage 很早就不维护了，勉强使用，问题如下：
 
+- loadUrl() 不能引入外部 CSS 或内嵌 CSS，只能使用行内样式 loadHtml() 可以使用内嵌 CSS
+- img 只能使用 width height 使用 style 不生效；
+- 加载图片需要设置线程时间
+- table border-collapse: collapse 不生效
+- h1-h4 p 字体样式也要手写 很多常用样式并不适用
+
+部署 Linux 需要下载中文字体库
+
+- 安装插件 `yum -y install fontconfig`
+- 将字体库文件放入 /usr/share/fonts 文件夹下
+- 重启 Linux
+
+手动下载 版本号出现问题，打包 Warning:
+
+```
+Downloading from central: https://repo.maven.apache.org/maven2/gui/ava/html2image/0.9/html2image-0.9.pom
+[WARNING] The POM for gui.ava:html2image:jar:0.9 is missing, no dependency information available
+The POM for gui.ava:html2image:jar:0.9 is missing, no dependency information available
+```
+
+15. Json Object（List） 互相转化
+16. Spring Boot 调用外部 Web API, [参考](https://attacomsian.com/blog/spring-boot-resttemplate-post-request-json-headers)

@@ -1,33 +1,17 @@
 - 基础知识
 
   - [资源](basic.md)
+  - [待解决问题](todo_list.md)
 
 - 前端框架
 
   - [React](frontend/react.md)
   - [Vue](frontend/vue.md)
-  - Angular
 
 - 移动端框架
 
-  - 原生 App
-
-    - Android(Java / Kotlin)
-    - iOS(Objective-C / Swift)
-
-- 混合 App
-
-  - Ionic
-  - PhoneGap
-  - Cordova
-  - uni-app(Vue)
-
-- 跨平台 App
-
-  - [React Native](frontend/react_native.md)(React) Expo
-  - [Flutter](frontend/flutter.md)(Dart)
-  - Xamarin(C#)
-  - NativeScript(Angular)
+  - [React Native](frontend/react_native.md)
+  - [Flutter](frontend/flutter.md)
 
 - 小程序
 
@@ -35,30 +19,13 @@
   - 支付宝小程序
   - [Taro(React)](frontend/taro.md)
 
-- 桌面框架
-
-  - Electron
-
-- 前端库
-
-  - jQuery
-  - jQuery-UI
-  - Bootstrap
-  - Zepto
-  - EasyUI
-  - RxJS
-
 - 后端语言
 
   - [Java](backend/java.md)
-  - Python
-  - NodeJS
 
 - 后端框架
 
-  - SSH, SSM
   - [Django](backend/django.md)
-  - Express, Koa
 
 - 数据库
 
@@ -68,6 +35,10 @@
 
   - [阿里云](backend/aliyun.md)
 
+- 案例学习
+ 
+  - [lin-cms](case_study/lin_cms.md)
+
 - 工具
 
   - [Git](tools/git.md)
@@ -75,10 +46,8 @@
   - [Vim](tools/vim.md)
   - [iTerm2](tools/iTerm2.md)
   - [WebStorm](tools/webstorm.md)
-  - Postman
   - [VirtualBox](tools/virtualbox.md)
   - [ProcessOn](https://processon.com/)
-  - Axure RP
   - [蓝湖](https://lanhuapp.com/)
   - [ESLint](tools/eslint.md)
 

@@ -51,10 +51,16 @@ Debug + Release: $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 Staging: $(BUILD_DIR)/Release\$(EFFECTIVE_PLATFORM_NAME)
 最后更改键名 CONFIGURATION_BUILD_DIR，若先改键名，XCode 会闪退
 
-!> Pods 也要设置多版本 否则报错 `Library not found for -lPods-xxApp` Pods 配置同上
+!> Pods 也要设置多版本 否则报错 `Library not found for -lPods-xxApp` Pods 配置同上 不过 pods 配置并不永久保存（缺乏 iOS 基础知识），所以每次打包还要重新配置，配置后 debug 又不能正常运行！需要改键名
 
 [XCode11 can not find "Build Location -> Per-configuration Build Products Path -> Staging "](https://github.com/microsoft/react-native-code-push/issues/1782)
 
+!> 可能是部署环境的问题，导致每次打测试/正式包都会报错
+iOS 报错 `Library not found for -lPods-xxApp`  
+Android 报错 `com.android.builder.testing.api.DeviceException: com.android.ddmlib.InstallException: INSTALL_FAILED_INVALID_APK`  
+所以第一件事务必清除缓存
+
+每次打包都很麻烦，会出现各种各样的问题，着急也没有用，麻烦点配置也总比打包不成强
 
 APP 启动图标自动生成器: [图标工厂](https://icon.wuruihong.com/)  
 创建新的 Scheme, 在 Build Setting 中*Add a User Defined Setting*，添加自定义属性。每个 Scheme 应包括 bundle ID / App Icon / bunlde display name 和自定义属性。
@@ -69,7 +75,7 @@ $ react-native run-ios --configuration Staging // 测试版本
 $ react-native run-ios --configuration Release // 正式版本
 ```
 
-!> 如果出现之前能安装，过段时间安装不了测试/正式版本，仔细查看错误报告。原因可能是 gradle 升级 解决方法：清除 build 缓存、gradle 临时构建文件，或者删除已安装的APP，重新 build
+!> 如果出现之前能安装，过段时间安装不了测试/正式版本，仔细查看错误报告。原因可能是 gradle 升级 解决方法：清除 build 缓存、gradle 临时构建文件，或者删除已安装的 APP，重新 build
 
 ## 开屏页
 
@@ -144,14 +150,35 @@ label 参数命令行会报错，若忽略，默认是更新最后一个版本
    极光推送支持「小米推送」、「华为推送」「魅族推送」「Google FCM」「OPPO 推送」等市场上已有的 5 种系统推送，
    在 App 杀死时，你通过极光推送发的消息，在这 4 种手机上，会自动走系统推送下发消息，需要开通 VIP。
 3. iOS 是系统内（APN）推送，所以应用即使杀掉进程，也可以获取推送通知，并唤起应用
+4. Android 推送可以自定义标题和内容，iOS 标题直接显示应用名称，自定义内容
+5. Android 极光推送是没有提供角标的，[极光推送的角标问题](https://community.jiguang.cn/article/139240)
 
 ## 第三方组件
 
 RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
-- [react-navigation](https://reactnavigation.org/)
+- [react-navigation](https://reactnavigation.org/) version 5.x
 - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) RN>60.0 [解决 autolink 问题](https://github.com/oblador/react-native-vector-icons/issues/1035#issuecomment-508645612) iOS/Android 都需要手动引入字体库
 - react-native-offline
+- [redux](https://redux.js.org/) version 4.x
+- [react-redux](https://react-redux.js.org/) version 7.x
+- [redux-saga](https://redux-saga.js.org/)
+- [redux-persist](https://github.com/rt2zz/redux-persist) version 6.x
+  > storage 需要引用 AsyncStorage from '@react-native-community/async-storage' 同时 pod install
+- [react-logger](https://github.com/LogRocket/redux-logger)
+- [react-native-image-viewer](https://github.com/ascoders/react-native-image-viewer) 图片查看
+- [react-native-code-push](https://github.com/microsoft/react-native-code-push) 热更新
+- [react-native-bootsplash](https://github.com/zoontek/react-native-bootsplash) 开屏页
+- [react-native-swiper](https://github.com/leecade/react-native-swiper) 轮播图
+- [react-native-video](https://github.com/react-native-community/react-native-video) 视频
+- [react-native-root-toast](https://github.com/magicismight/react-native-root-toast) Toast
+- [react-native-image-picker](https://github.com/react-native-image-picker/react-native-image-picker) 相册选择器
+- [react-native-picker-select](https://github.com/lawnstarter/react-native-picker-select) select
+
+### 新闻模块开发
+
+- [iOS 新闻类 App 内容页技术探索](https://juejin.im/entry/6844903598724218893)
+- [网易新闻 App](https://github.com/pinuofeng/NeteaseNews)
 
 ## 打包
 
@@ -183,7 +210,7 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
    选中在下一年要保留的设备
 
 2. TestFlight
-   _尚未实践_
+   iOS 官方测试工具 目前测试设备上限是 10,000 台
 
 ## App Store
 
@@ -309,6 +336,39 @@ gradle.properties file 增加
 10. git 锁死无法 add 文件，并且无法 reload app
 
 解决方法： `rm -rf .git/index.lock`
+
+11. 自定义组件循环引用 选择同一级自定义组件直接引用，而不是通过 index 引用，否则会警告
+12. 0.63.0 模拟器上传图片报错，升级 [0.63.3](https://react-native-community.github.io/upgrade-helper/?from=0.63.0&to=0.63.3)  
+    升级 fipper 版本会导致 Android 启动不了应用，`java.lang.NoClassDefFoundError:<clinit>failed for class com.facebook.flipper.android.EventBase`
+    保持 flipper 原有版本 0.37.0
+
+13. redux 存储/清除缓存机制 [清除所有 store](https://stackoverflow.com/questions/35622588/how-to-reset-the-state-of-a-redux-store)
+    选择性（白名单）清除
+
+14. tab 下拉列表显示头部部分，并且随着滚动可以固定 tab 栏
+
+    - [Sticky Tab Bar in a Scroll View, with FlatLists as child of Tab View](https://www.reddit.com/r/reactnative/comments/gowgup/sticky_tab_bar_in_a_scroll_view_with_flatlists_as/)
+    - [Tutorial: A Collapsible Search Bar in React Native](https://blog.expo.io/implementation-complex-animation-in-react-native-by-example-search-bar-with-tab-view-and-collapsing-68bb43be2dcb)
+    - [Tabs with FlatLists inside ScrollView - like Instagram or Twitter profile pages](https://stackoverflow.com/questions/54693590/tabs-with-flatlists-inside-scrollview-like-instagram-or-twitter-profile-pages)
+
+15. Touchable 组件 Android 系统下 绝对定位或负边距 无法点击，一种方式是使用 `import { TouchableOpacity } from 'react-native-gesture-handler';`
+16. 新闻类 APP
+    - [iOS 新闻类 App 内容页技术探索](https://juejin.im/entry/6844903598724218893)
+    - [网易新闻 App](https://github.com/pinuofeng/NeteaseNews)
+17. rn-fetch-blob 源码中 warning 循环引用，[解决方法](https://github.com/joltup/rn-fetch-blob/issues/183#issuecomment-450826541)
+
+18. iOS App Store 跳转
+    Linking 跳转地址：“itms-apps://itunes.apple.com/app/id<Apple ID>”，例如 itms-apps://apps.apple.com/cn/app/id1476231701
+    info.plist
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>itms-apps</string>
+</array>
+```
+
+18. JPush 集成，[React-native 接入极光推送,iOS 端编译报错问题解决](https://blog.csdn.net/iOSTianNan/article/details/108789538) iOS 直接 pod install 就行，但是因为 jcore-react-native 版本升级文件更新命名，找不到依赖，因此报错，降低版本号可以解决
 
 ## 投影
 

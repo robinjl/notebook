@@ -21,3 +21,9 @@
 1. Ant Design / Ant Design Pro
 2. Next.js
 3. Gatsby
+
+## And Design issues
+
+1. form 有时对复杂组件无法委托，比如 文件上传组件
+
+2. modal 中 form initialValues 数据会滞后加载 Modal destroyOnClose + <Form preserve={false} /> 会清除 form 数据 或者不使用 initialValues，使用 form.setFieldsValue
