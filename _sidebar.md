@@ -47,8 +47,6 @@
   - [iTerm2](tools/iTerm2.md)
   - [WebStorm](tools/webstorm.md)
   - [VirtualBox](tools/virtualbox.md)
-  - [ProcessOn](https://processon.com/)
-  - [蓝湖](https://lanhuapp.com/)
   - [ESLint](tools/eslint.md)
 
 - 职场/创业

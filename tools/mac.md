@@ -51,6 +51,7 @@ $ du -sh *
 $ cd Library
 $ du -d 1 -h
 ```
+
 查看硬盘空间
 
 ```
@@ -58,8 +59,11 @@ $ df -h
 ```
 
 升级系统/XCode 会占用大量内存，储存空间中“其他”占用很大空间
-![](../images/macOS_room_problem.png)  
+
+![](../images/macOS_room_problem.png)
+
 使用 **[OmniDiskSweeper](https://www.omnigroup.com/more/)**，文件从大到小显示
+
 ![](../images/OminDiskSweeper.png)
 
 ## 查看 iOS simulator 列表
@@ -93,7 +97,7 @@ SmartSVN 修改 repository 地址：Menu -> Modify -> Relocate
 macOS 升级 10.15，Axure RP 8 打不开，需要下载 8.1.0.3388 或 9， 下载地址：[Axure RP 8 Mac](https://www.axure.com/release-history/rp8)  
 注册码：  
 Licensee：zdfans.com  
-Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli  
+Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli
 
 ## 其他
 

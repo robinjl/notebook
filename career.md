@@ -41,8 +41,3 @@
 2. [程序员，你真的会写简历吗？](https://www.imooc.com/article/16649)
 3. [给编程初学者的一些建议](https://www.imooc.com/article/30702)
 4. [重塑程序员职业发展观](https://www.imooc.com/article/298045)
-
-## 新事物
-
-1. Deno.js
-2. Figma 设计工具

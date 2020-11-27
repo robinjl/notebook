@@ -23,7 +23,7 @@
 
 ### react-native
 
-1. 提高 iOS build 速度
+1. 提高 iOS build 速度 / Flipper
 2. Pod 多版本部署问题
 3. Android 权限询问
 4. animated API
