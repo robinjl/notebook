@@ -49,7 +49,8 @@ $ react-native run-android --variant release // 正式版本
 解决方法: Add User-Defined Setting，先赋值  
 Debug + Release: $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)  
 Staging: $(BUILD_DIR)/Release\$(EFFECTIVE_PLATFORM_NAME)
-最后更改键名 CONFIGURATION_BUILD_DIR，若先改键名，XCode 会闪退
+最后更改键名 CONFIGURATION_BUILD_DIR，若先改键名，XCode 会闪退  
+粘贴时一定要注意，多一个空格就会构建错误，白白浪费时间
 
 !> Pods 也要设置多版本 否则报错 `Library not found for -lPods-xxApp` Pods 配置同上 不过 pods 配置并不永久保存（缺乏 iOS 基础知识），所以每次打包还要重新配置，配置后 debug 又不能正常运行！需要改键名
 
@@ -174,6 +175,9 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 - [react-native-root-toast](https://github.com/magicismight/react-native-root-toast) Toast
 - [react-native-image-picker](https://github.com/react-native-image-picker/react-native-image-picker) 相册选择器
 - [react-native-picker-select](https://github.com/lawnstarter/react-native-picker-select) select
+- [react-native-keyboard-aware-scroll-view](https://github.com/APSL/react-native-keyboard-aware-scroll-view) KeyboardAvodingView
+- [rn-fetch-blob](https://github.com/joltup/rn-fetch-blob) 文件系统
+- [react-native-cameraroll](https://github.com/react-native-cameraroll/react-native-cameraroll) 相册
 
 ### 新闻模块开发
 
@@ -210,7 +214,8 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
    选中在下一年要保留的设备
 
 2. TestFlight
-   iOS 官方测试工具 目前测试设备上限是 10,000 台
+   iOS 官方测试工具 目前测试设备上限是 10,000 台  
+   发布审核版本，新的版本状态显示为`准备提交` 操作：外部群组 -> 构建版本 -> 选择新的版本 状态变为`正在等待审核`
 
 ## App Store
 
@@ -368,7 +373,9 @@ gradle.properties file 增加
 </array>
 ```
 
-18. JPush 集成，[React-native 接入极光推送,iOS 端编译报错问题解决](https://blog.csdn.net/iOSTianNan/article/details/108789538) iOS 直接 pod install 就行，但是因为 jcore-react-native 版本升级文件更新命名，找不到依赖，因此报错，降低版本号可以解决
+19. JPush 集成，[React-native 接入极光推送,iOS 端编译报错问题解决](https://blog.csdn.net/iOSTianNan/article/details/108789538) iOS 直接 pod install 就行，但是因为 jcore-react-native 版本升级文件更新命名，找不到依赖，因此报错，降低版本号可以解决
+
+20. RN 0.63 加入了 Flipper，导致打包时大部分时间都用在了上面，非常耗时，其实对于开发是不需要的，[How do i remove Flipper from React Native](https://github.com/facebook/flipper/issues/1326)
 
 ## 投影
 

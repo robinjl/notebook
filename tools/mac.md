@@ -62,7 +62,7 @@ $ df -h
 
 ![](../images/macOS_room_problem.png)
 
-使用 **[OmniDiskSweeper](https://www.omnigroup.com/more/)**，文件从大到小显示
+使用[OmniDiskSweeper](https://www.omnigroup.com/more/)，文件从大到小显示
 
 ![](../images/OminDiskSweeper.png)
 
