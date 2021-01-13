@@ -193,6 +193,8 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
 > 测试版 releaseStaging
 
+gradle 进程出现问题 查看进程列表 `./gradlew --status` 杀掉进程 `./gradlew --stop`
+
 #### iOS
 
 1. 启动 XCode
@@ -377,6 +379,9 @@ gradle.properties file 增加
 
 20. RN 0.63 加入了 Flipper，导致打包时大部分时间都用在了上面，非常耗时，其实对于开发是不需要的，[How do i remove Flipper from React Native](https://github.com/facebook/flipper/issues/1326)
 
+21. 报错 `What went wrong:Execution failed for task ':app:multiDexListRelease'. A failure occurred while executing com.android.build.gradle.internal.tasks.Workers$ActionFacade GC overhead limit exceeded`
+
+解决：gradle.properties 添加配置 org.gradle.jvmargs=-Xmx4096m -XX:MaxPermSize=4096m -XX:+HeapDumpOnOutOfMemoryError
 ## 投影
 
 - Total Control（Android on Windows）

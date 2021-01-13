@@ -23,7 +23,7 @@
 
 ### react-native
 
-1. 提高 iOS build 速度 / Flipper
+1. 提高 iOS build 速度 0.63.0 起 Flipper 自动配置到初始项目中 打包很慢 注释掉相关代码 [How do i remove Flipper from React Native](https://github.com/facebook/flipper/issues/1326)
 2. Pod 多版本部署问题
 3. Android 权限询问
 4. animated API

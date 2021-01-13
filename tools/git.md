@@ -72,7 +72,7 @@ $ git log -p        含有内容差异
 $ git log -2        最近数条
 $ git log --stat    列出总结性选项
 $ git log --pretty=oneline || short || full || fuller 格式化查看内容
-$ git log --pragh   展现分支线  
+$ git log --pragh   展现分支线
 
 $ git log filename  查看单文件提交历史
 $ git log -p filename 查看单文件提交历史和差异详细信息
@@ -142,6 +142,7 @@ $ git push [origin develop]
 注意：
 
 - 如果你只想获取最新代码，并且本地的修改与获取文件并不冲突，可以直接 merge，所以并不一定完全按照上面的顺序执行
+- 如果有冲突 首先 `git stash` 保存自己本地修改的代码 然后 merge 远程代码， 接着 `git stash pop` 还原自己修改的代码 然后修改解决冲突 最后提交
 - 出现冲突的解决方法：
   - 通过命令行合并，可能在代码中标记出冲突所在的区域，需要手动改写
   - WebStorm 可以通过菜单选项 Git -> Repository -> Merge Changes，手动解决冲突
@@ -175,8 +176,8 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 ```
 
 2. 项目迁移  
-从 GitHub 迁移至 GitLab  
-new project -> import project -> select GitHub -> select repository
+   从 GitHub 迁移至 GitLab  
+   new project -> import project -> select GitHub -> select repository
 
 ## GitHub
 
