@@ -394,3 +394,18 @@ gradle.properties file 增加
 一种简单的方式是在 app 文件夹下创建`package.json`文件，然后编写`{"name":"app"}`就可以通过 app/components、app/assets 方式引用, [参考](https://medium.com/@davidjwoody/how-to-use-absolute-paths-in-react-native-6b06ae3f65d1)
 
 正确的方式是配置 `jsconfig.js`、`webpack.config.js`, 待研究
+
+## Xcode
+
+2021.4.26 构建 iOS package 上传 App Store 要求必须使用 SDK 14 及以上，意味着 Xcode 必须升级到 12.5 及以上，意味着 macOS 必须升级到 11 及以上
+RN < 63.0 的项目构建可能会报错 Libraries - React.xcodeproj -> React -> CxxBridge -> RCTCxxBridge.mm 修改代码 [react-native run-ios build failure on XCode 12.5 beta](https://github.com/react-native-community/cli/issues/1365)
+```
+746 line in RCTCxxBridge.mm 
+
+from
+(NSArray<RCTModuleData *> *)_initializeModules:(NSArray<id< RCTBridgeModule > > *)modules
+
+to
+(NSArray<RCTModuleData *> *)_initializeModules:(NSArray *)modules
+```
+

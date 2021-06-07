@@ -327,6 +327,10 @@ Optinal 是通过一种简洁的写法标注可能存在 Java 空指针情况
 **自动更新**
 按照[官网教程](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment-systemd-service)部署 systemd 方式， 在 /etc/systemd/system 下创建.service 文件。但存在一个问题，配置参数（ExecStart）为 jar 绝对路径，新包中如果有更新的版本号，就要再次修改路径，才能使用命令行启动
 
+
+报错： `Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError`  
+解决方法：杀掉进程 重启服务  
+
 命令行
 
 ```

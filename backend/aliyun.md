@@ -80,6 +80,8 @@ $ kill -9 [pid]
 
 ## CentOS 防火墙
 
+> 如果阿里云已配置安全组，仍然无法访问端口号，可能是防火墙未开放端口
+
 开启端口
 
 ```
@@ -126,7 +128,7 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --remove-port=80/tcp --permanent
 ```
 
-也可以添加端口范围(比如 80)
+也可以添加端口范围(比如 7000-9000)
 
 ```
 firewall-cmd --zone=public --add-port=7000-9000/tcp --permanent
