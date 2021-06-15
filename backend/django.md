@@ -214,3 +214,4 @@ python manage.py migrate --fake
 ## 其他
 
 [BasicComparisonFilters](https://code.djangoproject.com/wiki/BasicComparisonFilters)
+[Mac彻底卸载Python](https://huybien.com/how-to-completely-uninstall-python-on-macos/)

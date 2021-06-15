@@ -382,6 +382,16 @@ gradle.properties file 增加
 21. 报错 `What went wrong:Execution failed for task ':app:multiDexListRelease'. A failure occurred while executing com.android.build.gradle.internal.tasks.Workers$ActionFacade GC overhead limit exceeded`
 
 解决：gradle.properties 添加配置 org.gradle.jvmargs=-Xmx4096m -XX:MaxPermSize=4096m -XX:+HeapDumpOnOutOfMemoryError
+
+22. macOS 升级到 Big Sur 出现 Android 打包失败异常
+
+[Could not find tools.jar. Please check that /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home contains a valid JDK installation](https://stackoverflow.com/questions/64968851/could-not-find-tools-jar-please-check-that-library-internet-plug-ins-javaapple)
+
+解决方法：修改 zshrc 更新JAVA_HOME路径
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+```
+
 ## 投影
 
 - Total Control（Android on Windows）
@@ -399,8 +409,9 @@ gradle.properties file 增加
 
 2021.4.26 构建 iOS package 上传 App Store 要求必须使用 SDK 14 及以上，意味着 Xcode 必须升级到 12.5 及以上，意味着 macOS 必须升级到 11 及以上
 RN < 63.0 的项目构建可能会报错 Libraries - React.xcodeproj -> React -> CxxBridge -> RCTCxxBridge.mm 修改代码 [react-native run-ios build failure on XCode 12.5 beta](https://github.com/react-native-community/cli/issues/1365)
+
 ```
-746 line in RCTCxxBridge.mm 
+746 line in RCTCxxBridge.mm
 
 from
 (NSArray<RCTModuleData *> *)_initializeModules:(NSArray<id< RCTBridgeModule > > *)modules
@@ -408,4 +419,3 @@ from
 to
 (NSArray<RCTModuleData *> *)_initializeModules:(NSArray *)modules
 ```
-

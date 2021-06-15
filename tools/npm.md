@@ -16,3 +16,23 @@ NPM 全局安装权限错误， 解决方法：
 ```
 $ sudo chown -R $(whoami) /usr/local/lib/node_modules/
 ```
+
+## 卸载 node / npm
+
+```
+rm -rf /usr/local/bin/node
+rm -rf /usr/local/bin/npm
+```
+
+## .npmrc
+
+taro 项目中 配置了 .npmrc
+
+```
+registry=https://r.cnpmjs.org
+disturl=https://r.cnpmjs.org/node
+sass_binary_site=https://r.cnpmjs.org/node-sass/
+fse_binary_host_mirror=https://r.cnpmjs.org/fsevents
+```
+
+安装源访问不到 node-sass 安装失败 使用淘宝镜像 [整理 Mac 系统 node-sass 安装失败的原因及解决办法](https://www.cnblogs.com/renxiaoren/p/11903792.html)
