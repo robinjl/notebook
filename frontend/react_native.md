@@ -195,6 +195,12 @@ RN 插件库： [React Native Example](https://reactnativeexample.com/)
 
 gradle 进程出现问题 查看进程列表 `./gradlew --status` 杀掉进程 `./gradlew --stop`
 
+## 调试
+
+真机安装 debug 安装包后，以后可以无线调试  
+iOS 可以直接运行
+Android 打开调试面板 Dev Settings -> Debugging Debug server host & port for device -> 输入 IP + port
+
 #### iOS
 
 1. 启动 XCode
