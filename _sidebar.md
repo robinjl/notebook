@@ -26,6 +26,7 @@
 - 后端框架
 
   - [Django](backend/django.md)
+  - [Spring Cloud](backend/spring_cloud.md)
 
 - 数据库
 
@@ -42,6 +43,7 @@
 - 工具
 
   - [Git](tools/git.md)
+  - [NPM](tools/npm.md)
   - [Mac](tools/mac.md)
   - [Vim](tools/vim.md)
   - [iTerm2](tools/iTerm2.md)

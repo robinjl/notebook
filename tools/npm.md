@@ -36,3 +36,5 @@ fse_binary_host_mirror=https://r.cnpmjs.org/fsevents
 ```
 
 安装源访问不到 node-sass 安装失败 使用淘宝镜像 [整理 Mac 系统 node-sass 安装失败的原因及解决办法](https://www.cnblogs.com/renxiaoren/p/11903792.html)
+
+## NVM
