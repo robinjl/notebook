@@ -1,18 +1,35 @@
 ## 待解决问题清单
 
-### 公共部分
+# Web CMS
 
-1. APP 版本管理
+1. CMS 权限管理
 
-[Android/iOS 应用版本的维护](https://www.ifeegoo.com/android-ios-app-version-maintenance.html)
+- 细粒度控制
+- 动态菜单
 
-2. APP 消息推送
-3. CMS 权限管理
-4. CMS 动态菜单
-5. CMS WebSocket
-6. CMS token
-7. CMS 文件上传
-8. 文件转换
+2. CMS WebSocket
+3. CMS token
+
+OAuth2  
+access_token, refresh_token
+
+4. CMS 文件上传
+5. 文件转换
+6. 报告导出
+
+- 前端（Web APP）解决方案
+- 后端解决方案
+- 图表
+
+7. 大屏
+
+- 适配性
+- 图表
+
+8. 工作流
+9. Canvas
+10. Animation
+11. 表格 table 各种场景 分页 删除
 
 ### react
 
@@ -20,6 +37,22 @@
 2. Webpack
 3. React 生命周期 componentWillReceiveProps componentDidUpdate
 4. axios
+
+## APP
+
+1. APP 版本管理
+
+[Android/iOS 应用版本的维护](https://www.ifeegoo.com/android-ios-app-version-maintenance.html)
+
+2. APP 消息推送
+
+极光推送
+
+3. 分页
+
+## 运维
+
+CI/CD
 
 ### react-native
 

@@ -50,6 +50,8 @@
   - [WebStorm](tools/webstorm.md)
   - [VirtualBox](tools/virtualbox.md)
   - [ESLint](tools/eslint.md)
+  - [Bash](tools/bash.md)
+  - [Windows Server](tools/windows_server.md)
 
 - 职场/创业
 

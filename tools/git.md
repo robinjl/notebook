@@ -181,4 +181,6 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 ## GitHub
 
-[GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly](https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/)
+1. [GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly](https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/)
+
+2. GitHub 主干分支由 master 变更为 main，已存在项目进行 git 管理 初始化可以写成 `git init --initial-branch=main`

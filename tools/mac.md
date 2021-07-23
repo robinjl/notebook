@@ -2,22 +2,23 @@
 
 ## MacBook 常用软件
 
-| 软件                     | 功能             |
-| ------------------------ | ---------------- |
-| MagicanRest              | 休息提醒         |
-| VirtualBox               | 免费的虚拟机     |
-| Folx                     | 下载工具         |
-| Charles                  | 抓包工具         |
-| Dr.Cleaner               | 系统清理工具     |
-| ~~SmartSVN~~ Cornerstone | 版本管理工具     |
-| Alfred                   | 快速搜索工具     |
-| ForkLift                 | FTP              |
-| Fliqlo                   | 经典时钟屏保     |
-| iTerm                    | 终端             |
-| Oh My Zsh                | 终端             |
-| Homebrew                 | 包安装工具       |
-| OminDiskSweeper          | 文件分布查看     |
-| HandShaker               | Android 文件传输 |
+| 软件                          | 功能             |
+| ----------------------------- | ---------------- |
+| MagicanRest                   | 休息提醒         |
+| VirtualBox                    | 免费的虚拟机     |
+| Folx                          | 下载工具         |
+| Charles                       | 抓包工具         |
+| Dr.Cleaner                    | 系统清理工具     |
+| ~~SmartSVN~~ Cornerstone      | 版本管理工具     |
+| Alfred                        | 快速搜索工具     |
+| ForkLift                      | FTP              |
+| Fliqlo                        | 经典时钟屏保     |
+| iTerm                         | 终端             |
+| Oh My Zsh                     | 终端             |
+| Homebrew                      | 包安装工具       |
+| OminDiskSweeper               | 文件分布查看     |
+| HandShaker                    | Android 文件传输 |
+| [PDMan](http://www.pdman.cn/) | 数据库建模工具   |
 
 ## macOS 查看本地 IP
 

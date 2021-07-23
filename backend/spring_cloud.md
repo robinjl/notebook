@@ -8,9 +8,19 @@
 
 [Maven Repository](https://search.maven.org/)
 
+## IntelliJ 
+
+1. 开启 Services
+
+View -> Tool Windows -> Services -> Add Service -> Run Configuration Type -> Spring Boot
+
+2. 复制并开启相同的服务（例如演示负载均衡）
+
+Service -> 右键 -> Copy Configuration -> Override parameters -> 增加端口号 server.port
+
 ## 概念
 
-1. Eureka 服务治理组建
+1. Eureka 服务治理组件
 2. Ribbon 负载均衡
 3. Hystrix 服务容错保护
 4. Hystrix Dashboard 断路器执行监控
@@ -22,6 +32,8 @@
 10. Consul 服务治理与配置中心
 11. Gateway 网关服务
 12. Admin 监控服务
+13. Security OAuth2
+13. 单点登录（Single Sign On）
 
 ## 笔记
 
@@ -45,3 +57,6 @@ Netflix Ribbon 依赖需要指定版本号
 - [19 张图概览 Spring Cloud](https://jishuin.proginn.com/p/763bfbd5574d)
 - [Spring Cloud 微服务实践 (8) - 部署](https://xie.infoq.cn/article/e940fe066a65b604019110c26)
 - [Java架构师-技术专家](https://class.imooc.com/sale/javaarchitect)
+- [Eureka, Zookeeper, Consul, Nacos 对比](https://developer.aliyun.com/article/738413)
+
+
