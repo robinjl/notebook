@@ -60,3 +60,10 @@ _下载 2019.3.2 或以前的版本，并且不能升级_
 2. _已失效_ [分享几个 IntelliJ IDEA 2019 激活码（破解码、注册码），亲测可用](https://www.jiweichengzhu.com/article/eb340e382d1d456c84a1d190db12755c)
 
 3. _已失效_ [WebStorm 激活](http://idea.lanyus.com/)
+
+
+#### SVN
+
+解决Mac bigsur 中 Can‘t use Subversion command line client:svn
+
+`brew install subversion`

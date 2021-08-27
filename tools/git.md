@@ -184,3 +184,14 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 1. [GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly](https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/)
 
 2. GitHub 主干分支由 master 变更为 main，已存在项目进行 git 管理 初始化可以写成 `git init --initial-branch=main`
+
+3. 报错 `LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443`
+
+安装 libressl `$ brew install libressl`  
+
+> 不能完全解决问题
+
+4. 报错 `Password authentication is temporarily disabled as part of a brownout. Please use a personal access token instead`
+
+（1）Github 设置 token  
+（2）Mac keychain 更改密码为生成的 token
