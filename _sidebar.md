@@ -48,6 +48,7 @@
   - [Vim](tools/vim.md)
   - [iTerm2](tools/iTerm2.md)
   - [WebStorm](tools/webstorm.md)
+  - [VS Code](tools/vscode.md)
   - [VirtualBox](tools/virtualbox.md)
   - [ESLint](tools/eslint.md)
   - [Bash](tools/bash.md)
