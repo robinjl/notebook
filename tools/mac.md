@@ -106,3 +106,18 @@ Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli
 
 1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
 2. [MacWk](https://macwk.com/) Mac 软件下载
+
+## Homebrew
+
+下载很慢 填加 DNS `8.8.8.8`  
+下载报错 `fatal: unable to access 'https://github.com/Homebrew/brew/': Failed to connect to github.com port 443: Operation timed out`  
+
+> 正确的做法应该是 关闭 VPN
+
+网络问题 多试几次  或者尝试  
+raw.githubusercontent.com 查找 IP 编辑 hosts 文件 或者尝试  
+```
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+

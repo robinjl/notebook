@@ -37,4 +37,11 @@ fse_binary_host_mirror=https://r.cnpmjs.org/fsevents
 
 安装源访问不到 node-sass 安装失败 使用淘宝镜像 [整理 Mac 系统 node-sass 安装失败的原因及解决办法](https://www.cnblogs.com/renxiaoren/p/11903792.html)
 
-## NVM
+## nvm
+
+M1 芯片 nvm 安装 node 报错 [nvm install node fails to install on macOS Big Sur M1 Chip](https://github.com/nvm-sh/nvm/issues/2350)
+
+原因可能是程序的硬件兼容性问题
+
+> iTerm -> 显示简介 -> 使用 Rosetta 打开，能够暂时解决这个问题
+
