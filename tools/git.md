@@ -1,6 +1,6 @@
-# Git 简要说明
+# Git
 
-## 一、参考 (都是阮老师的教程)
+## 一、参考  <small>(*都是阮老师的教程*)</small>
 
 1. [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 2. [Git 分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
@@ -13,7 +13,7 @@
 
 2.1 查看 / 提交
 
-```
+```BASH
 $ git branch  (-a)             查看分支(所有)
 $ git checkout [branch]        切换分支
 $ git status                   查看文件状态
@@ -23,7 +23,7 @@ $ git commit -m "message"      本地提交
 
 2.2 创建／删除分支
 
-```
+```BASH
 $ git branch [branch]                       创建分支，但依然停留在当前分支
 $ git checkout -b [branch]                  创建分支，并切换到新创建的分支
 $ git checkout -b [branch] [remote/branch]  创建远程分支到本地
@@ -31,12 +31,12 @@ $ git checkout -b [branch] [remote/branch]  创建远程分支到本地
 
 如果已存在远程分支，需要先拉取，然后再创建
 
-```
+```BASH
 $ git fetch origin [branch]
 $ git checkout -b [branch] [remote/branch]
 ```
 
-```
+```BASH
 $ git branch -d [branch]                    删除本地分支
 $ git push origin :[branch]                 删除远程分支（写法一）
 $ git push origin --delete [branch]         删除远程分支（写法二）
@@ -44,7 +44,7 @@ $ git push origin --delete [branch]         删除远程分支（写法二）
 
 2.3 远程仓库操作
 
-```
+```BASH
 $ git push  <远程主机名>  <本地分支名>:<远程分支名>
 e.g. $ git push origin [branch]       远程分支如果具有与本地分支存在“追踪关系”时，可以省略
 $ git pull [remote] [branch]           取回远程仓库变化，并与本地分支合并
@@ -52,13 +52,13 @@ $ git pull [remote] [branch]           取回远程仓库变化，并与本地�
 
 2.4 合并
 
-```
+```BASH
 $ git merge [branch]   合并指定分支到当前分支
 ```
 
 2.5 标签
 
-```
+```BASH
 $ git tag [tag]                       新建tag
 $ git push [remote] [tag]             提交远程指定tag
 $ git tag -d [tag]                    删除本地指定tag
@@ -67,7 +67,7 @@ $ git push origin :refs/tags/[tag]    删除远程指定tag
 
 2.6 查看日志
 
-```
+```BASH
 $ git log -p        含有内容差异
 $ git log -2        最近数条
 $ git log --stat    列出总结性选项
@@ -80,17 +80,18 @@ $ git log -p filename 查看单文件提交历史和差异详细信息
 
 2.7 重写历史
 
-```
-修改多个提交信息，一般是用于合并提交信息，比如从一个 feature 开发分支合并到主要开发分支，多个提交信息会显得杂乱
-$ git rebase -i HEAD~3  (最近3条) i 表示 interaction, 即交互操作，该命令会打开一个编辑器，可以进行修改
+```BASH
+// 修改多个提交信息，一般是用于合并提交信息，比如从一个 feature 开发分支合并到主要开发分支，多个提交信息会显得杂乱
+// (最近3条) i 表示 interaction, 即交互操作，该命令会打开一个编辑器，可以进行修改
+$ git rebase -i HEAD~3  
 
-在编辑器修改后退出保存
+// 在编辑器修改后退出保存
 $ wq
 ```
 
 2.8 重命名分支
 
-```
+```BASH
 $ git branch -m new-name              重命名当前分支
 $ git branch -m old-name new-name     重命名其他分支
 $ git push origin :old-name new-name  替代远程分支
@@ -179,7 +180,7 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
    从 GitHub 迁移至 GitLab  
    new project -> import project -> select GitHub -> select repository
 
-## GitHub
+## 六、GitHub
 
 1. [GitHub Protips: Tips, tricks, hacks, and secrets from Lee Reilly](https://github.blog/2020-04-09-github-protips-tips-tricks-hacks-and-secrets-from-lee-reilly/)
 
@@ -187,11 +188,11 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 3. 报错 `LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443`
 
-安装 libressl `$ brew install libressl`  
+安装 libressl `$ brew install libressl`
 
-> 不能完全解决问题
+> 不能完全解决问题 还需要用到第 4 点
 
 4. 报错 `Password authentication is temporarily disabled as part of a brownout. Please use a personal access token instead`
 
-（1）Github 设置 token  
+（1）Github 设置 token [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 （2）Mac keychain 更改密码为生成的 token

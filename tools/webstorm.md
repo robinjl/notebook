@@ -2,11 +2,11 @@
 
 ## 快捷键
 
-| 功能               | 快捷方式                               |
-| ------------------ | -------------------------------------- |
-| 打开最近的文件     | Command + E                            |
-| 全局搜索文件、代码 | double Shift                           |
-| 搜索文件结构       | Command + F12 -> Command + 0（自定义） |
+| 功能               | 快捷方式                   |
+| ------------------ | -------------------------- |
+| 打开最近的文件     | ⌘ + E                      |
+| 全局搜索文件、代码 | double ⇧                   |
+| 搜索文件结构       | ⌘ + F12 -> ⌘ + 0（自定义） |
 
 ## 插件
 
@@ -22,9 +22,15 @@ WebStorm 按照 Airbnb JSX 风格指南设置的一些规则处理
 
 #### ESlint
 
-ESlint 规则无分号，WebStorm 依然高亮显示    
+ESlint 规则无分号，WebStorm 依然高亮显示  
 解决方法：Preferences | Editor | Inspections | JavaScript | Code style issues | Unterminated statement  
 Severity -> No highlighting, only fix
+
+#### SVN
+
+解决 Mac bigsur 中 Can‘t use Subversion command line client:svn
+
+`brew install subversion`
 
 ## 设置
 
@@ -60,10 +66,3 @@ _下载 2019.3.2 或以前的版本，并且不能升级_
 2. _已失效_ [分享几个 IntelliJ IDEA 2019 激活码（破解码、注册码），亲测可用](https://www.jiweichengzhu.com/article/eb340e382d1d456c84a1d190db12755c)
 
 3. _已失效_ [WebStorm 激活](http://idea.lanyus.com/)
-
-
-#### SVN
-
-解决Mac bigsur 中 Can‘t use Subversion command line client:svn
-
-`brew install subversion`

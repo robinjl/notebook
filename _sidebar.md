@@ -1,45 +1,3 @@
-- 基础知识
-
-  - [资源](basic.md)
-  - [待解决问题](todo_list.md)
-
-- 前端框架
-
-  - [React](frontend/react.md)
-  - [Vue](frontend/vue.md)
-
-- 移动端框架
-
-  - [React Native](frontend/react_native.md)
-  - [Flutter](frontend/flutter.md)
-
-- 小程序
-
-  - [微信小程序](frontend/wechat.md)
-  - 支付宝小程序
-  - [Taro(React)](frontend/taro.md)
-
-- 后端语言
-
-  - [Java](backend/java.md)
-
-- 后端框架
-
-  - [Django](backend/django.md)
-  - [Spring Cloud](backend/spring_cloud.md)
-
-- 数据库
-
-  - [MySQL](backend/mysql.md)
-
-- 服务器
-
-  - [阿里云](backend/aliyun.md)
-
-- 案例学习
- 
-  - [lin-cms](case_study/lin_cms.md)
-
 - 工具
 
   - [Git](tools/git.md)
@@ -54,7 +12,44 @@
   - [Bash](tools/bash.md)
   - [Windows Server](tools/windows_server.md)
 
-- 职场/创业
+- 前端
 
-  - [博文](career.md)
-  - [团队协作](teamwork.md)
+  - [React](frontend/react.md)
+  - [Vue](frontend/vue.md)
+  - [微信小程序](frontend/wechat.md)
+  - [Taro](frontend/taro.md)
+
+- 移动端
+
+  - [React Native](frontend/react_native.md)
+  - [Flutter](frontend/flutter.md)
+
+- 后端
+
+  - [Java](backend/java.md)
+  - [Django](backend/django.md)
+  - [Spring Cloud](backend/spring_cloud.md)
+
+- 服务器
+
+  - [阿里云](backend/aliyun.md)
+
+- 数据库
+
+  - [MySQL](backend/mysql.md)
+
+- 案例学习
+
+  - [lin-cms](case_study/lin_cms.md)
+  - [待解决问题](case_study/todo_list.md)
+
+- 职业发展
+
+  - [资源](career/basic.md)
+  - [博文](career/blog.md)
+  - [团队协作](career/teamwork.md)
+
+- 生活
+  - [趣味](life/funny.md)
+  - [健身](life/fitness.md)
+  - [情感](life/emotion.md)

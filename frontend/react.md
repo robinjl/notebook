@@ -1,9 +1,9 @@
-## React
+# React
 
 1. [React 官网](https://reactjs.org/)
-1. [React Lifecycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
-1. [React 技术栈系列教程 - 阮一峰 著](http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html)
-1. [React 简易教程](react-simple-tutorial/README.md)
+2. [React Lifecycle](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+3. [React 技术栈系列教程 - 阮一峰 著](http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html)
+4. [React 简易教程](react-simple-tutorial/README.md)
 
 ## Redux
 
@@ -32,7 +32,7 @@
 
 如果组件没有提供样式属性 比如 style， 可以尝试包裹一层 div 样式 然后在样式中加入 :global() 覆盖 antd 全局样式， 例如 description 组件在 4.9.0 之前没有设置 label 样式的属性
 
-```
+```JSX
 <div className="container">
    <Descriptions title="">
       <Descriptions.Item label="XX">
@@ -40,8 +40,9 @@
       </Descriptions.Item>
     <Descriptions>
 </div>
+```
 
-style.less
+```LESS
 .container {
   :global(.ant-descriptions-item-label) {
     width: 200px;

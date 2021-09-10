@@ -1,5 +1,3 @@
-## lin-cms
-
 ### 概述
 
 1. 后端基于开源项目 [lin-cms-spring-boot](https://github.com/TaleLin/lin-cms-spring-boot)

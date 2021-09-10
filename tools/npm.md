@@ -1,4 +1,4 @@
-## NPM
+# NPM
 
 npm 5.0+ install package 直接加入到 package.json 的 dependencies  
 npm 5.2+ npx  

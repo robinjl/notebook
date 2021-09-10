@@ -18,7 +18,7 @@ interact
 expect eof
 ```
 
-**注意：** 变量（比如密码）中含有 \$ 等特殊符号时，需要转义
+!> 变量（比如密码）中含有 \$ 等特殊符号时，需要转义
 
 2. iTerm -> Preferences -> Profiles -> add Profile -> Command 中输入 `expect ~/.ssh/[scirpt_name]`
 3. Profiles -> [script_name]

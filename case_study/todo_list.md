@@ -1,6 +1,6 @@
-## 待解决问题清单
+# 待解决问题
 
-# Web CMS
+## Web CMS
 
 1. CMS 权限管理
 
@@ -31,7 +31,7 @@ access_token, refresh_token
 10. Animation
 11. 表格 table 各种场景 分页 删除
 
-### react
+## React
 
 1. babel-plugin-react-directives 使用技巧
 2. Webpack
@@ -54,7 +54,7 @@ access_token, refresh_token
 
 CI/CD
 
-### react-native
+## react-native
 
 1. 提高 iOS build 速度 0.63.0 起 Flipper 自动配置到初始项目中 打包很慢 注释掉相关代码 [How do i remove Flipper from React Native](https://github.com/facebook/flipper/issues/1326)
 2. Pod 多版本部署问题

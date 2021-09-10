@@ -1,5 +1,3 @@
-# VS Code
-
 ## Shortcuts
 
 | 功能             | 快捷键                 |

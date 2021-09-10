@@ -1,4 +1,4 @@
-# 学习资料
+# 资源
 
 ## 视频教程
 
@@ -13,10 +13,10 @@
 4. 深入浅出 Node.js
 5. JavaScript 框架设计（第 2 版)
 6. JavaScript 权威指南（第 6 版）
-7. JavaScript 忍者秘籍 第 2 版
+7. JavaScript 忍者秘籍 （第 2 版）
 8. ES6 标准入门（第 3 版） / [在线地址](http://es6.ruanyifeng.com/)
 9. CSS 世界
-10. 精通 CSS 高级 Web 标准解决方案 第 3 版
+10. 精通 CSS 高级 Web 标准解决方案 （第 3 版）
 11. jQuery 基础教程（第 4 版）
 
 ## 综合
@@ -39,7 +39,7 @@
 ## 网站
 
 1. [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-2. [FEX](https://fex.baidu.com/)
+2. [FEX](https://fex.baidu.com/) *已停止更新*
 3. [酷壳](https://coolshell.cn/)
 4. [Phodal Huang](https://www.phodal.com/)
 5. [鑫空间，鑫生活](https://www.zhangxinxu.com/)
@@ -50,7 +50,7 @@
 10. [FrontendMasters](https://frontendmasters.com/)
 11. [JavaScript Weekly](https://javascriptweekly.com/)
 
-## 🎨 前端技术栈
+## 前端技术栈
 
 ![](images/frontend_stack.png)
 
@@ -134,5 +134,5 @@
 2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
 3. [MikuTools](https://tools.miku.ac/)
 4. [图片压缩 Tinypng](https://tinypng.com/)
-5. [Juxtapose](https://juxtapose.knightlab.com/)  实现两张图片通过中间轴滑动对比
+5. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
 6. [Ray.so](https://ray.so/) 生成漂亮的代码截图
