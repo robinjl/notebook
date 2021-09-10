@@ -45,7 +45,7 @@
 
 - 职业发展
 
-  - [资源](career/basic.md)
+  - [资源](career/material.md)
   - [博文](career/blog.md)
   - [团队协作](career/teamwork.md)
 
