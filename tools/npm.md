@@ -2,7 +2,7 @@
 
 npm 5.0+ install package 直接加入到 package.json 的 dependencies  
 npm 5.2+ npx  
-`npm init` 如果没有指定仓库，会提示 WARN: No repository field，可以在 package.json 加上 `"private": true`，私有化仓库，屏蔽提示信息
+`npm init` 如果没有指定仓库，会提示 WARN: No repository field，可以在 package.json 加上 `"private": true`，私有化仓库，屏蔽提示信息  
 `npm audit fix` 监测并修改潜在的缺陷(vulnerabilities)
 
 [npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)  

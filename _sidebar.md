@@ -11,6 +11,7 @@
   - [ESLint](tools/eslint.md)
   - [Bash](tools/bash.md)
   - [Windows Server](tools/windows_server.md)
+  - [Chrome](tools/chrome.md)
 
 - 前端
 

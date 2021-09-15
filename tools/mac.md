@@ -119,6 +119,16 @@ macOS 升级 10.15，Axure RP 8 打不开，需要下载 8.1.0.3388 或 9， 下
 Licensee：zdfans.com  
 Key：gP5uuK2gH + iIVO3YFZwoKyxAdHpXRGNnZWN8Obntqv7 ++ FF3pAz7dTu8B61ySxli
 
+## 端口号占用情况
+
+```
+#命令格式：lsof -i :端口
+lsof -i:8080
+
+#杀掉进程
+kill -9 pid
+```
+
 ## 其他
 
 1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
