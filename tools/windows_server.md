@@ -8,6 +8,8 @@
 
 如果不配置全局变量，PowerShell Bash 都不能识别 nginx（报错：`bash: nginx: command not found`） 需要使用 CMD （Win + R）进入 nginx 安装目录下操作
 
+!> 命令行无效 进入 services.msc 手动重启或关闭
+
 ```
 // 启动
 start nginx
