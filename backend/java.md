@@ -47,16 +47,13 @@ VO View Object 显示层对象
 
 1. Mac OS X 安装 Java
 
-(1) 通过 Oracle Java 官网下载安装  
-(2) 使用过 React Native，已经安装过 Java， [文档](http://facebook.github.io/react-native/docs/getting-started)  
- 查看 Java 版本 `java -version`
-
-通过 homebrew 安装 JDK
-
+方法一、[通过 Oracle Java 官网下载安装](https://www.java.com/zh-CN/download/)   
+方法二、通过 homebrew 安装 JDK，[参考](https://reactnative.dev/docs/environment-setup#installing-dependencies) 
 ```
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk8
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 ```
+
+查看 Java 版本 `java -version`
 
 2. 设置 JAVA_HOME
    获取 JAVA_HOME 环境变量：

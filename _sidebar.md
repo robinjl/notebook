@@ -52,5 +52,4 @@
 
 - 生活
   - [趣味](life/funny.md)
-  - [健身](life/fitness.md)
   - [情感](life/emotion.md)
