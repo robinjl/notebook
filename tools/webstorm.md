@@ -50,7 +50,8 @@ Mac Intel 升级到 12 Monterey 闪退
 删除Mac残余文件
 
 ~/Library/Application\ Support  
-~/Library/Caches/
+~/Library/Caches/  
+~/Library/Preferences
 
 #### 2020.2.12 更新
 

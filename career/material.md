@@ -131,7 +131,7 @@
 ## 其他
 
 1. [Bing 每日一图 API](http://guolin.tech/api/bing_pic)
-2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
+2. [Logo/Favicon](https://www.logosc.cn/logo/) 
 3. [MikuTools](https://tools.miku.ac/)
 4. [图片压缩 Tinypng](https://tinypng.com/)
 5. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比

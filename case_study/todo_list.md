@@ -61,3 +61,12 @@ CI/CD
 3. Android 权限询问
 4. animated API
 5. react-native-swiper 比如 A->B，B 传递参数跳转 A,A 共用， Swiper 数据 index 未更新
+
+## 2022.4
+
+- [ ] 前端自动化部署（React 项目） Jenkins
+- [ ] Spring Cloud 打包自动化部署
+- [ ] 前端导航栏优化，鼠标滚动效果，样式优化（Ant Design 样式覆盖）
+- [ ] Redis 自启动
+- [ ] forklift 指定打开路径
+- [ ] MySQL 学习

@@ -25,11 +25,13 @@ nginx -s stop
 
 ## SSH
 
+windows 不能直接 ssh 连接，需要先安装 OpenSSH
+
 Windows Server2012 安装 OpenSSH 服务 [参考 1](https://segmentfault.com/a/1190000020166803) / [参考 2](https://www.pianshen.com/article/87221730998/) / [参考 3](https://www.pianshen.com/article/637599765/)
 
 步骤：
 
-1. 下载 [OpenSSH 对应版本](https//github.com/PowerShell/Win32-OpenSSH/releases) 到本地解压
+1. 下载 [OpenSSH 对应版本](https://github.com/PowerShell/Win32-OpenSSH/releases) 到本地解压
 2. 设置系统变量（可选）, 即便配置，有些命令仍然需要在 nginx 文件下执行，原因是 windows 路径配置并不正确，[参考](https://segmentfault.com/q/1010000002514451)
 3. 在 OpenSSH 文件夹下执行命令 `./install-sshd.ps1`
-4. 开启服务（services）启动 OpenSSH SSH Server
+4. 开启服务（services）, 启动 sshd (OpenSSH SSH Server)

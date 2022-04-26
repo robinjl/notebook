@@ -9,7 +9,7 @@
 | Folx                                                              | 下载工具         |
 | Charles                                                           | 抓包工具         |
 | Dr.Cleaner                                                        | 系统清理工具     |
-| ~~SmartSVN~~ Cornerstone                                          | 版本管理工具     |
+| ~~SmartSVN~~ ~~Cornerstone~~ Xversion                             | 版本管理工具     |
 | Alfred                                                            | 快速搜索工具     |
 | ForkLift                                                          | FTP              |
 | Fliqlo                                                            | 经典时钟屏保     |
@@ -90,6 +90,13 @@ $ df -h
 
 ```
 $ xcrun simctl list devices
+```
+
+删除无效的 device
+
+```
+$ sudo xcrun simctl delete unavailable
+$ xcrun simctl delete [device_UUID]
 ```
 
 `Error：Unable to boot device because it cannot be located on disk`, 解决办法：

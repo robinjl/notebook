@@ -1,3 +1,9 @@
+- 案例学习
+
+  - [待解决问题](case_study/todo_list.md)
+  - [lin-cms](case_study/lin_cms.md)
+  - [cms](case_study/cms.md)
+
 - 工具
 
   - [Git](tools/git.md)
@@ -12,6 +18,7 @@
   - [Bash](tools/bash.md)
   - [Windows Server](tools/windows_server.md)
   - [Chrome](tools/chrome.md)
+  - [Subversion](tools/svn.md)
 
 - 前端
 
@@ -38,11 +45,6 @@
 - 数据库
 
   - [MySQL](backend/mysql.md)
-
-- 案例学习
-
-  - [lin-cms](case_study/lin_cms.md)
-  - [待解决问题](case_study/todo_list.md)
 
 - 办公软件
 
