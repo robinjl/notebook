@@ -64,9 +64,9 @@ CI/CD
 
 ## 2022.4
 
-- [ ] 前端自动化部署（React 项目） Jenkins
-- [ ] Spring Cloud 打包自动化部署
-- [ ] 前端导航栏优化，鼠标滚动效果，样式优化（Ant Design 样式覆盖）
-- [ ] Redis 自启动
-- [ ] forklift 指定打开路径
+- [x] 前端自动化部署（React 项目） Jenkins
+- [x] Spring Cloud 打包自动化部署 
+- [x] 前端导航栏优化，鼠标滚动效果，样式优化（Ant Design 样式覆盖） 已解决：Menu 组件替换为 Tab 组件
+- [x] Redis 自启动
+- [x] forklift 指定打开路径  实现不了，不知道这个路径指什么
 - [ ] MySQL 学习
