@@ -10,8 +10,10 @@
 
 ## 插件
 
-| 名称         | 功能           |
-| ------------ | -------------- |
-| Adblock Plus | 网页广告屏蔽   |
-| Momentum     | 新标签页背景图 |
-| Octotree     | GitHub 文件树  |
+| 名称              | 功能                                        |
+| ----------------- | ------------------------------------------- |
+| Adblock Plus      | 网页广告屏蔽                                |
+| Momentum          | 新标签页背景图                              |
+| Octotree          | GitHub 文件树                               |
+| GitZip for github | github 下载选中的文件或文件夹（也有网页版） |
+| JSON Formatter    | JSON 网页格式化                             |

@@ -119,7 +119,7 @@
 
   - 操作系统
   - 网络原理 TCP/IP HTTP 状态码
-  - [设计模式](https://refactoringguru.cn/design-patterns)
+  - [设计模式](https://refactoringguru.cn/design-patterns), [Patterns.dev](https://www.patterns.dev/)
   - 数据结构及算法
 
 - 设计
