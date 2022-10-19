@@ -70,3 +70,15 @@ CI/CD
 - [x] Redis 自启动
 - [x] forklift 指定打开路径  实现不了，不知道这个路径指什么
 - [ ] MySQL 学习
+
+
+## 2022.10
+
+- [ ] Activiti
+- [ ] Vue 2
+- [ ] ESBuild
+
+CSS 
+
+- grid-template-columns
+- place-items

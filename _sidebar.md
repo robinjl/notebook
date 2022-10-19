@@ -60,3 +60,5 @@
 
   - [趣味](life/funny.md)
   - [健身](life/fitness.md)
+  - [情感](life/emotion.md)
+  - [思考](life/thinking.md)

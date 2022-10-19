@@ -340,6 +340,7 @@ sudo yum -y install mysql-community-server
 sudo systemctl start mysqld
 ```
 
+
 设置系统启动时自动启动
 
 ```
@@ -360,12 +361,36 @@ mysql -uroot -p // 用临时密码登录
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new password' // 设置新密码
 ```
 
+!> 报错：Failed to start mysqld.service: Unit not found.
+
+原因：CentOS 不再支持 MySQL， 而使用 Mariadb
+
+安装 mariadb-server `yum install -y mariadb-server`
+
+启动
+
+```
+sudo systemctl start mariadb.service
+```
+
+设置系统启动时自动启动
+
+```
+sudo systemctl enable mariadb.service
+```
+
+设置安全项，修改管理员密码
+
+```
+mysql_secure_installation
+```
+
 ## 允许远程连接数据库
 
 进入 MySQL 命令行，允许所有 IP 地址访问数据库
 
 ```
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'passowrd' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password';  // password 为远程访问密码
 
 ```
 
@@ -376,6 +401,10 @@ FLUSH PRIVILEGES;
 ```
 
 重启数据库
+
+```
+systemctl restart mariadb.service
+```
 
 ## 安装 Vim
 

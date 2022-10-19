@@ -39,7 +39,7 @@
 ## 网站
 
 1. [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-2. [FEX](https://fex.baidu.com/) *已停止更新*
+2. [FEX](https://fex.baidu.com/) _已停止更新_
 3. [酷壳](https://coolshell.cn/)
 4. [Phodal Huang](https://www.phodal.com/)
 5. [鑫空间，鑫生活](https://www.zhangxinxu.com/)
@@ -131,8 +131,9 @@
 ## 其他
 
 1. [Bing 每日一图 API](http://guolin.tech/api/bing_pic)
-2. [Logo/Favicon](https://www.logosc.cn/logo/) 
-3. [MikuTools](https://tools.miku.ac/)
-4. [图片压缩 Tinypng](https://tinypng.com/)
-5. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
-6. [Ray.so](https://ray.so/) 生成漂亮的代码截图
+2. [Bing 壁纸](https://bing.wdbyte.com/)
+3. [Logo/Favicon](https://www.logosc.cn/logo/)
+4. [MikuTools](https://tools.miku.ac/)
+5. [图片压缩 Tinypng](https://tinypng.com/)
+6. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
+7. [Ray.so](https://ray.so/) 生成漂亮的代码截图
