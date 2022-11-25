@@ -21,7 +21,15 @@ nginx -s reload
 nginx -s stop
 ```
 
+**开机自启动**
+
 [nginx 开机自启动](https://serverok.in/auto-start-nginx-on-windows)
+
+上面方法在 Window Server 2016 无法启动，可以尝试下面方法
+
+[window server 2019环境下将nginx配置为开机自启动服务](https://www.cnblogs.com/reblue520/p/15098471.html)
+
+若提示 `无法安装 .NET Framework 3.5。`，参考 [Windows Server2012 R2 无法安装.NET Framework 3.5的解决方法](https://www.cnblogs.com/luckyyang/p/13898791.html)
 
 ## SSH
 

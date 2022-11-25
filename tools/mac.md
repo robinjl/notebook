@@ -21,7 +21,10 @@
 | [PDMan](http://www.pdman.cn/)                                     | 数据库建模工具   |
 | [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) | 屏幕共享         |
 
-> [MacWk](https://macwk.com/) Mac 软件下载
+> ~~[MacWk](https://macwk.com/)（已关站）~~ Mac 软件下载其他选择
+
+- [macyy](https://www.macyy.cn/)
+- [macapp](https://macapp.org.cn/)
 
 ## Homebrew
 
