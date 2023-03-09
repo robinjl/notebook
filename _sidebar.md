@@ -62,3 +62,4 @@
   - [健身](life/fitness.md)
   - [情感](life/emotion.md)
   - [思考](life/thinking.md)
+  - [生活](life/living.md)
