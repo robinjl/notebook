@@ -41,6 +41,18 @@ Severity -> No highlighting, only fix
 
 支持正版，待能力提高一定程度，一定购买正版。
 
+#### 2022.4.3 更新
+
+Mac Intel 升级到 12 Monterey 闪退
+
+使用版本 2021.3，从官网下载或 Macwk.com 下载，并使用最新的 agent.jar 文件及激活码
+
+删除Mac残余文件
+
+~/Library/Application\ Support  
+~/Library/Caches/  
+~/Library/Preferences
+
 #### 2020.2.12 更新
 
 _下载 2019.3.2 或以前的版本，并且不能升级_

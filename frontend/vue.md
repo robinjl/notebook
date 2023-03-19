@@ -54,3 +54,11 @@ VS Code: Vetur
 
 [Vue Composition API](https://composition-api.vuejs.org/)
 
+## Vite 
+
+[脚手架工具 create vue](https://github.com/vuejs/create-vue) 构建 Vite 项目
+
+[管网](https://cn.vitejs.dev/)
+
+需要 Node.js 版本 14.18+，16+
+

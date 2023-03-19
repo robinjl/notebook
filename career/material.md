@@ -39,7 +39,7 @@
 ## 网站
 
 1. [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-2. [FEX](https://fex.baidu.com/) *已停止更新*
+2. [FEX](https://fex.baidu.com/) _已停止更新_
 3. [酷壳](https://coolshell.cn/)
 4. [Phodal Huang](https://www.phodal.com/)
 5. [鑫空间，鑫生活](https://www.zhangxinxu.com/)
@@ -119,7 +119,7 @@
 
   - 操作系统
   - 网络原理 TCP/IP HTTP 状态码
-  - [设计模式](https://refactoringguru.cn/design-patterns)
+  - [设计模式](https://refactoringguru.cn/design-patterns), [Patterns.dev](https://www.patterns.dev/)
   - 数据结构及算法
 
 - 设计
@@ -131,8 +131,11 @@
 ## 其他
 
 1. [Bing 每日一图 API](http://guolin.tech/api/bing_pic)
-2. [My Brand New Logo](https://mybrandnewlogo.com/) 自动设计生成 LOGO
-3. [MikuTools](https://tools.miku.ac/)
-4. [图片压缩 Tinypng](https://tinypng.com/)
-5. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
-6. [Ray.so](https://ray.so/) 生成漂亮的代码截图
+2. [Bing 壁纸](https://bing.wdbyte.com/)
+3. [Logo/Favicon](https://www.logosc.cn/logo/)
+4. [MikuTools](https://tools.miku.ac/)
+5. [图片压缩 Tinypng](https://tinypng.com/)
+6. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
+7. [Ray.so](https://ray.so/) 生成漂亮的代码截图
+8. [Unsplash](https://unsplash.com/) 免费共享的商业图片网站
+9. [Photokit](https://photokit.com/?lang=zh) 免费在线图片编辑器

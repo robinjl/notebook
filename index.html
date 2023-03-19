@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>Robin's Notebook</title>
-  <link rel="icon" href="_media/favicon.ico" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description" />
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Robin's Notebook</title>
+    <link rel="icon" href="_media/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="//unpkg.com/docsify/lib/themes/vue.css"
+    /> -->
+    <link rel="stylesheet" href="assets/css/vue.css"
+  </head>
 
 <body>
   <div id="app">Loading ...</div>
@@ -52,16 +57,24 @@
             "</footer>",
           ].join("");
 
-          hook.afterEach(function (html) {
-            return html + footer;
-          });
-        },
-      ],
-    };
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-</body>
-
+            hook.afterEach(function (html) {
+              return html + footer;
+            });
+          },
+        ],
+      };
+    </script>
+    <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/docsify-copy-code"></script>
+    <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script> -->
+    <script src="assets/js/docsify.min.js"></script>
+    <script src="assets/js/search.min.js"></script>
+    <script src="assets/js/docsify-copy-code.min.js"></script>
+    <script src="assets/js/docsify-scroll-to-top.min.js"></script>
+    <script src="assets/js/zoom-image.min.js"></script>
+    <script src="assets/js/emoji.min.js"></script>
+  </body>
 </html>

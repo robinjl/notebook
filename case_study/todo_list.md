@@ -61,3 +61,24 @@ CI/CD
 3. Android 权限询问
 4. animated API
 5. react-native-swiper 比如 A->B，B 传递参数跳转 A,A 共用， Swiper 数据 index 未更新
+
+## 2022.4
+
+- [x] 前端自动化部署（React 项目） Jenkins
+- [x] Spring Cloud 打包自动化部署 
+- [x] 前端导航栏优化，鼠标滚动效果，样式优化（Ant Design 样式覆盖） 已解决：Menu 组件替换为 Tab 组件
+- [x] Redis 自启动
+- [x] forklift 指定打开路径  实现不了，不知道这个路径指什么
+- [ ] MySQL 学习
+
+
+## 2022.10
+
+- [ ] Activiti
+- [ ] Vue 2
+- [ ] ESBuild
+
+CSS 
+
+- grid-template-columns
+- place-items

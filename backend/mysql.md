@@ -2,14 +2,18 @@
 
 ## 资源
 
+- [MySQL Tutorial](https://www.mysqltutorial.org/)
 - [MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/)
-- [MySQL Tutorial](http://www.mysqltutorial.org/)
-- [腾讯课堂](https://ke.qq.com/course/431451?term_id=100515157&taid=3746143490446683)
 - [SQL 教程-廖雪峰](https://www.liaoxuefeng.com/wiki/1177760294764384)
+- [腾讯课堂](https://ke.qq.com/course/431451?term_id=100515157&taid=3746143490446683)
 
 ## 客户端
 
-#### Workbench
+### Navicat
+
+1. 数据库较大时，导出 SQL 文件迁移，会很慢，源数据库使用"新建备份"创建备份，然后在目标数据库中选择"还原备份从"选择备份文件，速度很快
+
+### Workbench
 
 ER(entity-relationship)  
 EER(enhanced entity-relationship)
@@ -23,7 +27,7 @@ Database -> Reverse Engineer
 
 EER 导出为其他格式文件 File - Export -> Export as PNG / SVG / PDF
 
-#### Sequel Pro
+### Sequel Pro
 
 export / import .sql 文件 导出/引入数据库文件
 
@@ -37,10 +41,6 @@ bug: 只有一个数据表操作窗口，增加 tab，关闭 tab，会意外闪�
 1. 导出数据库： 选择数据库 -> 右键 -> Dump with 'mysqldump'
 2. 导入数据库： schemes 下创建数据库 -> 右键 -> Restore with 'mysql' 或者 打开.sql 文件运行->tab 右键-> run -> 选择数据库
 3. 在自动生成的命令上加上-d 参数, 就可以仅仅导出表结构而不包含数据
-
-#### Navicat
-
-1. 数据库较大时，导出 SQL 文件迁移，会很慢，源数据库使用"新建备份"创建备份，然后在目标数据库中选择"还原备份从"选择备份文件，速度很快
 
 ## 命令
 

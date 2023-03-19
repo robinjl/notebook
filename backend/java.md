@@ -1,5 +1,9 @@
 # Java
 
+## 资料
+
+[Java 全栈知识体系](https://pdai.tech/)
+
 ## 视频课程
 
 - [Java 零基础入门到精通-上](https://ke.qq.com/course/375599?taid=2866267900197679)
@@ -381,7 +385,10 @@ systemctl restart myapp
 
 ## MyBatis
 
-## MyBatis Plus
+基于 Java 的持久层框架
+DAO （Data Access Objects）数据访问对象
+
+## [MyBatis Plus](https://baomidou.com/)
 
 [Mybatis-Plus select does not list all fields, only query some fields](https://www.programmersought.com/article/67634618243/)
 
@@ -394,17 +401,17 @@ systemctl restart myapp
 ## Spring Boot
 
 1. [WebView 教程](https://spring.io/guides/gs/serving-web-content/)
-1. 提交代码，总是先提交一个空类的文件，然后需要再次提交增加的代码？
-1. @Controller 返回动态模版，如何与 @RestController 下的方法写在同一个 controller 文件里
-1. UUID 存储，目前将 uuid 转化成 String，数据库默认排序
-1. dozermapper 的使用, 简化分页单条数据模型
-1. Integer int Long long Boolean boolean 区别
-1. VO BO 区别
-1. Mapper.xml 作用 及 SQL 查询
-1. varchar(1) bit(1) boolean
-1. 简便的方式获取人员姓名等信息
-1. html 转换图片 [参考](https://my.oschina.net/u/4051898/blog/2990638)
-   java - htmltoimage 很早就不维护了，勉强使用，问题如下：
+2. 提交代码，总是先提交一个空类的文件，然后需要再次提交增加的代码？
+3. @Controller 返回动态模版，如何与 @RestController 下的方法写在同一个 controller 文件里
+4. UUID 存储，目前将 uuid 转化成 String，数据库默认排序
+5. dozermapper 的使用, 简化分页单条数据模型
+6. Integer int Long long Boolean boolean 区别
+7. VO BO 区别
+8. Mapper.xml 作用 及 SQL 查询
+9. varchar(1) bit(1) boolean
+10. 简便的方式获取人员姓名等信息
+11. html 转换图片 [参考](https://my.oschina.net/u/4051898/blog/2990638)
+    java - htmltoimage 很早就不维护了，勉强使用，问题如下：
 
 - loadUrl() 不能引入外部 CSS 或内嵌 CSS，只能使用行内样式 loadHtml() 可以使用内嵌 CSS
 - img 只能使用 width height 使用 style 不生效；

@@ -1,3 +1,9 @@
+- 案例学习
+
+  - [待解决问题](case_study/todo_list.md)
+  - [lin-cms](case_study/lin_cms.md)
+  - [cms](case_study/cms.md)
+
 - 工具
 
   - [Git](tools/git.md)
@@ -12,6 +18,7 @@
   - [Bash](tools/bash.md)
   - [Windows Server](tools/windows_server.md)
   - [Chrome](tools/chrome.md)
+  - [Subversion](tools/svn.md)
 
 - 前端
 
@@ -39,10 +46,9 @@
 
   - [MySQL](backend/mysql.md)
 
-- 案例学习
+- 办公软件
 
-  - [lin-cms](case_study/lin_cms.md)
-  - [待解决问题](case_study/todo_list.md)
+  - [WPS](office/wps.md)
 
 - 职业发展
 
@@ -51,5 +57,8 @@
   - [团队协作](career/teamwork.md)
 
 - 生活
+
   - [趣味](life/funny.md)
   - [情感](life/emotion.md)
+  - [思考](life/thinking.md)
+  - [生活](life/living.md)

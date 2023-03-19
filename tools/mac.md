@@ -9,7 +9,7 @@
 | Folx                                                              | 下载工具         |
 | Charles                                                           | 抓包工具         |
 | Dr.Cleaner                                                        | 系统清理工具     |
-| ~~SmartSVN~~ Cornerstone                                          | 版本管理工具     |
+| ~~SmartSVN~~ ~~Cornerstone~~ Xversion                             | 版本管理工具     |
 | Alfred                                                            | 快速搜索工具     |
 | ForkLift                                                          | FTP              |
 | Fliqlo                                                            | 经典时钟屏保     |
@@ -21,7 +21,10 @@
 | [PDMan](http://www.pdman.cn/)                                     | 数据库建模工具   |
 | [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) | 屏幕共享         |
 
-> [MacWk](https://macwk.com/) Mac 软件下载
+> ~~[MacWk](https://macwk.com/)（已关站）~~ Mac 软件下载其他选择
+
+- [macyy](https://www.macyy.cn/)
+- [macapp](https://macapp.org.cn/)
 
 ## Homebrew
 
@@ -92,6 +95,13 @@ $ df -h
 $ xcrun simctl list devices
 ```
 
+删除无效的 device
+
+```
+$ sudo xcrun simctl delete unavailable
+$ xcrun simctl delete [device_UUID]
+```
+
 `Error：Unable to boot device because it cannot be located on disk`, 解决办法：
 
 ```
@@ -133,3 +143,17 @@ kill -9 pid
 
 1. App Store 下载慢，尝试将 DNS 配置为 `114.114.114.114`
 2. Mac 输入特殊字符 ⌘ + ⌃ + Space
+
+## 系统
+
+1. 硬件诊断
+
+关机状态下，长按 D 键，直到出现旋转的地球，连接网络，然后点击同意诊断，几分钟后会出具报告
+
+2. 重做系统（最新）
+
+开机后，按住 Command + R， 直至出现连设置网络的选项
+
+3. 恢复出厂系统
+
+开机后，按住 Command + Option + Shift + R， 直至出现连设置网络的选项

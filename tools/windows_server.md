@@ -21,15 +21,25 @@ nginx -s reload
 nginx -s stop
 ```
 
+**开机自启动**
+
 [nginx 开机自启动](https://serverok.in/auto-start-nginx-on-windows)
 
+上面方法在 Window Server 2016 无法启动，可以尝试下面方法
+
+[window server 2019环境下将nginx配置为开机自启动服务](https://www.cnblogs.com/reblue520/p/15098471.html)
+
+若提示 `无法安装 .NET Framework 3.5。`，参考 [Windows Server2012 R2 无法安装.NET Framework 3.5的解决方法](https://www.cnblogs.com/luckyyang/p/13898791.html)
+
 ## SSH
+
+windows 不能直接 ssh 连接，需要先安装 OpenSSH
 
 Windows Server2012 安装 OpenSSH 服务 [参考 1](https://segmentfault.com/a/1190000020166803) / [参考 2](https://www.pianshen.com/article/87221730998/) / [参考 3](https://www.pianshen.com/article/637599765/)
 
 步骤：
 
-1. 下载 [OpenSSH 对应版本](https//github.com/PowerShell/Win32-OpenSSH/releases) 到本地解压
+1. 下载 [OpenSSH 对应版本](https://github.com/PowerShell/Win32-OpenSSH/releases) 到本地解压
 2. 设置系统变量（可选）, 即便配置，有些命令仍然需要在 nginx 文件下执行，原因是 windows 路径配置并不正确，[参考](https://segmentfault.com/q/1010000002514451)
 3. 在 OpenSSH 文件夹下执行命令 `./install-sshd.ps1`
-4. 开启服务（services）启动 OpenSSH SSH Server
+4. 开启服务（services）, 启动 sshd (OpenSSH SSH Server)
