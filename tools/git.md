@@ -1,6 +1,6 @@
 # Git
 
-## 一、参考  <small>(*都是阮老师的教程*)</small>
+## 一、参考 <small>(_都是阮老师的教程_)</small>
 
 1. [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 2. [Git 分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
@@ -83,7 +83,7 @@ $ git log -p filename 查看单文件提交历史和差异详细信息
 ```BASH
 // 修改多个提交信息，一般是用于合并提交信息，比如从一个 feature 开发分支合并到主要开发分支，多个提交信息会显得杂乱
 // (最近3条) i 表示 interaction, 即交互操作，该命令会打开一个编辑器，可以进行修改
-$ git rebase -i HEAD~3  
+$ git rebase -i HEAD~3
 
 // 在编辑器修改后退出保存
 $ wq
@@ -196,3 +196,8 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 
 （1）Github 设置 token [Creating a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 （2）Mac keychain 更改密码为生成的 token
+（3）如果 push 等操作没有出现输入密码选项，输入如下命令，再次执行操作输入用户名密码
+
+```
+git config --system --unset credential.helper
+```
