@@ -139,3 +139,4 @@
 7. [Ray.so](https://ray.so/) 生成漂亮的代码截图
 8. [Unsplash](https://unsplash.com/) 免费共享的商业图片网站
 9. [Photokit](https://photokit.com/?lang=zh) 免费在线图片编辑器
+10. [Chat GPT Demo](https://chat.chatgptdemo.net/)
