@@ -139,4 +139,6 @@
 7. [Ray.so](https://ray.so/) 生成漂亮的代码截图
 8. [Unsplash](https://unsplash.com/) 免费共享的商业图片网站
 9. [Photokit](https://photokit.com/?lang=zh) 免费在线图片编辑器
-10. [Chat GPT Demo](https://chat.chatgptdemo.net/)
+10. [迅排设计](https://design.palxp.com/home) 在线制作海报
+11. [FastGPT](https://labs.kagi.com/fastgpt) GPT 聊天问答
+12. [ChatGPT Demo](https://chat.chatgptdemo.net/) ChatGPT 克隆版
