@@ -25,8 +25,8 @@ _RN > 60_
 
 - APP 启动图标自动生成器:
 
-  1.  [图标工厂](https://icon.wuruihong.com/)
-  2.  [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/) 可以生成圆形图片
+  1.  [IconKitchen](https://icon.kitchen/) 可以生成圆角方形图片、圆形图片 （[Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)）
+  2.  [图标工厂](https://icon.wuruihong.com/) 不足之处是没有自动圆角
 
 - 生成 release keystore, [参考 Publishing to Google Play Store](https://reactnative.dev/docs/signed-apk-android)，双字母国家/地区代码是 CN（China）
 
@@ -34,8 +34,8 @@ _RN > 60_
 
 ```
 $ npm run android // 开发版本
-$ react-native run-android --variant releaseStaging // 测试版本
-$ react-native run-android --variant release // 正式版本
+$ npx react-native run-android --variant releaseStaging // 测试版本
+$ npx react-native run-android --variant release // 正式版本
 ```
 
 !> releaseStaging 安装失败，需要增加配置项`matchingFallbacks = ['release']` [issue](https://github.com/microsoft/react-native-code-push/issues/1557#issuecomment-480927795)
@@ -72,8 +72,8 @@ BUNDLE_DISPALY_NAME VS BUNDLE_NAME iOS 使用前者即可
 
 ```
 $ npm run ios // 开发版本
-$ react-native run-ios --configuration Staging // 测试版本
-$ react-native run-ios --configuration Release // 正式版本
+$ npx react-native run-ios --configuration Staging // 测试版本
+$ npx react-native run-ios --configuration Release // 正式版本
 ```
 
 !> 如果出现之前能安装，过段时间安装不了测试/正式版本，仔细查看错误报告。原因可能是 gradle 升级 解决方法：清除 build 缓存、gradle 临时构建文件，或者删除已安装的 APP，重新 build
@@ -393,7 +393,8 @@ gradle.properties file 增加
 
 [Could not find tools.jar. Please check that /Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home contains a valid JDK installation](https://stackoverflow.com/questions/64968851/could-not-find-tools-jar-please-check-that-library-internet-plug-ins-javaapple)
 
-解决方法：修改 zshrc 更新JAVA_HOME路径
+解决方法：修改 zshrc 更新 JAVA_HOME 路径
+
 ```
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 ```
