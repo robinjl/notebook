@@ -138,7 +138,7 @@
 6. [Juxtapose](https://juxtapose.knightlab.com/) 实现两张图片通过中间轴滑动对比
 7. [Ray.so](https://ray.so/) 生成漂亮的代码截图
 8. [Unsplash](https://unsplash.com/) 免费共享的商业图片网站
-9. [Photokit](https://photokit.com/?lang=zh) 免费在线图片编辑器
+9. [Photokit](https://photokit.com/?lang=zh) 免费在线图片编辑器  （去掉图片上的文字，先使用“橡皮擦”，再使用“背景”）
 10. [迅排设计](https://design.palxp.com/home) 在线制作海报
 11. [FastGPT](https://labs.kagi.com/fastgpt) GPT 聊天问答
 12. [ChatGPT Demo](https://chat.chatgptdemo.net/) ChatGPT 克隆版
