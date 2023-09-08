@@ -78,6 +78,12 @@ $ ps -ef | grep nginx
 $ kill -9 [pid]
 ```
 
+通过安装包安装 Nginx 安装路径是`/usr/local/nginx/sbin/nginx`，还需要配置全局变量
+
+```
+ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/
+```
+
 ## CentOS 防火墙
 
 > 如果阿里云已配置安全组，仍然无法访问端口号，可能是防火墙未开放端口
