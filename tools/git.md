@@ -201,3 +201,21 @@ $ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 ```
 git config --system --unset credential.helper
 ```
+
+5. 报错 `Failed to connect to github.com port 443` 无法拉取
+
+```
+// 取消代理命令
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+// 查看 git 配置文件
+vim ~/.gitconfig
+
+// 查看配置
+git config --list --show-origin
+```
+
+[DNS 解析错误](https://zhuanlan.zhihu.com/p/642910282)
+
+通过 [ipaddress.com](https://www.ipaddress.com)网站 查找 github.com 对应的 IP 地址：`140.82.113.4`，追加到 `/etc/hosts`文件中
