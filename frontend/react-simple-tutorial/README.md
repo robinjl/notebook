@@ -47,20 +47,20 @@ HTML 引入三个基本脚本库
 - 安装 create-react-app
 
 ```
-$ npm i create-react-app -g
+npm i create-react-app -g
 ```
 
 - 创建应用
 
 ```
-$ npx create-react-app [app_name]
+npx create-react-app [app_name]
 ```
 
 - 运行应用
 
 ```
-$ cd [app_name]
-$ npm start
+cd [app_name]
+npm start
 ```
 
 示例：  

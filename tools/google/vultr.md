@@ -15,19 +15,19 @@
    解决方法：修改 `shadowsocks-all.sh`, 删除 yum-depends 中 python 依赖
 
 2. IP 可以访问，SSH 可以登录，但端口号状态为关闭  
-   检查 VPS 端口状态 [网址](http://tool.chinaz.com/port/)    
+   检查 VPS 端口状态 [网址](http://tool.chinaz.com/port/)  
    解决方法：防火墙开启端口号
 
 ```
 // 查看防火墙状态
-$ systemctl status firewalld
+systemctl status firewalld
 
 // 开启端口
-$ firewall-cmd --zone=public --add-port=[port_name]/tcp --permanent
+firewall-cmd --zone=public --add-port=[port_name]/tcp --permanent
 
 // 重启防火墙
-$ firewall-cmd --reload
+firewall-cmd --reload
 
 // 查看所有打开的端口
-$ firewall-cmd --zone=public --list-ports
+firewall-cmd --zone=public --list-ports
 ```

@@ -8,7 +8,7 @@
 
 [Maven Repository](https://search.maven.org/)
 
-## IntelliJ 
+## IntelliJ
 
 1. 开启 Services
 
@@ -28,12 +28,12 @@ Service -> 右键 -> Copy Configuration -> Override parameters -> 增加端口�
 6. Zuul API 网关服务
 7. Config 配置中心
 8. Bus 消息总线
-9. Sleuth / Zipkin 分布式请求链式跟踪 
+9. Sleuth / Zipkin 分布式请求链式跟踪
 10. Consul 服务治理与配置中心
 11. Gateway 网关服务
 12. Admin 监控服务
 13. Security OAuth2
-13. 单点登录（Single Sign On）
+14. 单点登录（Single Sign On）
 
 ## 笔记
 
@@ -41,22 +41,19 @@ Service -> 右键 -> Copy Configuration -> Override parameters -> 增加端口�
 
 ```
 查看端口号使用情况
-$ lsof -i:[port_name]
+lsof -i:[port_name]
 
 杀掉进程
-$ kill -9 [pid_name]
+kill -9 [pid_name]
 ```
 
 Netflix Ribbon 依赖需要指定版本号
 
 子服务通过右键选择 Edit Configuration 增加变量 server.port 及新的端口号 可以复制一个进程。
 
-
 ## 资料
 
 - [19 张图概览 Spring Cloud](https://jishuin.proginn.com/p/763bfbd5574d)
 - [Spring Cloud 微服务实践 (8) - 部署](https://xie.infoq.cn/article/e940fe066a65b604019110c26)
-- [Java架构师-技术专家](https://class.imooc.com/sale/javaarchitect)
+- [Java 架构师-技术专家](https://class.imooc.com/sale/javaarchitect)
 - [Eureka, Zookeeper, Consul, Nacos 对比](https://developer.aliyun.com/article/738413)
-
-

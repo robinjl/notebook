@@ -65,7 +65,7 @@ PyCharm -> Edit Configuration
 -[让 PIP 源使用国内镜像，提升下载速度和安装成功率](https://www.cnblogs.com/microman/p/6107879.html)
 
 ```
-$ pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 #### 常用命令
@@ -73,19 +73,19 @@ $ pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
 创建虚拟环境
 
 ```
-$ mkvirtualenv my_django_environment
+mkvirtualenv my_django_environment
 ```
 
 pip 安装指定版本
 
 ```
-$ pip install [package_anme]==[version_name]
+pip install [package_anme]==[version_name]
 ```
 
 创建应用
 
 ```
-$ python manage.py startapp [app_name]
+python manage.py startapp [app_name]
 ```
 
 本地项目迁移
@@ -106,7 +106,7 @@ python manage.py migrate [,project_name]
 解决方法：
 
 ```
-$ sudo lsof -t -i tcp:8000 | xargs kill -9
+sudo lsof -t -i tcp:8000 | xargs kill -9
 ```
 
 报错 `django.db.utils.ProgrammingError: (1146, "Table 'xxx' doesn't exist")`  
@@ -117,7 +117,7 @@ $ sudo lsof -t -i tcp:8000 | xargs kill -9
 查看配置清单情况
 
 ```
-$ python3 manage.py check --deploy
+python3 manage.py check --deploy
 ```
 
 #### 技术点
@@ -136,17 +136,17 @@ $ python3 manage.py check --deploy
 解压安装：
 
 ```
-$ tar -zxvf LibreOffice_6.2.5.2_Linux_x86-64_rpm.tar.gz
-$ cd LibreOffice_6.2.5.2_Linux_x86-64_rpm/RPMS/
-$ yum localinstall *.rpm
+tar -zxvf LibreOffice_6.2.5.2_Linux_x86-64_rpm.tar.gz
+cd LibreOffice_6.2.5.2_Linux_x86-64_rpm/RPMS/
+yum localinstall *.rpm
 ```
 
 安装其他依赖：
 
 ```
-$ yum install cairo cups-libs libSM
-$ yum install ibus
-$ yum install libreoffice-headless
+yum install cairo cups-libs libSM
+yum install ibus
+yum install libreoffice-headless
 ```
 
 查看是否安装成功：
@@ -214,4 +214,4 @@ python manage.py migrate --fake
 ## 其他
 
 [BasicComparisonFilters](https://code.djangoproject.com/wiki/BasicComparisonFilters)
-[Mac彻底卸载Python](https://huybien.com/how-to-completely-uninstall-python-on-macos/)
+[Mac 彻底卸载 Python](https://huybien.com/how-to-completely-uninstall-python-on-macos/)

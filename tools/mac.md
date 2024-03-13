@@ -44,9 +44,9 @@ git config --global --unset https.proxy
 ## macOS 查看本地 IP
 
 ```
-$ ipconfig getifaddr en0
+ipconfig getifaddr en0
 或者
-$ ifconfig | grep inet
+ifconfig | grep inet
 ```
 
 ## Mac 屏幕共享
@@ -65,20 +65,20 @@ $ ifconfig | grep inet
 ## Mac 看根目录文件大小分布
 
 ```
-$ du -sh *
+du -sh *
 ```
 
 查看 Library 下文件分布
 
 ```
-$ cd Library
-$ du -d 1 -h
+cd Library
+du -d 1 -h
 ```
 
 查看硬盘空间
 
 ```
-$ df -h
+df -h
 ```
 
 升级系统/XCode 会占用大量内存，储存空间中“其他”占用很大空间
@@ -92,20 +92,20 @@ $ df -h
 ## 查看 iOS simulator 列表
 
 ```
-$ xcrun simctl list devices
+xcrun simctl list devices
 ```
 
 删除无效的 device
 
 ```
-$ sudo xcrun simctl delete unavailable
-$ xcrun simctl delete [device_UUID]
+sudo xcrun simctl delete unavailable
+xcrun simctl delete [device_UUID]
 ```
 
 `Error：Unable to boot device because it cannot be located on disk`, 解决办法：
 
 ```
-$ xcrun simctl erase all
+xcrun simctl erase all
 ```
 
 ## iPhone 投影到 MacBook

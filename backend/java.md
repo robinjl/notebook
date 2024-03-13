@@ -51,8 +51,9 @@ VO View Object 显示层对象
 
 1. Mac OS X 安装 Java
 
-方法一、[通过 Oracle Java 官网下载安装](https://www.java.com/zh-CN/download/)   
-方法二、通过 homebrew 安装 JDK，[参考](https://reactnative.dev/docs/environment-setup#installing-dependencies) 
+方法一、[通过 Oracle Java 官网下载安装](https://www.java.com/zh-CN/download/)  
+方法二、通过 homebrew 安装 JDK，[参考](https://reactnative.dev/docs/environment-setup#installing-dependencies)
+
 ```
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 ```
@@ -63,26 +64,26 @@ brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
    获取 JAVA_HOME 环境变量：
 
 ```
-$ /usr/libexec/java_home
+/usr/libexec/java_home
 ```
 
 在 ~/.zshrc 中设置环境变量
 
 ```
-$ vim ~/.zshrc
+vim ~/.zshrc
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 // 升级到 Big Sur 变量地址发生改变 需要改成
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 
-$ source ~/.zshrc
+source ~/.zshrc
 ```
 
 是否配置成功
 
 ```
-$ echo $JAVA_HOME
+echo $JAVA_HOME
 ```
 
 3. Linux 安装 Java8
@@ -342,7 +343,7 @@ After=syslog.target
 
 [Service]
 User=myapp
-ExecStart=/var/myapp/myapp.jar
+ExecStart=/usr/bin/java -jar /var/myapp/myapp.jar
 SuccessExitStatus=143
 
 [Install]
@@ -351,7 +352,7 @@ WantedBy=multi-user.target
 
 设置开机自启动
 
-`$ systemctl enable myapp.service`
+`systemctl enable myapp.service`
 
 > 但存在一个问题，配置参数（ExecStart）为 jar 绝对路径，新包中如果有更新的版本号，就要再次修改路径，才能使用命令行启动
 

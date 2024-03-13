@@ -33,9 +33,9 @@ _RN > 60_
 运行命令
 
 ```
-$ npm run android // 开发版本
-$ npx react-native run-android --variant releaseStaging // 测试版本
-$ npx react-native run-android --variant release // 正式版本
+npm run android // 开发版本
+npx react-native run-android --variant releaseStaging // 测试版本
+npx react-native run-android --variant release // 正式版本
 ```
 
 !> releaseStaging 安装失败，需要增加配置项`matchingFallbacks = ['release']` [issue](https://github.com/microsoft/react-native-code-push/issues/1557#issuecomment-480927795)
@@ -71,9 +71,9 @@ BUNDLE_DISPALY_NAME VS BUNDLE_NAME iOS 使用前者即可
 运行命令
 
 ```
-$ npm run ios // 开发版本
-$ npx react-native run-ios --configuration Staging // 测试版本
-$ npx react-native run-ios --configuration Release // 正式版本
+npm run ios // 开发版本
+npx react-native run-ios --configuration Staging // 测试版本
+npx react-native run-ios --configuration Release // 正式版本
 ```
 
 !> 如果出现之前能安装，过段时间安装不了测试/正式版本，仔细查看错误报告。原因可能是 gradle 升级 解决方法：清除 build 缓存、gradle 临时构建文件，或者删除已安装的 APP，重新 build

@@ -27,55 +27,55 @@ Web+ 是阿里云提供的 PaaS
 1. Add Nginx Repository
 
 ```
-$ sudo yum install epel-release
+sudo yum install epel-release
 ```
 
 2. Install Nginx
 
 ```
-$ sudo yum install nginx
+sudo yum install nginx
 ```
 
 3. Start Nginx
 
 ```
-$ sudo systemctl start nginx
+sudo systemctl start nginx
 ```
 
 4. Stop Nginx
 
 ```
-$ sudo systemctl stop nginx
+sudo systemctl stop nginx
 ```
 
 5. 启动系统时开启
 
 ```
-$ sudo systemctl enable nginx
+sudo systemctl enable nginx
 ```
 
 查看 nginx 版本
 
 ```
-$ nginx -v
+nginx -v
 ```
 
 查看运行状态
 
 ```
-$ sudo systemctl status nginx
+sudo systemctl status nginx
 ```
 
 查看使用 nginx 进程
 
 ```
-$ ps -ef | grep nginx
+ps -ef | grep nginx
 ```
 
 杀掉进程
 
 ```
-$ kill -9 [pid]
+kill -9 [pid]
 ```
 
 通过安装包安装 Nginx 安装路径是`/usr/local/nginx/sbin/nginx`，还需要配置全局变量
@@ -161,15 +161,15 @@ firewall-cmd --reload
 简单方法：Using EPEL Repo，下面一句命令就可以了(可能阿里云已经实现了)
 
 ```
-$ sudo yum install python36
-$ python3 -V
+sudo yum install python36
+python3 -V
 ```
 
 #### 安装虚拟环境
 
 ```
-$ pip3 install virtualenv
-$ pip3 install virtualenvwrapper
+pip3 install virtualenv
+pip3 install virtualenvwrapper
 ```
 
 设置全局变量 `vim ~/.bashrc`
@@ -191,7 +191,7 @@ mkvirtualenv [env_name]
 安装项目依赖包
 
 ```
-$ pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 报错：`mysqlclient mysql_config not found`
@@ -199,27 +199,27 @@ $ pip3 install -r requirements.txt
 使用了云数据库，云服务器不需要再安装 mysql，安装以下插件
 
 ```
-$ yum install gcc mariadb-devel python3-devel
+yum install gcc mariadb-devel python3-devel
 ```
 
 安装 uwsgi
 
 ```
-$ pip3 install uwsgi
+pip3 install uwsgi
 ```
 
 检查 nginx.conf 文件是否正确
 
 ```
-$ nginx -t
-$ nginx -t -c /etc/nginx/nginx.conf
+nginx -t
+nginx -t -c /etc/nginx/nginx.conf
 ```
 
 查看端口号使用情况
 
 ```
-$ netstat -ltnep
-$ netstat -lnp|grep [port]
+netstat -ltnep
+netstat -lnp|grep [port]
 ```
 
 配置前端环境（以 ant design pro 为例）
@@ -229,7 +229,7 @@ $ netstat -lnp|grep [port]
 重启 nginx
 
 ```
-$ systemctl restart nginx
+systemctl restart nginx
 ```
 
 #### uWSGI
@@ -279,7 +279,7 @@ server {
 **注意** 无法访问/root/下部署的程序，需要开放阿里云根目录访问权限
 
 ```
-$ chmod -R 777 /root
+chmod -R 777 /root
 ```
 
 什么是软链接？
@@ -319,7 +319,7 @@ http 自动跳转 https 配置
 
 > 请在域名注册商完成域名实名认证后 2-3 天再提交备案
 
-https://*[domain_name]*:*[port_name]* 无法访问？  
+https://_[domain_name]_:_[port_name]_ 无法访问？  
 后来没有调整什么就可以访问了，难道是域名实名认证后需要一段时间后才可以访问？
 
 ## 安装 Mysql
@@ -345,7 +345,6 @@ sudo yum -y install mysql-community-server
 ```
 sudo systemctl start mysqld
 ```
-
 
 设置系统启动时自动启动
 
@@ -433,6 +432,7 @@ yum install vim-X11 vim-common vim-enhanced vim-minimal
 3. Nginx 默认上传数据大小为 1M
 
 可以设置请求和代理参数
+
 ```
 client_max_body_size 100m;
 client_header_timeout 750s;
@@ -449,5 +449,5 @@ client_body_buffer_size 102400k;
 
 获取公网 IP `curl ifconfig.me`
 
-[解决公司网络无法通过ssh连接阿里云ECS的22端口](https://www.jianshu.com/p/effb2b665c15)
-[简单记录一下阿里云服务器Ssh登录不上的问题](https://hbnnforever.cn/article/sshaliecs.html)
+[解决公司网络无法通过 ssh 连接阿里云 ECS 的 22 端口](https://www.jianshu.com/p/effb2b665c15)
+[简单记录一下阿里云服务器 Ssh 登录不上的问题](https://hbnnforever.cn/article/sshaliecs.html)

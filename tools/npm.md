@@ -14,7 +14,7 @@ npx 允许调用项目内部安装的模块，即 node_modules/.bin/module_name
 NPM 全局安装权限错误， 解决方法：
 
 ```
-$ sudo chown -R $(whoami) /usr/local/lib/node_modules/
+sudo chown -R $(whoami) /usr/local/lib/node_modules/
 ```
 
 ## 淘宝镜像
