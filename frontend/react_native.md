@@ -235,8 +235,11 @@ Android 打开调试面板 Dev Settings -> Debugging Debug server host & port fo
 
 #### 企业开发者资质证书 certificate 更新
 
-1. Mac 钥匙串访问 -> 证书助理 -> 从证书颁发机构请求证书 -> 创建 CSR
-2. Apple Developer -> Certificate -> 创建 -> iOS Distribution (App Store and Ad Hoc) -> 选择 CSR -> 生成证书
+1. 每年开发者资质续费后，需要更新证书，更新有效期
+2. Mac 钥匙串访问 -> 证书助理 -> 从证书颁发机构请求证书 -> 存储到磁盘-> 生成 CSR
+3. Apple Developer -> Certificate -> 创建 -> 选择 Apple Distribution -> 选择 CSR -> 生成证书
+4. 如果是创建 APP， 则选择 iOS Distribution (App Store and Ad Hoc) -> 选择 CSR -> 生成证书
+5. 更新 APP profiles, 选择 Profile -> Edit -> 选择更新的 Certificate -> 保存
 
 #### 极光推送证书更新
 

@@ -62,7 +62,15 @@ ifconfig | grep inet
 | 显示/隐藏 文件     | Command + Shift + .    |
 | 强制推出任务       | Option + Command + Esc |
 
-## Mac 看根目录文件大小分布
+## Mac 命令
+
+查看当前文件夹大小
+
+```
+du -sh
+```
+
+看根目录文件大小分布
 
 ```
 du -sh *
