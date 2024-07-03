@@ -230,3 +230,21 @@ set foreign_key_checks = 0; // 关闭外键检查
 delete from [table_name] where ...;
 set foreign_key_checks = 1; // 重新开启外键检查
 ```
+
+## MySQL 重置自增 ID 方法
+
+[参考](https://www.cnblogs.com/pengai/articles/15816839.html)
+
+```sql
+// 删除 id 不连续的列
+// 第一列 id 1, 第二列 id 1000, 使 id 连续，下一列恢复为 id = 2;
+delete from [table_name] where id = 1000;
+// 重置自增 id
+alter table [table_name] auto_increment = 2;
+```
+
+Lombok @Data @Getter @Setter
+
+Navicat 数据库迁移
+
+Navicat 数据库备份

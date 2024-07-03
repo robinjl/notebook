@@ -161,7 +161,7 @@ firewall-cmd --reload
 简单方法：Using EPEL Repo，下面一句命令就可以了(可能阿里云已经实现了)
 
 ```
-sudo yum install python36
+sudo yum install python37
 python3 -V
 ```
 

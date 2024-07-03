@@ -215,3 +215,124 @@ python manage.py migrate --fake
 
 [BasicComparisonFilters](https://code.djangoproject.com/wiki/BasicComparisonFilters)
 [Mac 彻底卸载 Python](https://huybien.com/how-to-completely-uninstall-python-on-macos/)
+
+## CentOS 配置 Django 项目生产环境
+
+1. 安装 Nginx
+2. 安装 python3，自带包管理工具 pip3
+
+```bash
+pip --version     # Python2.x 版本命令
+pip3 --version    # Python3.x 版本命令
+```
+
+[pip 使用国内镜像源](https://www.runoob.com/w3cnote/pip-cn-mirror.html)
+
+单独安装包文件
+
+```
+pip install [package_name] -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+3. [安装虚拟环境](https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django/development_environment#%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E8%BD%AF%E4%BB%B6)
+
+```bash
+pip3 install virtualenvwrapper
+```
+
+配置 `~/.bashrc` 文件，注册全局变量
+
+```bash
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+```
+
+重启文件
+
+```bash
+source ~/.bashrc
+```
+
+创建虚拟环境
+
+```bash
+mkvirtualenv [env_name]
+```
+
+安装依赖包
+
+```bash
+pip3 install SomePackage              # 最新版本
+pip3 install SomePackage==1.0.4       # 指定版本
+```
+
+运行虚拟环境
+
+```bash
+workon [virtualenv_name]
+```
+
+4. 运行项目
+
+```bash
+python manage.py runserver 0.0.0.0:8000
+```
+
+5. 导出依赖包列表，应用于其他环境
+
+```bash
+python -m pip freeze > requirements.txt  # 导出安装包
+pip3 install -r requirements.txt         # 安装包列表
+```
+
+项目可能陈旧，安装包可能无法安装，可以通过硬拷贝的方式部署新环境  
+macOS / Linux 虚拟环境位置及安装包文件是 `.virtualenvs/[virtualenv_name]/lib/[python]/site-packages`
+
+安装包依赖有冲突时，可扩展版本号
+
+```bash
+[package_name] >= 1.5   # 可以是 1.5 1.6 2.0
+[package_name] ~= 1.5   # 可以是 1.5 1.6
+```
+
+6. 安装 uwsgi
+
+方式一：[官网](https://uwsgi-docs.readthedocs.io/en/latest/Download.html)下载 stable 版本
+
+```bash
+tar -zxvf uwsgi                 # 解压文件
+cd uwsgi                        # 进入解压目录
+python3 setup.py install        # 安装
+```
+
+方式二： 命令行
+
+```
+pip3 install uwsgi
+```
+
+安装报错 `Python.h：没有那个文件或目录`
+
+解决 `yum install -y python3-devel`
+
+https://www.liujiangblog.com/course/django/181
+
+报错 django.db.utils.ProgrammingError: (1146, "Table XXX doesn't exist")
+
+7. 配置 uwsgi.ini
+
+在项目根目录下新建文件 `uwsgi.ini`
+
+```bash
+[uwsgi]
+socket=:7010                                  # 对本机8000端口提供服务
+chdir=/root/projects/[project_name]           # 项目根目录
+master=true                                   # 主程序
+processes=4
+threads=2
+module=RiskManagement.wsgi:application        #
+pidfile=%(chdir)/uwsgi.pid
+```

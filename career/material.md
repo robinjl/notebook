@@ -143,3 +143,4 @@
 11. [FastGPT](https://labs.kagi.com/fastgpt) GPT 聊天问答
 12. [ChatGPT Demo](https://chat.chatgptdemo.net/) ChatGPT 克隆版
 13. [做好图](http://www.zuohaotu.com/image-merge.aspx) 图片拼接
+14. [资源下载](https://archive.org/) PDF 书籍下载
