@@ -39,16 +39,8 @@
 ## 网站
 
 1. [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-2. [FEX](https://fex.baidu.com/) _已停止更新_
-3. [酷壳](https://coolshell.cn/)
-4. [Phodal Huang](https://www.phodal.com/)
-5. [鑫空间，鑫生活](https://www.zhangxinxu.com/)
-6. [Smashing Magzine](https://www.smashingmagazine.com/)
-7. [Scotch.io](https://scotch.io/)
-8. [Google Web Developers](https://developers.google.com/web/)
-9. [Egghead](https://egghead.io/)
-10. [FrontendMasters](https://frontendmasters.com/)
-11. [JavaScript Weekly](https://javascriptweekly.com/)
+2. [酷壳](https://coolshell.cn/)
+3. [Smashing Magzine](https://www.smashingmagazine.com/)
 
 ## 前端技术栈
 
@@ -100,20 +92,13 @@
 - 标准化
 
   - W3C
-  - PWA / WebComponents / Polymer
-  - Workbox
+  - PWA / WebComponents
 
 - 后端开发
 
-  - Node.js
-  - Express.js
+  - Node.js（Express.js）
   - MySQL
   - MongoDB
-  - GraphQL
-  - Apollo
-  - Relay
-  - Heroku
-  - Serverless
 
 - 计算机基础
 
@@ -143,4 +128,4 @@
 11. [FastGPT](https://labs.kagi.com/fastgpt) GPT 聊天问答
 12. [ChatGPT Demo](https://chat.chatgptdemo.net/) ChatGPT 克隆版
 13. [做好图](http://www.zuohaotu.com/image-merge.aspx) 图片拼接
-14. [资源下载](https://archive.org/) PDF 书籍下载
+14. [color4bg.js](https://github.com/winterx/color4bg.js) 生成动态、抽象的背景图的工具
