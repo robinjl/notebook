@@ -2,7 +2,7 @@
 
 ## 资源
 
-- [MySQL Tutorial](https://www.mysqltutorial.org/)
+- [MySQL Tutorial](https://www.mysqltutorial.org/), [中文教程](https://mysqljiaocheng.com/)
 - [MySQL 5.7 Reference Manual](https://dev.mysql.com/doc/refman/5.7/en/)
 - [SQL 教程-廖雪峰](https://www.liaoxuefeng.com/wiki/1177760294764384)
 - [腾讯课堂](https://ke.qq.com/course/431451?term_id=100515157&taid=3746143490446683)

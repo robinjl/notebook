@@ -238,23 +238,29 @@ systemctl restart nginx
 
 uwsgi 启动：先进入虚拟环境，然后进入项目目录，执行
 
-```
+```bash
 uwsgi --ini uwsgi.ini  // 可以打印调试信息
 ```
 
 重启（更改项目文件后，需要重启）
 
-```
+```bash
 uwsgi --reload uwsgi.pid
 ```
 
 停止
 
-```
+```bash
 uwsgi --stop uwsgi.pid
 ```
 
-如果无法停止，查看对应的端口进程情况 `netstat -lnp|grep [port]` 然后编辑 uwsgi.pid，重新停止
+如果无法彻底停止，可以修改 uwsgi.ini 端口号，重新启动，使原有端口号无法访问
+
+查看 uwsgi 占用进程
+
+```bash
+ps ax|grep uwsgi
+```
 
 uwsgi.ini module 指向 django 项目 settings 对应的名称
 
