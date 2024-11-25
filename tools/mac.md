@@ -21,10 +21,9 @@
 | [PDMan](http://www.pdman.cn/)                                     | 数据库建模工具   |
 | [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) | 屏幕共享         |
 
-> ~~[MacWk](https://macwk.com/)（已关站）~~ Mac 软件下载其他选择
+软件下载网站：
 
-- [macyy](https://www.macyy.cn/)
-- [macapp](https://macapp.org.cn/)
+- [MacWk](https://macwk.com.cn/)
 
 ## Homebrew
 
@@ -40,6 +39,10 @@ raw.githubusercontent.com 查找 IP 编辑 hosts 文件 或者尝试
 git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
+
+> brew 安装插件出现问题时，可以先更新 `brew update`
+
+[Homebrew 配置镜像源](https://mudan.me/post/original/2023/11/17/为macOS的Homebrew配置大陆镜像源.html)
 
 ## macOS 查看本地 IP
 
