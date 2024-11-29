@@ -17,6 +17,7 @@
 | Oh My Zsh                                                         | 终端             |
 | Homebrew                                                          | 包安装工具       |
 | OminDiskSweeper                                                   | 文件分布查看     |
+| CleanMyMac                                                        | 系统垃圾清理     |
 | HandShaker                                                        | Android 文件传输 |
 | [PDMan](http://www.pdman.cn/)                                     | 数据库建模工具   |
 | [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/) | 屏幕共享         |

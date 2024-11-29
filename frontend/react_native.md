@@ -402,6 +402,15 @@ gradle.properties file 增加
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 ```
 
+23. `npm start`报错 `macOS fsevents unavailable (this watcher can only be used on Darwin)`
+
+解决方法: `npm install fsevents -D`, 与 watchman 无关
+
+!>_2024.11.26_  
+最新的 watchman 已经不支持 macOS 12（需要 macOS 13 及更高版本），需要手动安装老版本  
+brew 安装新版本 watchman 的依赖如 llvm、rust 非常耗时，需要耐心等待，  
+[手动下载历史版本 watchman.rb 文件](https://juejin.cn/post/7178847159918264375)，执行命令`brew install -s -v -d watchman.rb`
+
 ## 投影
 
 - Total Control（Android on Windows）

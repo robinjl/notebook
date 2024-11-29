@@ -37,6 +37,10 @@ Severity -> No highlighting, only fix
 1. 版本控制不显示颜色问题
    Preferences -> Version Control -> Add -> Apply
 
+2. 全局搜索失效
+
+File -> Invalidate Cashes... -> 清除缓存重启
+
 ## 关于激活
 
 支持正版，待能力提高一定程度，一定购买正版。
@@ -47,7 +51,7 @@ Mac Intel 升级到 12 Monterey 闪退
 
 使用版本 2021.3，从官网下载或 Macwk.com 下载，并使用最新的 agent.jar 文件及激活码
 
-删除Mac残余文件
+删除 Mac 残余文件
 
 ~/Library/Application\ Support  
 ~/Library/Caches/  

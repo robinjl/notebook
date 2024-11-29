@@ -1,6 +1,6 @@
 # Git
 
-## 一、参考 <small>(_都是阮老师的教程_)</small>
+## 一、参考
 
 1. [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 2. [Git 分支管理策略](http://www.ruanyifeng.com/blog/2012/07/git.html)
@@ -143,7 +143,7 @@ git push [origin develop]
 注意：
 
 - 如果你只想获取最新代码，并且本地的修改与获取文件并不冲突，可以直接 merge，所以并不一定完全按照上面的顺序执行
-- 如果有冲突 首先 `git stash` 保存自己本地修改的代码 然后 merge 远程代码， 接着 `git stash pop` 还原自己修改的代码 然后修改解决冲突 最后提交
+- 如果有冲突，首先 `git stash` 保存自己本地修改的代码，然后 merge 远程代码， 接着 `git stash pop` 还原自己修改的代码，修改解决冲突，最后提交
 - 出现冲突的解决方法：
   - 通过命令行合并，可能在代码中标记出冲突所在的区域，需要手动改写
   - WebStorm 可以通过菜单选项 Git -> Repository -> Merge Changes，手动解决冲突
@@ -218,4 +218,4 @@ git config --list --show-origin
 
 [DNS 解析错误](https://zhuanlan.zhihu.com/p/642910282)
 
-通过 [ipaddress.com](https://www.ipaddress.com)网站 查找 github.com 对应的 IP 地址：`140.82.113.4`，追加到 `/etc/hosts`文件中
+通过 [ipaddress.com](https://www.ipaddress.com)网站 查找 github.com 对应的 IP 地址：`140.82.113.3`，追加到 `/etc/hosts`文件中(macOS)
