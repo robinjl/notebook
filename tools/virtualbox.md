@@ -7,7 +7,8 @@
 安装 CentOS 7 后，测试网络状态 `ping www.bing.com` 若提示 `Name or service not known` 说明网络没有配置正确  
 参考 [CentOS 连接外网](https://blog.csdn.net/ermaner666/article/details/87932853)
 
-一、配置网卡  
+一、配置网卡
+
 `vi /etc/sysconfig/network-scripts/ifcfg-enp0s3`
 
 - 修改部分
@@ -22,7 +23,8 @@
 5. 添加网关：192.168.x.x
 6. 添加 DNS: 8.8.8.8
 
-二、配置 DNS  
+二、配置 DNS
+
 `vi /etc/resolv.conf` 添加 nameserver 8.8.8.8
 
 #### 常用命令

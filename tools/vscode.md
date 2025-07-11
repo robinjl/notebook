@@ -4,7 +4,7 @@
 | ------------------ | ---------------- |
 | 查看快捷键列表     | ⌘ + K, ⌘ + S     |
 | 打开新窗口         | ⌘ + ⇧ + N        |
-| 查看项目访问历史   | ⌘ + R            |
+| 查看项目访问历史   | ^ + R            |
 | 查看最近访问的文件 | ⌘ + P            |
 | 定位到侧边栏       | ⌘ + 0            |
 | 新建文件夹         | ⌘ + M（自定义）  |
@@ -28,9 +28,3 @@
     }
   }
   ```
-
-## 后端开发使用技巧
-
-开发 Spring Boot, 需要更新 VS code, 要求 Java JDK 17+，安装插件 `Spring Boot Extension Pack`
-Java Mac 安装位置`/Library/Java/JavaVirtualMachines`  
-Java 安装方式 1：官网下载 pkg 2. homebrew
