@@ -7,10 +7,9 @@
   - [NPM](tools/npm.md)
   - [Vim](tools/vim.md)
   - [iTerm2](tools/iTerm2.md)
+  - [VS Code](tools/vscode.md)
   - [WebStorm](tools/webstorm.md)
   - [IntelliJ IDEA](tools/intelliJ.md)
-  - [VS Code](tools/vscode.md)
-  - [VirtualBox](tools/virtualbox.md)
   - [Chrome](tools/chrome.md)
   - [Google](tools/google/vultr.md)
 
@@ -18,7 +17,6 @@
 
   - [React](frontend/react.md)
   - [Vue](frontend/vue.md)
-  - [微信小程序](frontend/wechat.md)
   - [Taro](frontend/taro.md)
 
 - 移动端
@@ -28,8 +26,8 @@
 - 后端
 
   - [Java](backend/java.md)
-  - [Django](backend/django.md)
   - [Spring Cloud](backend/spring_cloud.md)
+  - [Django](backend/django.md)
 
 - 服务器
 
@@ -50,4 +48,3 @@
   - [趣味](life/funny.md)
   - [情感](life/emotion.md)
   - [思考](life/thinking.md)
-  - [生活](life/living.md)
