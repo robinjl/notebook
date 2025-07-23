@@ -2,22 +2,20 @@
 
 ## 工具
 
-1. Git/GitLab
+1. Git/GitHub
 2. Teambition
+3. Tracup
 
 ## 设计
 
-- Photoshop
-- Pixelmator Pro（macOS）
 - Axure RP
 - Sketch（macOS）
 - 蓝湖
 
 ## 文档
 
-- Markdown
-- github.io
 - [docsify](https://docsify.js.org/)
+- [vitepress](https://vitepress.dev/zh/)
+- GitHub Pages
 - GitBook
 - vuepress
-- [vitepress](https://vitepress.dev/zh/)

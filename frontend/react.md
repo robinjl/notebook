@@ -8,8 +8,7 @@
 ## Redux
 
 1. [Redux 官网](https://redux.js.org/)
-2. [A cartoon intro to Redux](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
-3. Redux 相关组件
+2. Redux 相关组件
 
 - redux-thunk
 - redux-saga

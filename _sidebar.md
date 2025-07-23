@@ -16,28 +16,18 @@
 - 前端
 
   - [React](frontend/react.md)
-  - [Vue](frontend/vue.md)
-  - [Taro](frontend/taro.md)
-
-- 移动端
-
   - [React Native](frontend/react_native.md)
+  - [Taro](frontend/taro.md)
 
 - 后端
 
   - [Java](backend/java.md)
   - [Spring Cloud](backend/spring_cloud.md)
   - [Django](backend/django.md)
-
-- 服务器
-
+  - [MySQL](backend/mysql.md)
   - [阿里云](backend/aliyun.md)
 
-- 数据库
-
-  - [MySQL](backend/mysql.md)
-
-- 职业发展
+- 职业
 
   - [资源](career/material.md)
   - [博文](career/blog.md)
@@ -45,6 +35,5 @@
 
 - 生活
 
-  - [趣味](life/funny.md)
   - [情感](life/emotion.md)
   - [思考](life/thinking.md)

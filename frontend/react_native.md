@@ -1,9 +1,7 @@
-# React Native
-
 ## 学习资源
 
 1. [React Native 官网](http://facebook.github.io/react-native/)
-2. [慕课网 - 新版 React Native 从入门到实战打造高质量上线 App（再升级）](https://coding.imooc.com/learn/list/304.html)
+2. [慕课网 - 新版 React Native 从入门到实战打造高质量上线 App（再升级）](https://coding.imooc.com/class/304.html)
 3. [React Native 学习资源精选仓库](https://github.com/crazycodeboy/react-native-awesome)
 
 ## 开源项目
