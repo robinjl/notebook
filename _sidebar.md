@@ -4,6 +4,7 @@
   - [Windows](tools/windows.md)
   - [Linux](tools/linux.md)
   - [Git](tools/git.md)
+  - [SVN](tools/svn.md)
   - [NPM](tools/npm.md)
   - [Vim](tools/vim.md)
   - [iTerm2](tools/iTerm2.md)
