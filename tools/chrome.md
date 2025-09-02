@@ -15,3 +15,4 @@
 | Octotree          | GitHub 文件树                 |
 | GitZip for github | GitHub 下载选中的文件或文件夹 |
 | JSON Formatter    | JSON 格式化                   |
+| GoFullPage        | 长屏截图                      |
