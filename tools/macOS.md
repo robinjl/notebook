@@ -54,7 +54,7 @@ df -h
 
 软件下载网站：
 
-- [MacWk](https://macwk.com.cn/)
+- [MacWk](https://www.macwk.com)
 
 ## Homebrew
 
