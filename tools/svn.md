@@ -5,3 +5,4 @@
 | 将本地已有项目连接到远程 SVN 仓库 | `svn checkout <远程仓库URL> --force .` |
 | 查看仓库信息                      | `svn info`                             |
 | 更改仓库地址                      | `svn relocate <新仓库URL>`             |
+| 从版本库删除（但保留本地文件）    | `svn delete --keep-local 文件名`       |
